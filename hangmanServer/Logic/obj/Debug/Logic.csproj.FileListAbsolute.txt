@@ -1,0 +1,6 @@
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\bin\Debug\Logic.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\bin\Debug\Logic.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\obj\Debug\Logic.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Logic\obj\Debug\Logic.pdb

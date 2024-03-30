@@ -1,0 +1,9 @@
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\bin\Debug\Comunication.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\bin\Debug\Comunication.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\bin\Debug\Logic.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\bin\Debug\Logic.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\obj\Debug\Comunication.csproj.AssemblyReference.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\obj\Debug\Comunication.csproj.CoreCompileInputs.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\obj\Debug\Comunica.313C19D9.Up2Date
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\obj\Debug\Comunication.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Comunication\obj\Debug\Comunication.pdb

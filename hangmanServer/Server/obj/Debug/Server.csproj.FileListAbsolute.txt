@@ -1,0 +1,12 @@
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Server.exe.config
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Server.exe
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Server.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Comunication.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Logic.dll
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Comunication.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Server\bin\Debug\Logic.pdb
+C:\Users\Dani\source\repos\ahorcadoServer\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Dani\source\repos\ahorcadoServer\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\Dani\source\repos\ahorcadoServer\Server\obj\Debug\Server.exe
+C:\Users\Dani\source\repos\ahorcadoServer\Server\obj\Debug\Server.pdb
