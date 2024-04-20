@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="517" Width="1005">
+    <Grid Margin="0,0,10,-6">
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-Login.png" Margin="0,-7,-13,0"></Image>
+
+        <Grid>
+            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="342,224,329,227"/>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,239,0,0" Opacity="0"/>
+            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="343,318,328,133"/>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,332,0,0" Opacity="0"/>
+        </Grid>
+        <Button Style="{StaticResource orange-button}" FocusVisualStyle="{x:Null}" Content="Acceder" HorizontalAlignment="Left" Margin="428,404,0,0" VerticalAlignment="Top" Height="53" Width="152" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00"/>
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\title-home-Spanish.png" HorizontalAlignment="Left" Height="76" Margin="266,79,0,0" VerticalAlignment="Top" Width="480"/>
+        <Label Content="Inicio de Sesión" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="323,163,306,313"/>
+        <Label Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,286,0,0" VerticalAlignment="Top"/>
+        <Label Content="¿No tienes un perfil?, ¡Regístrate!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Center" Margin="0,374,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

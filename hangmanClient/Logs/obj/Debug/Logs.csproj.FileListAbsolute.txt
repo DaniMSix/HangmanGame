@@ -1,0 +1,6 @@
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\bin\Debug\Logs.dll
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\bin\Debug\Logs.pdb
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.AssemblyReference.cache
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.CoreCompileInputs.cache
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.dll
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.pdb

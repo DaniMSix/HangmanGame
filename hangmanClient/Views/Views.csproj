@@ -74,8 +74,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\CreateProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CreateProfile.xaml.cs">
+      <DependentUpon>CreateProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +110,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SRIPlayerManagement\ServicesExposed.wsdl" />
+    <Resource Include="Fonts\VT323-Regular.ttf" />
+    <Resource Include="Fonts\PressStart2P-Regular.ttf" />
+    <Resource Include="Fonts\Retro Gaming.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +141,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Label-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\orange-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title-home-English.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title-home-Spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-register-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

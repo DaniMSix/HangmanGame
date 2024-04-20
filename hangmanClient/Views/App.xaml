@@ -4,6 +4,40 @@
              xmlns:local="clr-namespace:Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="orange-button" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\orange-button.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <FontFamily x:Key="FuenteVT323">/Fonts/VT323-Regular.ttf#VT323</FontFamily>
+        <FontFamily x:Key="PressStart2P">/Fonts/PressStart2P-Regular.ttf#Press Start 2P</FontFamily>
+        <FontFamily x:Key="Retro Gaming">/Fonts/Retro Gaming.ttf#Retro Gaming</FontFamily>
+
+        <SolidColorBrush x:Key="CustomButtonTextColor" Color="#6D3B00" />
+
+        <Style TargetType="Label">
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="1" Color="Black" Opacity="0.1"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="button-back" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\arrow.png"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>
