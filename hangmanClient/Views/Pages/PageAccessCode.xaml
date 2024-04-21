@@ -1,0 +1,29 @@
+﻿<Page x:Class="Views.Pages.PageAccessCode"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="517" d:DesignWidth="1005"
+      Title="PageAccessCode">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-Access-Code.png"/>
+        </Grid.Background>
+        
+        
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\txtAccess-code.png" HorizontalAlignment="Center" Height="90" Margin="0,258,0,0" VerticalAlignment="Top" Width="459"/>
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\fungus-icon.png" HorizontalAlignment="Center" Height="103" Margin="0,53,0,0" VerticalAlignment="Top" Width="145"/>
+        <Label Content="Código de acceso" FontFamily="{StaticResource PressStart2P}" FontSize="34" HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top"/>
+        <Button Style="{StaticResource green-button}" Content="Unirse" FontFamily="{StaticResource FuenteVT323}" FontSize="25" HorizontalAlignment="Center" Margin="0,397,0,0" VerticalAlignment="Top" Height="53" Width="153"/>
+        <TextBox Style="{StaticResource TransparentTextBox}" FontSize="70" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Margin="273,258,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="59" Height="88" />
+        <TextBox Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="356,258,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="59" Height="88"/>
+        <TextBox Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="436,258,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="58" Height="88"/>
+        <TextBox Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="516,258,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="58" Height="88"/>
+        <TextBox Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="594,258,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="58" Height="88"/>
+        <TextBox Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="674,258,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="58" Height="88"/>
+
+    </Grid>
+</Page>

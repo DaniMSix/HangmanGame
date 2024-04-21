@@ -15,6 +15,17 @@
             <Setter Property="Padding" Value="0"/>
         </Style>
 
+        <Style x:Key="green-button" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\green-button.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
         <FontFamily x:Key="FuenteVT323">/Fonts/VT323-Regular.ttf#VT323</FontFamily>
         <FontFamily x:Key="PressStart2P">/Fonts/PressStart2P-Regular.ttf#Press Start 2P</FontFamily>
         <FontFamily x:Key="Retro Gaming">/Fonts/Retro Gaming.ttf#Retro Gaming</FontFamily>
@@ -38,6 +49,82 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="button-menu" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\menu-icon.png"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="pink-button" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\pink-button.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="long-orange-button" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\long-orange-button.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <Style x:Key="TransparentButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- Icono -->
+                            <Image Source="{TemplateBinding Tag}" Width="20" Height="20" Margin="2"/>
+                            <!-- Texto -->
+                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}" VerticalAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="long-purple-button" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\long-purple-button.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+        <Style x:Key="TransparentTextBox" TargetType="TextBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+
+
+
 
     </Application.Resources>
 </Application>

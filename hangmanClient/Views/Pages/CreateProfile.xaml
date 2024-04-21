@@ -13,8 +13,6 @@
             <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-register-user.png"/>
         </Grid.Background>
 
-
-        <Frame />
         <Button Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="51" Width="91"/>
 
         <Label Content="Crear perfil" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="369,71,340,405"/>

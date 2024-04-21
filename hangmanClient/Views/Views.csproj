@@ -74,14 +74,56 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Challenging Waiting Room.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CreateProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAccessCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Waiting room fortune teller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Challenging Waiting Room.xaml.cs">
+      <DependentUpon>Challenging Waiting Room.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CreateProfile.xaml.cs">
       <DependentUpon>CreateProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAccessCode.xaml.cs">
+      <DependentUpon>PageAccessCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageCategories.xaml.cs">
+      <DependentUpon>PageCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Waiting room fortune teller.xaml.cs">
+      <DependentUpon>Waiting room fortune teller.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -165,6 +207,66 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\green-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pink-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\long-orange-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trash-can-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EU Flag Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dashboard-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Challenging-Waiting-Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\game-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\long-purple-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Access-Code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\txtAccess-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fungus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fungus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\squirrel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rabbit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
