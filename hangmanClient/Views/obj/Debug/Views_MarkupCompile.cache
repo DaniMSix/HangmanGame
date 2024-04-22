@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\App.xaml
-71400931209
+11-1096203830
 
-13-845726933
+171242380678
 151069376965
-MainWindow.xaml;Pages\Challenging Waiting Room.xaml;Pages\CreateProfile.xaml;Pages\Home.xaml;Pages\Menu.xaml;Pages\PageAccessCode.xaml;Pages\Waiting room fortune teller.xaml;
+MainWindow.xaml;Pages\Challenging Waiting Room.xaml;Pages\CreateProfile.xaml;Pages\ErrorPage.xaml;Pages\Home.xaml;Pages\Menu.xaml;Pages\PageAccessCode.xaml;Pages\PageAnimalCategory.xaml;Pages\PageCategories.xaml;Pages\successPage.xaml;Pages\Waiting room fortune teller.xaml;
 
 True
 

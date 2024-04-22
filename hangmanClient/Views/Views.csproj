@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ErrorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,11 +98,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAnimalCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageCategories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\successPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Waiting room fortune teller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\warningPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +126,9 @@
     <Compile Include="Pages\CreateProfile.xaml.cs">
       <DependentUpon>CreateProfile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ErrorPage.xaml.cs">
+      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -119,11 +138,20 @@
     <Compile Include="Pages\PageAccessCode.xaml.cs">
       <DependentUpon>PageAccessCode.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageAnimalCategory.xaml.cs">
+      <DependentUpon>PageAnimalCategory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageCategories.xaml.cs">
       <DependentUpon>PageCategories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\successPage.xaml.cs">
+      <DependentUpon>successPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Waiting room fortune teller.xaml.cs">
       <DependentUpon>Waiting room fortune teller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\warningPage.xaml.cs">
+      <DependentUpon>warningPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -251,22 +279,22 @@
     <Resource Include="Images\txtAccess-code.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="fungus-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\fungus-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background-Categories.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\squirrel.png" />
+    <Resource Include="Images\flute-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\chicken.png" />
+    <Resource Include="Images\Background-Error.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\rabbit.png" />
+    <Resource Include="Images\Background-success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-warning.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

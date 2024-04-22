@@ -122,9 +122,5 @@
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
 
-
-
-
-
     </Application.Resources>
 </Application>

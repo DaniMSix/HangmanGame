@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\pagecategories.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\pagecategories.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\warningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\warningpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\createprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\createprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\views\\pages\\errorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\errorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\successpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\successpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\views\\pages\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\views\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\App.xaml",
               "RelativeDocumentMoniker": "Views\\App.xaml",
@@ -40,13 +48,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PageCategories.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\PageCategories.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\PageCategories.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\PageCategories.xaml",
-              "RelativeToolTip": "Views\\Pages\\PageCategories.xaml",
+              "Title": "warningPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\warningPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\warningPage.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\warningPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\warningPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T00:34:44.087Z",
+              "WhenOpened": "2024-04-22T01:23:50.079Z",
               "EditorCaption": ""
             },
             {
@@ -59,15 +67,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateProfile.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\CreateProfile.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\CreateProfile.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\CreateProfile.xaml",
-              "RelativeToolTip": "Views\\Pages\\CreateProfile.xaml",
+              "DocumentIndex": 2,
+              "Title": "successPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\successPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\successPage.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\successPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\successPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T23:00:28.93Z",
+              "WhenOpened": "2024-04-22T01:12:55.672Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\ErrorPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\ErrorPage.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\ErrorPage.xaml",
+              "RelativeToolTip": "Views\\Pages\\ErrorPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-22T00:33:04.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Home.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Home.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Home.xaml",
+              "RelativeToolTip": "Views\\Pages\\Home.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-22T00:30:57.049Z"
             }
           ]
         }
