@@ -2,13 +2,15 @@
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\App.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\MainWindow.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\Challenging Waiting Room.xaml;;
+FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\ChangeLanguage.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\CreateProfile.xaml;;
+FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\ErrorPage.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\Home.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\Menu.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\PageAccessCode.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\PageAnimalCategory.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\PageCategories.xaml;;
-FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\Waiting room fortune teller.xaml;;
-FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\ErrorPage.xaml;;
 FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\successPage.xaml;;
+FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\Waiting room fortune teller.xaml;;
+FC:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Pages\warningPage.xaml;;
 

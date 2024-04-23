@@ -78,6 +78,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ChangeLanguage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CreateProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\loser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,10 +126,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\winning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Challenging Waiting Room.xaml.cs">
       <DependentUpon>Challenging Waiting Room.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChangeLanguage.xaml.cs">
+      <DependentUpon>ChangeLanguage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CreateProfile.xaml.cs">
       <DependentUpon>CreateProfile.xaml</DependentUpon>
@@ -131,6 +146,9 @@
     </Compile>
     <Compile Include="Pages\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\loser.xaml.cs">
+      <DependentUpon>loser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
@@ -152,6 +170,9 @@
     </Compile>
     <Compile Include="Pages\warningPage.xaml.cs">
       <DependentUpon>warningPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\winning.xaml.cs">
+      <DependentUpon>winning.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -295,6 +316,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\World.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Purple-Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mexico-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-winning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sign.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

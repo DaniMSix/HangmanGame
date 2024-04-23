@@ -18,17 +18,35 @@ C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\bin\Debug\Views.exe
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\bin\Debug\Views.pdb
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.csproj.AssemblyReference.cache
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\MainWindow.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Challenging Waiting Room.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\ChangeLanguage.g.cs
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\CreateProfile.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\ErrorPage.g.cs
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Home.g.cs
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Menu.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAccessCode.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAnimalCategory.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCategories.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\successPage.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Waiting room fortune teller.g.cs
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\warningPage.g.cs
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\App.g.cs
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views_MarkupCompile.cache
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views_MarkupCompile.lref
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\App.baml
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\MainWindow.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Challenging Waiting Room.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\ChangeLanguage.baml
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\CreateProfile.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\ErrorPage.baml
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Home.baml
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Menu.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAccessCode.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAnimalCategory.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCategories.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\successPage.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Waiting room fortune teller.baml
+C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Pages\warningPage.baml
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.g.resources
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.Properties.Resources.resources
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.csproj.GenerateResource.cache
