@@ -10,9 +10,9 @@
       Title="Home">
 
     <Grid>
-        <Button Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,428,0,0" VerticalAlignment="Top" Height="43" Width="130"/>
-        <Button Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="Crear partida" HorizontalAlignment="Left" FontSize="22" Margin="433,428,0,0" VerticalAlignment="Top" Height="43" Width="175"/>
-        <Button Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Tengo un código" HorizontalAlignment="Left" Margin="626,428,0,0" VerticalAlignment="Top" Width="187" Height="43"/>
+        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,428,0,0" VerticalAlignment="Top" Height="43" Width="130"/>
+        <Button Cursor="Hand" Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="Crear partida" HorizontalAlignment="Left" FontSize="22" Margin="433,428,0,0" VerticalAlignment="Top" Height="43" Width="175"/>
+        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Tengo un código" HorizontalAlignment="Left" Margin="626,428,0,0" VerticalAlignment="Top" Width="187" Height="43"/>
         <Label FontFamily="{StaticResource FuenteVT323}" Content="Partidas disponibles" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="451,115,0,0" VerticalAlignment="Top"/>
         <Label FontFamily="{StaticResource FuenteVT323}" FontSize="17" Content="¡Bienvenido Daniela!" HorizontalAlignment="Left" Margin="40,164,0,0" VerticalAlignment="Top"/>
         <Button Style="{StaticResource button-menu}" Content="Button" HorizontalAlignment="Left" Margin="960,10,0,0" VerticalAlignment="Top" Height="15" Width="53"/>

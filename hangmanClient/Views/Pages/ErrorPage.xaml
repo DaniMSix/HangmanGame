@@ -23,7 +23,7 @@
         Las credenciales ingresadas no corresponden a ningún usuario registrado.
             </TextBlock>
         </Label>
-        <Button Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
 
 
     </Grid>

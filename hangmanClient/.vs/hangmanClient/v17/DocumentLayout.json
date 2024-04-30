@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\loser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\loser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\winning.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\winning.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\views\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\pages\\changelanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\changelanguage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dani\\desktop\\hangmangame\\hangmanclient\\views\\utils\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\utils\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\App.xaml",
-              "RelativeDocumentMoniker": "Views\\App.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\App.xaml",
-              "RelativeToolTip": "Views\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-19T15:14:21.883Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "loser.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\loser.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\loser.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\loser.xaml",
-              "RelativeToolTip": "Views\\Pages\\loser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-23T15:37:26.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "winning.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\winning.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\winning.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\winning.xaml",
-              "RelativeToolTip": "Views\\Pages\\winning.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-23T15:24:15.46Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -75,14 +42,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChangeLanguage.xaml",
-              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\ChangeLanguage.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\ChangeLanguage.xaml",
-              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\ChangeLanguage.xaml",
-              "RelativeToolTip": "Views\\Pages\\ChangeLanguage.xaml",
+              "DocumentIndex": 1,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Login.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
+              "RelativeToolTip": "Views\\Pages\\Login.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T17:35:42.476Z",
+              "WhenOpened": "2024-04-30T03:34:39.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-30T03:33:57.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Pages\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml.cs",
+              "RelativeToolTip": "Views\\Pages\\Login.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:25:30.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SoundManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Utils\\SoundManager.cs",
+              "RelativeDocumentMoniker": "Views\\Utils\\SoundManager.cs",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Utils\\SoundManager.cs",
+              "RelativeToolTip": "Views\\Utils\\SoundManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:17:30.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T15:24:34.758Z",
               "EditorCaption": ""
             }
           ]

@@ -21,7 +21,7 @@
    Width="370">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="360"><Run Text="¿Estás listo "/><LineBreak/><Run Text="para descifrar palabras y salvar al ahorcado?"/></TextBlock>
         </Label>
-        <Button Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
 
 
     </Grid>

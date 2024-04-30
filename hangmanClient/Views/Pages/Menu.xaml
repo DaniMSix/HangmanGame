@@ -12,11 +12,11 @@
         <Grid.Background>
             <SolidColorBrush Color="#7868DE" Opacity="0.56" />
         </Grid.Background>
-        <Button Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\pen.png" Content="Editar perfil" Margin="10,10,50,415"/>
-        <Button Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\dashboard-icon.png" Content="Ver estadísticas" Margin="10,40,19,385"/>
-        <Button Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\trash-can-icon.png" Content="Eliminar perfil" Margin="10,70,19,355"/>
-        <Button Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\EU Flag Icon.png" Content="Cambiar idioma" Margin="10,95,19,330"/>
-        <Button Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\arrow.png" Content="Salir" Margin="10,125,19,300"/>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\pen.png" Content="Editar perfil" Margin="10,10,50,415"/>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\dashboard-icon.png" Content="Ver estadísticas" Margin="10,40,19,385"/>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\trash-can-icon.png" Content="Eliminar perfil" Margin="10,70,19,355"/>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\EU Flag Icon.png" Content="Cambiar idioma" Margin="10,95,19,330"/>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\arrow.png" Content="Salir" Margin="10,125,19,300"/>
 
     </Grid>
 </Page>

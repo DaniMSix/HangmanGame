@@ -1,0 +1,38 @@
+﻿<Page x:Class="Views.Pages.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="495.667" d:DesignWidth="1005"
+      Title="Login">
+
+    <Grid Margin="0,0,10,-6">
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-Login.png" Margin="0,-7,-13,0"></Image>
+
+        <Grid>
+            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="342,224,329,227"/>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
+             Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,239,0,0" Opacity="0"/>
+            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="343,318,328,133"/>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
+            Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,332,0,0" Opacity="0"/>
+        </Grid>
+
+        <Button Cursor="Hand" x:Name="btnLogin"  Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="428,404,0,0" VerticalAlignment="Top" Height="53" Width="152" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
+
+        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\title-home-Spanish.png" HorizontalAlignment="Left" Height="76" Margin="266,79,0,0" VerticalAlignment="Top" Width="480"/>
+        <Label x:Name="txtTitleLogin" Content = "Login" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,163,328,313"/>
+        <Label x:Name="txtUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,192,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,286,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtRegister" Content="Registrarse" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Center" Margin="0,374,0,0" VerticalAlignment="Top"/>
+        <!-- Aquí debes ajustar la ruta de la música -->
+        <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Views/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
+
+        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Click="ClicPlayMusicButtonClick" Margin="929,-3,-9,430">
+            <Image x:Name="btnMusic" Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\note.png" Width="49" Height="46"/>
+        </Button>
+        <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
+    </Grid>
+</Page>

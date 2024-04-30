@@ -23,7 +23,7 @@
                 <DropShadowEffect Color="Black" Direction="315" ShadowDepth="2" Opacity="0.3"/>
             </Label.Effect>
         </Label>
-        <Button Style="{StaticResource long-purple-button}" Foreground="#331155" Content="Iniciar partida" FontFamily="{StaticResource FuenteVT323}" FontSize="24" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Height="52" Width="218"/>
+        <Button Cursor="Hand" Style="{StaticResource long-purple-button}" Foreground="#331155" Content="Iniciar partida" FontFamily="{StaticResource FuenteVT323}" FontSize="24" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Height="52" Width="218"/>
 
 
     </Grid>

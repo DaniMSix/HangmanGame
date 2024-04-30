@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-register-user.png"/>
         </Grid.Background>
 
-        <Button Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="51" Width="91"/>
+        <Button Cursor="Hand" Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="51" Width="91"/>
 
         <Label Content="Crear perfil" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="369,71,340,405"/>
         <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="281,131,460,344"/>
@@ -29,7 +29,7 @@
         <Label Content="Fecha &#xD;&#xA;nacimiento" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="545,123,0,0" VerticalAlignment="Top"/>
         <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="641,131,100,344"/>
         <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="641,390,100,85"/>
-        <Button Style="{StaticResource orange-button}" FocusVisualStyle="{x:Null}" Content="Registrarse" HorizontalAlignment="Left" Margin="477,447,0,0" VerticalAlignment="Top" Height="53" Width="174" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FocusVisualStyle="{x:Null}" Content="Registrarse" HorizontalAlignment="Left" Margin="477,447,0,0" VerticalAlignment="Top" Height="53" Width="174" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00"/>
 
     </Grid>
 </Page>

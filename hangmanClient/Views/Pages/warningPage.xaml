@@ -21,7 +21,7 @@ Margin="0,122,0,0"
 Width="370">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Hay campos vacíos. Complételos o cámbielos para continuar" Width="370"/>
         </Label>
-        <Button Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
 
 
     </Grid>

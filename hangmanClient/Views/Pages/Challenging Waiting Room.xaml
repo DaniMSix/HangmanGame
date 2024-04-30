@@ -20,8 +20,8 @@
             </Label.Effect>
         </Label>
         <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\game-flag.png" HorizontalAlignment="Left" Height="83" Margin="474,240,0,0" VerticalAlignment="Top" Width="82"/>
-        <Button Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Cancelar partida" FontSize="22" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"/>
-        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="26" Foreground="#3D408F" Content="Danimsix se ha unido a la partida" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Cancelar partida" FontSize="22" HorizontalAlignment="Left" Margin="398,328,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"/>
+        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="30" Foreground="#3D408F" Content="Danimsix se ha unido a la partida" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
