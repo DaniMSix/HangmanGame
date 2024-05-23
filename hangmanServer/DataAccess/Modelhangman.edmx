@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="hangman_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="id_category" />
+          </Key>
+          <Property Name="id_category" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="45" />
+          <Property Name="name_EN" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="Game_Match">
+          <Key>
+            <PropertyRef Name="id_gamematch" />
+          </Key>
+          <Property Name="id_gamematch" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code" Type="varchar" MaxLength="7" />
+          <Property Name="language" Type="varchar" MaxLength="10" />
+          <Property Name="id_word" Type="int" />
+          <Property Name="id_challenger" Type="int" />
+          <Property Name="id_guesser" Type="int" />
+          <Property Name="id_match_status" Type="int" />
+          <Property Name="id_match_language" Type="int" />
+        </EntityType>
+        <EntityType Name="Match_Language">
+          <Key>
+            <PropertyRef Name="id_match_language" />
+          </Key>
+          <Property Name="id_match_language" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="int" />
+        </EntityType>
+        <EntityType Name="Match_Status">
+          <Key>
+            <PropertyRef Name="id_match_status" />
+          </Key>
+          <Property Name="id_match_status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="int" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="id_player" />
+          </Key>
+          <Property Name="id_player" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="12" />
+          <Property Name="name" Type="varchar" MaxLength="40" />
+          <Property Name="birthdate" Type="date" />
+          <Property Name="phonenumber" Type="int" />
+          <Property Name="email" Type="varchar" MaxLength="45" />
+          <Property Name="password" Type="varchar" MaxLength="20" />
+          <Property Name="score" Type="int" />
+        </EntityType>
+        <EntityType Name="Word">
+          <Key>
+            <PropertyRef Name="id_word" />
+          </Key>
+          <Property Name="id_word" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" />
+          <Property Name="name_EN" Type="varchar" MaxLength="20" />
+          <Property Name="hint" Type="varchar" MaxLength="40" />
+          <Property Name="description" Type="varchar" MaxLength="150" />
+          <Property Name="id_category" Type="int" />
+        </EntityType>
+        <Association Name="FK_gamematch_challenger">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="id_player" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_challenger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_guesser">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="id_player" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_guesser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_match_language">
+          <End Role="Match_Language" Type="Self.Match_Language" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match_Language">
+              <PropertyRef Name="id_match_language" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_match_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_match_status">
+          <End Role="Match_Status" Type="Self.Match_Status" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match_Status">
+              <PropertyRef Name="id_match_status" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_match_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_word">
+          <End Role="Word" Type="Self.Word" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Word">
+              <PropertyRef Name="id_word" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_word" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_word_category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Word" Type="Self.Word" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="id_category" />
+            </Principal>
+            <Dependent Role="Word">
+              <PropertyRef Name="id_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hangman_dbModelStoreContainer">
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Game_Match" EntityType="Self.Game_Match" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Match_Language" EntityType="Self.Match_Language" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Match_Status" EntityType="Self.Match_Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Word" EntityType="Self.Word" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_gamematch_challenger" Association="Self.FK_gamematch_challenger">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_guesser" Association="Self.FK_gamematch_guesser">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_match_language" Association="Self.FK_gamematch_match_language">
+            <End Role="Match_Language" EntitySet="Match_Language" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_match_status" Association="Self.FK_gamematch_match_status">
+            <End Role="Match_Status" EntitySet="Match_Status" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_word" Association="Self.FK_gamematch_word">
+            <End Role="Word" EntitySet="Word" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_word_category" Association="Self.FK_word_category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Word" EntitySet="Word" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="hangman_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="id_category" />
+          </Key>
+          <Property Name="id_category" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="name_EN" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Word" Relationship="Self.FK_word_category" FromRole="Category" ToRole="Word" />
+        </EntityType>
+        <EntityType Name="Game_Match">
+          <Key>
+            <PropertyRef Name="id_gamematch" />
+          </Key>
+          <Property Name="id_gamematch" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="id_word" Type="Int32" />
+          <Property Name="id_challenger" Type="Int32" />
+          <Property Name="id_guesser" Type="Int32" />
+          <Property Name="id_match_status" Type="Int32" />
+          <Property Name="id_match_language" Type="Int32" />
+          <NavigationProperty Name="Player" Relationship="Self.FK_gamematch_challenger" FromRole="Game_Match" ToRole="Player" />
+          <NavigationProperty Name="Player1" Relationship="Self.FK_gamematch_guesser" FromRole="Game_Match" ToRole="Player" />
+          <NavigationProperty Name="Match_Language" Relationship="Self.FK_gamematch_match_language" FromRole="Game_Match" ToRole="Match_Language" />
+          <NavigationProperty Name="Match_Status" Relationship="Self.FK_gamematch_match_status" FromRole="Game_Match" ToRole="Match_Status" />
+          <NavigationProperty Name="Word" Relationship="Self.FK_gamematch_word" FromRole="Game_Match" ToRole="Word" />
+        </EntityType>
+        <EntityType Name="Match_Language">
+          <Key>
+            <PropertyRef Name="id_match_language" />
+          </Key>
+          <Property Name="id_match_language" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="Int32" />
+          <NavigationProperty Name="Game_Match" Relationship="Self.FK_gamematch_match_language" FromRole="Match_Language" ToRole="Game_Match" />
+        </EntityType>
+        <EntityType Name="Match_Status">
+          <Key>
+            <PropertyRef Name="id_match_status" />
+          </Key>
+          <Property Name="id_match_status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="Int32" />
+          <NavigationProperty Name="Game_Match" Relationship="Self.FK_gamematch_match_status" FromRole="Match_Status" ToRole="Game_Match" />
+        </EntityType>
+        <EntityType Name="Player">
+          <Key>
+            <PropertyRef Name="id_player" />
+          </Key>
+          <Property Name="id_player" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="birthdate" Type="DateTime" Precision="0" />
+          <Property Name="phonenumber" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="score" Type="Int32" />
+          <NavigationProperty Name="Game_Match" Relationship="Self.FK_gamematch_challenger" FromRole="Player" ToRole="Game_Match" />
+          <NavigationProperty Name="Game_Match1" Relationship="Self.FK_gamematch_guesser" FromRole="Player" ToRole="Game_Match" />
+        </EntityType>
+        <EntityType Name="Word">
+          <Key>
+            <PropertyRef Name="id_word" />
+          </Key>
+          <Property Name="id_word" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name_EN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="hint" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="id_category" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_word_category" FromRole="Word" ToRole="Category" />
+          <NavigationProperty Name="Game_Match" Relationship="Self.FK_gamematch_word" FromRole="Word" ToRole="Game_Match" />
+        </EntityType>
+        <Association Name="FK_word_category">
+          <End Role="Category" Type="Self.Category" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Word" Type="Self.Word" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="id_category" />
+            </Principal>
+            <Dependent Role="Word">
+              <PropertyRef Name="id_category" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_challenger">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="id_player" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_challenger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_guesser">
+          <End Role="Player" Type="Self.Player" Multiplicity="0..1" />
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Player">
+              <PropertyRef Name="id_player" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_guesser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_match_language">
+          <End Role="Match_Language" Type="Self.Match_Language" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match_Language">
+              <PropertyRef Name="id_match_language" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_match_language" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_match_status">
+          <End Role="Match_Status" Type="Self.Match_Status" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match_Status">
+              <PropertyRef Name="id_match_status" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_match_status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_gamematch_word">
+          <End Role="Word" Type="Self.Word" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Game_Match" Type="Self.Game_Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Word">
+              <PropertyRef Name="id_word" />
+            </Principal>
+            <Dependent Role="Game_Match">
+              <PropertyRef Name="id_word" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="hangman_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="Game_Match" EntityType="Self.Game_Match" />
+          <EntitySet Name="Match_Language" EntityType="Self.Match_Language" />
+          <EntitySet Name="Match_Status" EntityType="Self.Match_Status" />
+          <EntitySet Name="Player" EntityType="Self.Player" />
+          <EntitySet Name="Word" EntityType="Self.Word" />
+          <AssociationSet Name="FK_word_category" Association="Self.FK_word_category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Word" EntitySet="Word" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_challenger" Association="Self.FK_gamematch_challenger">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_guesser" Association="Self.FK_gamematch_guesser">
+            <End Role="Player" EntitySet="Player" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_match_language" Association="Self.FK_gamematch_match_language">
+            <End Role="Match_Language" EntitySet="Match_Language" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_match_status" Association="Self.FK_gamematch_match_status">
+            <End Role="Match_Status" EntitySet="Match_Status" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+          <AssociationSet Name="FK_gamematch_word" Association="Self.FK_gamematch_word">
+            <End Role="Word" EntitySet="Word" />
+            <End Role="Game_Match" EntitySet="Game_Match" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="hangman_dbModelStoreContainer" CdmEntityContainer="hangman_dbEntities">
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="hangman_dbModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="id_category" ColumnName="id_category" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="name_EN" ColumnName="name_EN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Game_Match">
+            <EntityTypeMapping TypeName="hangman_dbModel.Game_Match">
+              <MappingFragment StoreEntitySet="Game_Match">
+                <ScalarProperty Name="id_gamematch" ColumnName="id_gamematch" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="id_word" ColumnName="id_word" />
+                <ScalarProperty Name="id_challenger" ColumnName="id_challenger" />
+                <ScalarProperty Name="id_guesser" ColumnName="id_guesser" />
+                <ScalarProperty Name="id_match_status" ColumnName="id_match_status" />
+                <ScalarProperty Name="id_match_language" ColumnName="id_match_language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Match_Language">
+            <EntityTypeMapping TypeName="hangman_dbModel.Match_Language">
+              <MappingFragment StoreEntitySet="Match_Language">
+                <ScalarProperty Name="id_match_language" ColumnName="id_match_language" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Match_Status">
+            <EntityTypeMapping TypeName="hangman_dbModel.Match_Status">
+              <MappingFragment StoreEntitySet="Match_Status">
+                <ScalarProperty Name="id_match_status" ColumnName="id_match_status" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Player">
+            <EntityTypeMapping TypeName="hangman_dbModel.Player">
+              <MappingFragment StoreEntitySet="Player">
+                <ScalarProperty Name="id_player" ColumnName="id_player" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="score" ColumnName="score" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Word">
+            <EntityTypeMapping TypeName="hangman_dbModel.Word">
+              <MappingFragment StoreEntitySet="Word">
+                <ScalarProperty Name="id_word" ColumnName="id_word" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="name_EN" ColumnName="name_EN" />
+                <ScalarProperty Name="hint" ColumnName="hint" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="id_category" ColumnName="id_category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

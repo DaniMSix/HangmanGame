@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hangman_dbModelStoreContainer" CdmEntityContainer="hangman_dbEntities">
+    <EntitySetMapping Name="category">
+      <EntityTypeMapping TypeName="hangman_dbModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id_category" ColumnName="id_category" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gamematch">
+      <EntityTypeMapping TypeName="hangman_dbModel.gamematch">
+        <MappingFragment StoreEntitySet="gamematch">
+          <ScalarProperty Name="id_gamematch" ColumnName="id_gamematch" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="id_word" ColumnName="id_word" />
+          <ScalarProperty Name="id_challenger" ColumnName="id_challenger" />
+          <ScalarProperty Name="id_guesser" ColumnName="id_guesser" />
+          <ScalarProperty Name="id_match_status" ColumnName="id_match_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="match_status">
+      <EntityTypeMapping TypeName="hangman_dbModel.match_status">
+        <MappingFragment StoreEntitySet="match_status">
+          <ScalarProperty Name="id_match_status" ColumnName="id_match_status" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player">
+      <EntityTypeMapping TypeName="hangman_dbModel.player">
+        <MappingFragment StoreEntitySet="player">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id_player" ColumnName="id_player" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="word">
+      <EntityTypeMapping TypeName="hangman_dbModel.word">
+        <MappingFragment StoreEntitySet="word">
+          <ScalarProperty Name="id_word" ColumnName="id_word" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="hint" ColumnName="hint" />
+          <ScalarProperty Name="id_category" ColumnName="id_category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

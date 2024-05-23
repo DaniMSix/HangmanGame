@@ -1,36 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|c:\\users\\dani\\source\\repos\\ahorcadoserver\\comunication\\servicesexposed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|solutionrelative:comunication\\servicesexposed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AFBD45-0EC9-4CBA-8207-2275FF197DB8}|Server\\Server.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6AFBD45-0EC9-4CBA-8207-2275FF197DB8}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AFBD45-0EC9-4CBA-8207-2275FF197DB8}|Server\\Server.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{D6AFBD45-0EC9-4CBA-8207-2275FF197DB8}|Server\\Server.csproj|solutionrelative:server\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\comunication\\iplayermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|solutionrelative:comunication\\iplayermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\logic\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|solutionrelative:logic\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40B81F75-AC24-49E3-8466-FF42756B22E6}|Logs\\Logs.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\logs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40B81F75-AC24-49E3-8466-FF42756B22E6}|Logs\\Logs.csproj|solutionrelative:logs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6984868-2C03-4B56-8C57-C7B9522488E6}|DataAccess\\DataAccess.csproj|C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6984868-2C03-4B56-8C57-C7B9522488E6}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanServer\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -38,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,91 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Logic\\Player.cs",
-              "RelativeDocumentMoniker": "Logic\\Player.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Logic\\Player.cs",
-              "RelativeToolTip": "Logic\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T00:01:52.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Server\\App.config",
-              "RelativeDocumentMoniker": "Server\\App.config",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Server\\App.config",
-              "RelativeToolTip": "Server\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-03-26T18:21:08.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T18:18:31.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServicesExposed.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Comunication\\ServicesExposed.cs",
-              "RelativeDocumentMoniker": "Comunication\\ServicesExposed.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Comunication\\ServicesExposed.cs",
-              "RelativeToolTip": "Comunication\\ServicesExposed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T17:23:53.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPlayerManagement.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Comunication\\IPlayerManagement.cs",
-              "RelativeDocumentMoniker": "Comunication\\IPlayerManagement.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Comunication\\IPlayerManagement.cs",
-              "RelativeToolTip": "Comunication\\IPlayerManagement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T17:39:41.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Logs\\Class1.cs",
-              "RelativeDocumentMoniker": "Logs\\Class1.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\Logs\\Class1.cs",
-              "RelativeToolTip": "Logs\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T17:28:08.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\DataAccess\\Class1.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Class1.cs",
-              "ToolTip": "C:\\Users\\Dani\\source\\repos\\ahorcadoServer\\DataAccess\\Class1.cs",
-              "RelativeToolTip": "DataAccess\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T17:27:25.323Z"
             }
           ]
         }
