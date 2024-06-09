@@ -22,7 +22,7 @@
         <Style x:Key="orange-button" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush  ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\orange-button.png"/>
+                    <ImageBrush  ImageSource="\Images\orange-button.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -36,7 +36,7 @@
         <Style x:Key="green-button" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\green-button.png"/>
+                    <ImageBrush ImageSource="\Images\green-button.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -62,7 +62,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\arrow.png"/>
+                        <Image Source="\Views\Images\arrow.png"/>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -72,7 +72,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\menu-icon.png"/>
+                        <Image Source="\Views\Images\menu-icon.png"/>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -81,7 +81,7 @@
         <Style x:Key="pink-button" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\pink-button.png"/>
+                    <ImageBrush ImageSource="\Images\pink-button.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -92,7 +92,7 @@
         <Style x:Key="long-orange-button" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\long-orange-button.png"/>
+                    <ImageBrush ImageSource="\Images\long-orange-button.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -125,7 +125,7 @@
         <Style x:Key="long-purple-button" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\long-purple-button.png"/>
+                    <ImageBrush ImageSource="\Images\long-purple-button.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="BorderBrush" Value="Transparent"/>

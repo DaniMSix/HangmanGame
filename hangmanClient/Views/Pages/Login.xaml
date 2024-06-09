@@ -8,31 +8,32 @@
       d:DesignHeight="495.667" d:DesignWidth="1005"
       Title="Login">
 
-    <Grid Margin="0,0,10,-6">
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-Login.png" Margin="0,-7,-13,0"></Image>
+    <Grid >
+        <Image Source="\Images\Background-Login.png" Margin="0,-7,-13,0"></Image>
 
         <Grid>
-            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="342,224,329,227"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
-             Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,239,0,0" Opacity="0"/>
-            <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="343,318,328,133"/>
-            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top"
-            Width="267" Height="27" FontSize="20" Text="Texto en TextBox" Margin="368,332,0,0" Opacity="0"/>
+            <Image Source="\Images\Label-login.png"  Margin="307,220,295,221"/>
+            <TextBox x:Name="txtUser" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Center" VerticalAlignment="Center"
+         Width="240" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" FocusVisualStyle="{x:Null}"/>
+            <Image Source="\Images\Label-login.png"  Margin="326,316,306,126"/>
+            <PasswordBox x:Name="psdPassword" HorizontalAlignment="Left" Margin="387,332,0,0" VerticalAlignment="Top"
+             Width="240" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0" FocusVisualStyle="{x:Null}"/>
         </Grid>
 
-        <Button Cursor="Hand" x:Name="btnLogin"  Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="428,404,0,0" VerticalAlignment="Top" Height="53" Width="152" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
+        <Button Cursor="Hand" x:Name="btnLogin"  Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="447,427,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
 
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\title-home-Spanish.png" HorizontalAlignment="Left" Height="76" Margin="266,79,0,0" VerticalAlignment="Top" Width="480"/>
-        <Label x:Name="txtTitleLogin" Content = "Login" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,163,328,313"/>
-        <Label x:Name="txtUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,192,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txtPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="356,286,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txtRegister" Content="Registrarse" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Center" Margin="0,374,0,0" VerticalAlignment="Top"/>
+        <Image Source="\Images\title-home-Spanish.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
+        <Label x:Name="txtTitleLogin" HorizontalContentAlignment="Center" Content = "Iniciar sesión" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>
+        <Label x:Name="lbUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="371,192,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="¿No tienes perfil aún? ¡Regístrate aquí!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"/>
         <!-- Aquí debes ajustar la ruta de la música -->
         <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Views/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
         <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Click="ClicPlayMusicButtonClick" Margin="929,-3,-9,430">
-            <Image x:Name="btnMusic" Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\note.png" Width="49" Height="46"/>
+            <Image x:Name="btnMusic" Source="\Images\note.png" Width="49" Height="46"/>
         </Button>
         <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
+        <Image Source="\Images\mexico-flag.png" HorizontalAlignment="Left" Height="56" Margin="888,12,0,0" VerticalAlignment="Top" Width="53"/>
     </Grid>
 </Page>

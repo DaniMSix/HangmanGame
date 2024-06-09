@@ -7,13 +7,15 @@
         xmlns:p="clr-namespace:Views.Properties"
         xmlns:pages="clr-namespace:Views.Pages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="495.667" Width="1005">
+        Title="MainWindow" Height="530" Width="1005"
+        ResizeMode="NoResize">
 
-    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Height="720" Width="1280">
-        <Frame.Content>
-            <local:Login/>
-            <!-- Aquí se carga la página de inicio de sesión -->
-        </Frame.Content>
-    </Frame>
+    <Grid>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden">
+                <Frame.Content>
+                    <local:Login/>
+                </Frame.Content>
+        </Frame>
+    </Grid>
 
 </Window>

@@ -4,3 +4,9 @@ C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.Assem
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.CoreCompileInputs.cache
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.dll
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\bin\Debug\Logs.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\bin\Debug\Logs.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.AssemblyReference.cache
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.csproj.CoreCompileInputs.cache
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Logs\obj\Debug\Logs.pdb
