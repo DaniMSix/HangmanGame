@@ -5,31 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="517" d:DesignWidth="1005"
+      d:DesignHeight="530" d:DesignWidth="1005"
       Title="CreateProfile">
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-register-user.png"/>
+            <ImageBrush ImageSource="\Images\Background-register-user.png"/>
         </Grid.Background>
 
         <Button Cursor="Hand" Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="51" Width="91"/>
 
         <Label Content="Crear perfil" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="369,71,340,405"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="281,131,460,344"/>
+        <Image Source="\Images\Label-login.png"  Margin="291,116,445,352"/>
         <Label Content="Nombre completo" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="140,202,0,0" VerticalAlignment="Top"/>
         <Label Content="Usuario" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="213,131,0,0" VerticalAlignment="Top"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="266,196,441,279"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="262,258,445,217"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="262,324,445,151"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="262,386,445,89"/>
         <Label Content="Teléfono celular" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="126,260,0,0" VerticalAlignment="Top"/>
         <Label Content="Correo" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="220,325,0,0" VerticalAlignment="Top"/>
         <Label Content="Contraseña(confirmar)" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="92,390,0,0" VerticalAlignment="Top"/>
-        <Label Content="Fecha &#xD;&#xA;nacimiento" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="545,123,0,0" VerticalAlignment="Top"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="641,131,100,344"/>
-        <Image Source="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Label-login.png"  Margin="641,390,100,85"/>
+        <Label Content="Fecha &#xD;&#xA;nacimiento" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,117,0,0" VerticalAlignment="Top"/>
+        <Image Source="\Images\Label-login.png"  Margin="685,117,56,358"/>
         <Button Cursor="Hand" Style="{StaticResource orange-button}" FocusVisualStyle="{x:Null}" Content="Registrarse" HorizontalAlignment="Left" Margin="477,447,0,0" VerticalAlignment="Top" Height="53" Width="174" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00"/>
+        <Image Source="/Images/Label-login.png"  Margin="291,186,445,282"/>
+        <Image Source="/Images/Label-login.png"  Margin="291,250,445,218"/>
+        <Image Source="/Images/Label-login.png"  Margin="291,312,445,156"/>
+        <Image Source="/Images/Label-login.png"  Margin="291,376,445,92"/>
+        <Image Source="/Images/Label-login.png"  Margin="690,376,46,92"/>
 
     </Grid>
 </Page>

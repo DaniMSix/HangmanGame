@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Views.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para Home.xaml
-    /// </summary>
     public partial class Home : Page
     {
-        public Home()
+        DTOPlayer activePlayer;
+
+        public Home(DTOPlayer activePlayer)
         {
             InitializeComponent();
+            this.activePlayer = activePlayer;
+            ShowPlayerGreeting();
         }
 
+        public void ShowPlayerGreeting()
+        {
+            lbPlayerGreeting.Content = "Bienvenido " + activePlayer.Name;
+        }
+
+        private void BtnClicShowMenu(object sender, RoutedEventArgs e)
+        {
+            var menuPage = new Menu();
+            frMenu.Navigate(menuPage);
+            frMenu.Visibility = Visibility.Visible;
+            btnExit.Visibility = Visibility.Visible;
+        }
+
+        private void BtnClicHideMenu(object sender, RoutedEventArgs e)
+        {
+            frMenu.Visibility = Visibility.Hidden;
+            btnExit.Visibility = Visibility.Hidden;
+        }
     }
 }

@@ -13,10 +13,10 @@ namespace DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class hangman_dbEntities : DbContext
+    public partial class HangmanDbEntities : DbContext
     {
-        public hangman_dbEntities()
-            : base("name=hangman_dbEntities")
+        public HangmanDbEntities()
+            : base("name=HangmanDbEntities")
         {
         }
     
@@ -26,9 +26,9 @@ namespace DataAccess
         }
     
         public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Game_Match> Game_Match { get; set; }
-        public virtual DbSet<Match_Language> Match_Language { get; set; }
-        public virtual DbSet<Match_Status> Match_Status { get; set; }
+        public virtual DbSet<Gamematch> Gamematch { get; set; }
+        public virtual DbSet<MatchLanguage> MatchLanguage { get; set; }
+        public virtual DbSet<MatchStatus> MatchStatus { get; set; }
         public virtual DbSet<Player> Player { get; set; }
         public virtual DbSet<Word> Word { get; set; }
     }

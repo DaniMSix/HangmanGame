@@ -8,32 +8,73 @@
       d:DesignHeight="495.667" d:DesignWidth="1005"
       Title="Login">
 
-    <Grid >
-        <Image Source="\Images\Background-Login.png" Margin="0,-7,-13,0"></Image>
+    <Grid>
+        <Image Source="\Images\Background-Login.png" Margin="0,-7,-13,0"/>
 
         <Grid>
-            <Image Source="\Images\Label-login.png"  Margin="307,220,295,221"/>
+            <Image Source="\Images\Label-login.png" Margin="307,220,295,221"/>
+            <Image x:Name="imgLabelErrorUser" Visibility="Hidden" Source="\Images\error-label.png" Height="60" Margin="295,215,284,221"/>
             <TextBox x:Name="txtUser" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Center" VerticalAlignment="Center"
          Width="240" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" FocusVisualStyle="{x:Null}"/>
             <Image Source="\Images\Label-login.png"  Margin="326,316,306,126"/>
+            <Image x:Name="imgLabelErrorPassword" Visibility="Hidden" Source="\Images\error-label.png" Height="60" Margin="326,310,306,126"/>
             <PasswordBox x:Name="psdPassword" HorizontalAlignment="Left" Margin="387,332,0,0" VerticalAlignment="Top"
              Width="240" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0" FocusVisualStyle="{x:Null}"/>
         </Grid>
+        <!-- TextBlock para los puntos suspensivos -->
+        <TextBlock x:Name="txtLoadingDots" FontFamily="{StaticResource FuenteVT323}" Visibility="Collapsed" Text="..." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,427,0,0" >
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="TextBlock.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Text">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="."/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value=".."/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="..."/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="."/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value=".."/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="..."/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Collapsed}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
 
-        <Button Cursor="Hand" x:Name="btnLogin"  Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="447,427,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
+        <Button x:Name="btnLogin" Cursor="Hand" Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="447,427,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
 
         <Image Source="\Images\title-home-Spanish.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
         <Label x:Name="txtTitleLogin" HorizontalContentAlignment="Center" Content = "Iniciar sesión" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>
         <Label x:Name="lbUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="371,192,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="¿No tienes perfil aún? ¡Regístrate aquí!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"/>
+        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="¿No tienes perfil aún? ¡Regístrate aquí!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
+               MouseUp="TxtClicRegister"/>
         <!-- Aquí debes ajustar la ruta de la música -->
-        <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Views/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
+        <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
         <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Click="ClicPlayMusicButtonClick" Margin="929,-3,-9,430">
             <Image x:Name="btnMusic" Source="\Images\note.png" Width="49" Height="46"/>
         </Button>
         <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
         <Image Source="\Images\mexico-flag.png" HorizontalAlignment="Left" Height="56" Margin="888,12,0,0" VerticalAlignment="Top" Width="53"/>
+
+        <!-- Fondo gris semitransparente -->
+        <Border x:Name="brdGrayBackground" Background="#80000000" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1005" Height="496" Visibility="Collapsed"/>
+
+        <!-- Frame para el mensaje -->
+        <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
+
+
+        <!-- TextBlock para "Cargando" -->
+        <TextBlock x:Name="txtLoadingLabel" FontFamily="{StaticResource FuenteVT323}" Text="Cargando" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,427,0,0" Visibility="Collapsed"/>
+
+        
+
+
+
     </Grid>
 </Page>

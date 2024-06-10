@@ -17,22 +17,22 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Player()
         {
-            this.Game_Match = new HashSet<Game_Match>();
-            this.Game_Match1 = new HashSet<Game_Match>();
+            this.Gamematch = new HashSet<Gamematch>();
+            this.Gamematch1 = new HashSet<Gamematch>();
         }
     
-        public int id_player { get; set; }
+        public int idPlayer { get; set; }
         public string username { get; set; }
         public string name { get; set; }
         public Nullable<System.DateTime> birthdate { get; set; }
-        public Nullable<int> phonenumber { get; set; }
+        public string phonenumber { get; set; }
         public string email { get; set; }
         public string password { get; set; }
         public Nullable<int> score { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Match> Game_Match { get; set; }
+        public virtual ICollection<Gamematch> Gamematch { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Match> Game_Match1 { get; set; }
+        public virtual ICollection<Gamematch> Gamematch1 { get; set; }
     }
 }

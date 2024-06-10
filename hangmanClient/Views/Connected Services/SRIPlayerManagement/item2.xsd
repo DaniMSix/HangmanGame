@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic" />
+  <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic.DTO" />
+  <xs:element name="AuthenticateLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Logic.DTO" minOccurs="0" name="AuthenticateLoginResult" nillable="true" type="q1:DTOPlayer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="RegisterPlayer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Logic" minOccurs="0" name="newPlayer" nillable="true" type="q1:Player" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Logic.DTO" minOccurs="0" name="newPlayer" nillable="true" type="q2:DTOPlayer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -12,6 +27,34 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="RegisterPlayerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmailPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Logic.DTO" minOccurs="0" name="dataPlayer" nillable="true" type="q3:DTOPlayer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEmailPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateEmailPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFullProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Logic.DTO" minOccurs="0" name="dataPlayer" nillable="true" type="q4:DTOPlayer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFullProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateFullProfileResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

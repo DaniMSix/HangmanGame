@@ -1,7 +1,6 @@
 ﻿using DataAccess;
 using Logic;
 using Logic.DTO;
-using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core;
@@ -19,7 +18,7 @@ namespace Comunication
 
             try
             {
-                UserManagement authentication = new UserManagement();
+                PlayerManagement authentication = new PlayerManagement();
 
                 player = authentication.AuthenticationLogin(username, password);
 
@@ -51,7 +50,7 @@ namespace Comunication
             var status = false;
             try
             {
-                UserManagement userManagement = new UserManagement();
+                PlayerManagement userManagement = new PlayerManagement();
                 status = userManagement.UpdateEmailPassword(dataPlayer);
             }
             catch (EntityException entityException)
@@ -66,7 +65,7 @@ namespace Comunication
             var status = false;
             try
             {
-                UserManagement userManagement = new UserManagement();
+                PlayerManagement userManagement = new PlayerManagement();
                 status = userManagement.UpdateFullProfile(dataPlayer);
             }
             catch (EntityException entityException)
@@ -78,37 +77,6 @@ namespace Comunication
 
     }
 
-    public partial class ServicesExposed : IUserEmailValidation
-    {
-        public bool CheckIfEmailAndUserExist(string username, string email)
-        {
-            Register register = new Register();
-            bool status = false;
-
-            try
-            {
-                status = register.CheckIfEmailAndUsernameExist(username, email);
-            }
-            catch (EntityException entityException)
-            {
-                Console.WriteLine($"{entityException.Message}");
-            }
-            return status;
-        }
-
-        public bool SendEmailValidation(System.String codeValidation, System.String email)
-        {
-            var emailSentSuccessfully = client.SendEmailValidation(codeValidation, email);
-            return emailSentSuccessfully;
-        }
-
-        public System.String GenerateValidationCode()
-        {
-            return new Random().Next(0, 100000).ToString("D5");
-            // D5: Generate a number with less than 5 digits, add 0's at the beginning.
-        }
-    }
-
     public partial class ServicesExposed : IManageGameService
     {
         private IManageGameServiceCallback callBackGameService = null;
@@ -117,8 +85,8 @@ namespace Comunication
 
         public void NewGame(int hostUserId, string gameName)
         {
-            ManageGame manageGame = new ManageGame();
-            Game_Match registeredGame = null;
+            /*ManageGame manageGame = new ManageGame();
+            Gamematch registeredGame = null;
             try
             {
                 registeredGame = manageGame.RegisterGame(gameName);
@@ -132,7 +100,7 @@ namespace Comunication
             {
                 Room room = new Room()
                 {
-                    Game = registeredGame,
+                    GameMatch = registeredGame,
                     HostUserId = hostUserId,
                     Players = new List<int>()
                 };
@@ -145,19 +113,19 @@ namespace Comunication
                 players.Add(hostUserId, callBackGameService);
                 callBackGameService.StartGameRoom(registeredGame);
             }
-
+            */
         }
 
         public void JoinGame(int userId, string accessCode)
         {
-            var error = 1;
+            /*var error = 1;
 
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
             {
                 foreach (Room room in globalRooms)
                 {
-                    if (room.Game_Match != null && room.Game_Match.code == accessCode)
+                    if (room.GameMatch & room.GameMatch.code == accessCode)
                     {
                         if (room.Players.Count >= room.MAXPLAYERS)
                         {
@@ -168,7 +136,7 @@ namespace Comunication
                             error = 0;
                             room.Players.Add(userId);
                             players.Add(userId, callBackGameService);
-                            callBackGameService.StartGameRoom(room.Game_Match);
+                            callBackGameService.StartGameRoom(room.GameMatch);
                         }
                         break;
                     }
@@ -183,7 +151,7 @@ namespace Comunication
                 {
                     callBackGameService.CompleteRoom();
                 }
-            }
+            }*/
         }
 
         public void DisconnectGame(int userId, int gameId)
@@ -191,7 +159,7 @@ namespace Comunication
             Console.WriteLine($"disconnected {userId}");
             foreach (Room room in globalRooms)
             {
-                if (room.Game_Match.id_gamematch == gameId)
+                if (room.GameMatch.idGamematch == gameId)
                 {
                     if (room.HostUserId == userId)
                     {

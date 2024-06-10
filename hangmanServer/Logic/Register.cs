@@ -14,16 +14,16 @@ namespace Logic
         {
             bool status = false;
 
-            using (var context = new hangman_dbEntities())
+            using (var context = new HangmanDbEntities())
             {
                 Player recordPlayer = new Player()
                 {
-                    username = newPlayer.username,
-                    name = newPlayer.name,
-                    birthdate = newPlayer.birthdate,
-                    phonenumber = newPlayer.phonenumber,
-                    email = newPlayer.email,
-                    password = newPlayer.password,
+                    username = newPlayer.Username,
+                    name = newPlayer.Name,
+                    birthdate = newPlayer.Birthdate,
+                    phonenumber = newPlayer.Phonenumber,
+                    email = newPlayer.Email,
+                    password = newPlayer.Password,
                     
                 };
 
@@ -36,7 +36,7 @@ namespace Logic
         public bool CheckIfEmailAndUsernameExist(System.String username, String email)
         {
             bool thereAreRecords = false;
-            using (var context = new hangman_dbEntities())
+            using (var context = new HangmanDbEntities())
             {
                 var accounts = (from player in context.Player
                                 where

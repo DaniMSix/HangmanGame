@@ -1,28 +1,25 @@
-﻿<Page x:Class="Views.Pages.successPage"
+﻿<Page x:Class="Views.Pages.SuccessPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="251" d:DesignWidth="518"
-      Title="successPage">
+      Title="SuccessPage">
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\Background-success.png"/>
+            <ImageBrush ImageSource="\Images\Background-success.png"/>
         </Grid.Background>
-        <Label FontFamily="{StaticResource PressStart2P}" Content="¡Hola de nuevo, Daniela! " FontSize="20" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="471"/>
-        <Label FontFamily="{StaticResource FuenteVT323}"  
+        <Label x:Name="txtTitle" FontFamily="{StaticResource PressStart2P}"  HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="471"/>
+        <Label x:Name="txtContent" FontFamily="{StaticResource FuenteVT323}"  HorizontalContentAlignment="Center"
    FontSize="17" 
    HorizontalAlignment="Center" 
    VerticalAlignment="Top" 
    Margin="0,122,0,0" 
    Width="370">
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="360"><Run Text="¿Estás listo "/><LineBreak/><Run Text="para descifrar palabras y salvar al ahorcado?"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="360"></TextBlock>
         </Label>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
-
-
+        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="BtnAcceptClick"/>
     </Grid>
 </Page>

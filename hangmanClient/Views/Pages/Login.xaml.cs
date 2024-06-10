@@ -1,20 +1,24 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
+using System.Windows.Input;
+using System.Windows.Navigation;
 using Views.Utils;
 
 namespace Views.Pages
 {
     public partial class Login : Page
     {
+        private SRIPlayerManagement.IPlayerManagement client = new SRIPlayerManagement.PlayerManagementClient();
         private bool isPlaying = false;
+        private string username;
+        private string password;
+        Domain.DTOPlayer newPlayeraActive;
 
         public Login()
         {
             InitializeComponent();
-            // Subscribe to the MediaEnded event to restart playback when the media file has ended
-            //mediaPlayerBackgroundMusic.MediaEnded += MediaPlayerMediaEnded;
         }
 
         private void ClicPlayMusicButtonClick(object sender, RoutedEventArgs e)
@@ -22,57 +26,89 @@ namespace Views.Pages
             btnMusic.Opacity = 0.2;
             if (!isPlaying)
             {
-                // Set the LoadedBehavior to Manual
-                //mediaPlayerBackgroundMusic.LoadedBehavior = MediaState.Manual;
-                // Play the media file
-                //mediaPlayerBackgroundMusic.Play();
-                // Increase the volume (for example, by 10%)
-                //mediaPlayerBackgroundMusic.Volume += 0.1; // Adjust this value as needed
-                // Update the playback state
                 isPlaying = true;
             }
             else
             {
-                // Pause the playback
-                //mediaPlayerBackgroundMusic.Pause();
-                // Update the playback state
                 isPlaying = false;
             }
         }
 
-        // Method to restart playback when the media file has ended
-        private void MediaPlayerMediaEnded(object sender, RoutedEventArgs e)
+        private async void ClickLogin(object sender, RoutedEventArgs e)
         {
-            // If the media file has ended and playback is active, restart playback
-            if (isPlaying)
+            btnLogin.Visibility = Visibility.Hidden;
+            txtLoadingLabel.Visibility = Visibility.Visible;
+            txtLoadingDots.Visibility = Visibility.Visible;
+            try
             {
-                //mediaPlayerBackgroundMusic.Position = TimeSpan.Zero; // Reset the player position to the beginning
-                //mediaPlayerBackgroundMusic.Play(); // Start playback again
+                username = txtUser.Text;
+                password = psdPassword.Password;
+
+                var playerLogin = await Task.Run(() => client.AuthenticateLogin(username, password));
+
+                if (playerLogin != null)
+                {
+                    newPlayeraActive = new Domain.DTOPlayer()
+                    {
+                        IdPlayer = playerLogin.IdPlayer,
+                        Username = playerLogin.Username,
+                        Name = playerLogin.Name,
+                        Birthdate = playerLogin.Birthdate,
+                        Phonenumber = playerLogin.Phonenumber,
+                        Email = playerLogin.Email,
+                        Score = playerLogin.Score
+                    };
+
+                    txtLoadingLabel.Visibility = Visibility.Collapsed;
+                    txtLoadingDots.Visibility = Visibility.Hidden;
+                    // Mostrar el fondo gris semitransparente
+                    brdGrayBackground.Visibility = Visibility.Visible;
+
+                    // Crear una instancia de SuccessPage con el título y contenido deseado
+                    var successPage = new SuccessPage("¡Éxito!", "Inicio de sesión exitoso.");
+
+                    // Suscribirse al evento MessageClosed de SuccessPage
+                    successPage.MessageClosed += (s, args) =>
+                    {
+                        txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
+                        brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
+                        var home = new Home(newPlayeraActive);
+                        if (NavigationService != null)
+                        {
+                            NavigationService.Navigate(home);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocurrió un error al intentar mostrar la ventana");
+                        }
+                    };
+
+
+                    // Asignar SuccessPage al contenido del Frame
+                    frMessage.Content = successPage;
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrectas.", "Inicio de sesión fallido", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error durante la autenticación: " + ex.Message);
+            }
+            finally
+            {
             }
         }
 
-        private void ClickLogin(object sender, RoutedEventArgs e)
+        private void TxtClicRegister(object sender, MouseButtonEventArgs e)
         {
-            ButtonAnimation buttonAnimation = new ButtonAnimation();
-            buttonAnimation.ClickDarken(btnLogin, () =>
-            {
-                btnLogin.Dispatcher.Invoke(() =>
-                {
-                    btnLogin.Opacity = 1.0;
-                });
-            });
-            btnLogin.Opacity = 1.0;
-            SoundManager.PlayButtonClickSound();
+            // Crear una instancia de la página de registro (suponiendo que se llama RegisterPage)
+            var registerPage = new CreateProfile();
+
+            // Navegar a la página de registro
+            NavigationService.Navigate(registerPage);
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

@@ -12,26 +12,83 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic" />
+      <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic.DTO" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IPlayerManagement_AuthenticateLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateLogin" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerManagement_AuthenticateLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateLoginResponse" />
+  </wsdl:message>
   <wsdl:message name="IPlayerManagement_RegisterPlayer_InputMessage">
     <wsdl:part name="parameters" element="tns:RegisterPlayer" />
   </wsdl:message>
   <wsdl:message name="IPlayerManagement_RegisterPlayer_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegisterPlayerResponse" />
   </wsdl:message>
+  <wsdl:message name="IPlayerManagement_UpdateEmailPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailPassword" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerManagement_UpdateEmailPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerManagement_UpdateFullProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFullProfile" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerManagement_UpdateFullProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFullProfileResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPlayerManagement">
+    <wsdl:operation name="AuthenticateLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/AuthenticateLogin" message="tns:IPlayerManagement_AuthenticateLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/AuthenticateLoginResponse" message="tns:IPlayerManagement_AuthenticateLogin_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="RegisterPlayer">
       <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/RegisterPlayer" message="tns:IPlayerManagement_RegisterPlayer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/RegisterPlayerResponse" message="tns:IPlayerManagement_RegisterPlayer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateEmailPassword" message="tns:IPlayerManagement_UpdateEmailPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateEmailPasswordResponse" message="tns:IPlayerManagement_UpdateEmailPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFullProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile" message="tns:IPlayerManagement_UpdateFullProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse" message="tns:IPlayerManagement_UpdateFullProfile_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IPlayerManagement" type="tns:IPlayerManagement">
     <wsp:PolicyReference URI="#NetTcpBinding_IPlayerManagement_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="AuthenticateLogin">
+      <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/AuthenticateLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="RegisterPlayer">
       <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/RegisterPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailPassword">
+      <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/UpdateEmailPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFullProfile">
+      <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/UpdateFullProfile" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

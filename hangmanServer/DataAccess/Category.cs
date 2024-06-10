@@ -20,9 +20,9 @@ namespace DataAccess
             this.Word = new HashSet<Word>();
         }
     
-        public int id_category { get; set; }
+        public int idCategory { get; set; }
         public string name { get; set; }
-        public string name_EN { get; set; }
+        public string nameEN { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Word> Word { get; set; }

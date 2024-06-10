@@ -16,3 +16,15 @@ C:\Users\Dani\Desktop\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.
 C:\Users\Dani\Desktop\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
 C:\Users\Dani\Desktop\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Dani\Desktop\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.csproj.Up2Date
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanServer\DataAccess\obj\Debug\DataAccess.pdb

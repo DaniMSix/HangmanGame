@@ -15,36 +15,36 @@ namespace Views.SRIPlayerManagement {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Player", Namespace="http://schemas.datacontract.org/2004/07/Logic")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DTOPlayer", Namespace="http://schemas.datacontract.org/2004/07/Logic.DTO")]
     [System.SerializableAttribute()]
-    public partial class Player : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DTOPlayer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
+        private System.DateTime BirthdateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool isActiveField;
+        private string EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int numberGamesWonField;
+        private int IdPlayerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string passwordField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string phoneField;
+        private string PasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int pointsEarnedField;
+        private string PhonenumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int userIdField;
+        private int ScoreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string usernameField;
+        private string UsernameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -57,105 +57,105 @@ namespace Views.SRIPlayerManagement {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
+        public System.DateTime Birthdate {
             get {
-                return this.emailField;
+                return this.BirthdateField;
             }
             set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
+                if ((this.BirthdateField.Equals(value) != true)) {
+                    this.BirthdateField = value;
+                    this.RaisePropertyChanged("Birthdate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool isActive {
+        public string Email {
             get {
-                return this.isActiveField;
+                return this.EmailField;
             }
             set {
-                if ((this.isActiveField.Equals(value) != true)) {
-                    this.isActiveField = value;
-                    this.RaisePropertyChanged("isActive");
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int numberGamesWon {
+        public int IdPlayer {
             get {
-                return this.numberGamesWonField;
+                return this.IdPlayerField;
             }
             set {
-                if ((this.numberGamesWonField.Equals(value) != true)) {
-                    this.numberGamesWonField = value;
-                    this.RaisePropertyChanged("numberGamesWon");
+                if ((this.IdPlayerField.Equals(value) != true)) {
+                    this.IdPlayerField = value;
+                    this.RaisePropertyChanged("IdPlayer");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string password {
+        public string Name {
             get {
-                return this.passwordField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
-                    this.passwordField = value;
-                    this.RaisePropertyChanged("password");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone {
+        public string Password {
             get {
-                return this.phoneField;
+                return this.PasswordField;
             }
             set {
-                if ((object.ReferenceEquals(this.phoneField, value) != true)) {
-                    this.phoneField = value;
-                    this.RaisePropertyChanged("phone");
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int pointsEarned {
+        public string Phonenumber {
             get {
-                return this.pointsEarnedField;
+                return this.PhonenumberField;
             }
             set {
-                if ((this.pointsEarnedField.Equals(value) != true)) {
-                    this.pointsEarnedField = value;
-                    this.RaisePropertyChanged("pointsEarned");
+                if ((object.ReferenceEquals(this.PhonenumberField, value) != true)) {
+                    this.PhonenumberField = value;
+                    this.RaisePropertyChanged("Phonenumber");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int userId {
+        public int Score {
             get {
-                return this.userIdField;
+                return this.ScoreField;
             }
             set {
-                if ((this.userIdField.Equals(value) != true)) {
-                    this.userIdField = value;
-                    this.RaisePropertyChanged("userId");
+                if ((this.ScoreField.Equals(value) != true)) {
+                    this.ScoreField = value;
+                    this.RaisePropertyChanged("Score");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string username {
+        public string Username {
             get {
-                return this.usernameField;
+                return this.UsernameField;
             }
             set {
-                if ((object.ReferenceEquals(this.usernameField, value) != true)) {
-                    this.usernameField = value;
-                    this.RaisePropertyChanged("username");
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
                 }
             }
         }
@@ -174,11 +174,29 @@ namespace Views.SRIPlayerManagement {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SRIPlayerManagement.IPlayerManagement")]
     public interface IPlayerManagement {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/RegisterPlayer", ReplyAction="http://tempuri.org/IPlayerManagement/RegisterPlayerResponse")]
-        bool RegisterPlayer(Views.SRIPlayerManagement.Player newPlayer);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/AuthenticateLogin", ReplyAction="http://tempuri.org/IPlayerManagement/AuthenticateLoginResponse")]
+        Views.SRIPlayerManagement.DTOPlayer AuthenticateLogin(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/AuthenticateLogin", ReplyAction="http://tempuri.org/IPlayerManagement/AuthenticateLoginResponse")]
+        System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOPlayer> AuthenticateLoginAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/RegisterPlayer", ReplyAction="http://tempuri.org/IPlayerManagement/RegisterPlayerResponse")]
-        System.Threading.Tasks.Task<bool> RegisterPlayerAsync(Views.SRIPlayerManagement.Player newPlayer);
+        bool RegisterPlayer(Views.SRIPlayerManagement.DTOPlayer newPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/RegisterPlayer", ReplyAction="http://tempuri.org/IPlayerManagement/RegisterPlayerResponse")]
+        System.Threading.Tasks.Task<bool> RegisterPlayerAsync(Views.SRIPlayerManagement.DTOPlayer newPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/UpdateEmailPassword", ReplyAction="http://tempuri.org/IPlayerManagement/UpdateEmailPasswordResponse")]
+        bool UpdateEmailPassword(Views.SRIPlayerManagement.DTOPlayer dataPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/UpdateEmailPassword", ReplyAction="http://tempuri.org/IPlayerManagement/UpdateEmailPasswordResponse")]
+        System.Threading.Tasks.Task<bool> UpdateEmailPasswordAsync(Views.SRIPlayerManagement.DTOPlayer dataPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile", ReplyAction="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse")]
+        bool UpdateFullProfile(Views.SRIPlayerManagement.DTOPlayer dataPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile", ReplyAction="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse")]
+        System.Threading.Tasks.Task<bool> UpdateFullProfileAsync(Views.SRIPlayerManagement.DTOPlayer dataPlayer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -208,12 +226,36 @@ namespace Views.SRIPlayerManagement {
                 base(binding, remoteAddress) {
         }
         
-        public bool RegisterPlayer(Views.SRIPlayerManagement.Player newPlayer) {
+        public Views.SRIPlayerManagement.DTOPlayer AuthenticateLogin(string username, string password) {
+            return base.Channel.AuthenticateLogin(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOPlayer> AuthenticateLoginAsync(string username, string password) {
+            return base.Channel.AuthenticateLoginAsync(username, password);
+        }
+        
+        public bool RegisterPlayer(Views.SRIPlayerManagement.DTOPlayer newPlayer) {
             return base.Channel.RegisterPlayer(newPlayer);
         }
         
-        public System.Threading.Tasks.Task<bool> RegisterPlayerAsync(Views.SRIPlayerManagement.Player newPlayer) {
+        public System.Threading.Tasks.Task<bool> RegisterPlayerAsync(Views.SRIPlayerManagement.DTOPlayer newPlayer) {
             return base.Channel.RegisterPlayerAsync(newPlayer);
+        }
+        
+        public bool UpdateEmailPassword(Views.SRIPlayerManagement.DTOPlayer dataPlayer) {
+            return base.Channel.UpdateEmailPassword(dataPlayer);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateEmailPasswordAsync(Views.SRIPlayerManagement.DTOPlayer dataPlayer) {
+            return base.Channel.UpdateEmailPasswordAsync(dataPlayer);
+        }
+        
+        public bool UpdateFullProfile(Views.SRIPlayerManagement.DTOPlayer dataPlayer) {
+            return base.Channel.UpdateFullProfile(dataPlayer);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateFullProfileAsync(Views.SRIPlayerManagement.DTOPlayer dataPlayer) {
+            return base.Channel.UpdateFullProfileAsync(dataPlayer);
         }
     }
 }

@@ -11,27 +11,27 @@ namespace Logic.DTO
     public class DTOPlayer
     {
         [DataMember]
-        public int id_player { get; set; }
+        public int IdPlayer { get; set; }
 
         [DataMember]
-        public String username { get; set; }
+        public String Username { get; set; }
 
         [DataMember]
-        public String name { get; set; }
+        public String Name { get; set; }
 
         [DataMember]
-        public DateTime birthdate  { get; set; }
+        public DateTime Birthdate  { get; set; }
 
         [DataMember]
-        public int phonenumber { get; set; }
+        public string Phonenumber { get; set; }
 
         [DataMember]
-        public String email { get; set; }
+        public String Email { get; set; }
 
         [DataMember]
-        public String password { get; set; }
+        public String Password { get; set; }
 
         [DataMember]
-        public int score { get; set; }
+        public int Score { get; set; }
     }
 }

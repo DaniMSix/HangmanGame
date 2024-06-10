@@ -25,7 +25,7 @@ namespace Comunication
     public interface IManageGameServiceCallback
     {
         [OperationContract(IsOneWay = true)]
-        void StartGameRoom(Game_Match game);
+        void StartGameRoom(Gamematch game);
 
         [OperationContract(IsOneWay = true)]
         void AccessCodeNotFound();
@@ -37,6 +37,6 @@ namespace Comunication
         void CanceledGame();
 
         [OperationContract(IsOneWay = true)]
-        void StartGame(Game game);
+        void StartGame(Gamematch game);
     }
 }

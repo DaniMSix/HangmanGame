@@ -24,5 +24,14 @@ namespace Views.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnClicHideMenu(object sender, RoutedEventArgs e)
+        {
+            var parentFrame = this.Parent as Frame;
+            if (parentFrame != null)
+            {
+                parentFrame.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }

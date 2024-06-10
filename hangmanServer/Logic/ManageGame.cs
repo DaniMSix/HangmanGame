@@ -7,21 +7,21 @@ namespace Logic
 {
     public class ManageGame
     {
-        public Game_Match RegisterGame(string language)
+        public Gamematch RegisterGame(string language)
         {
-            Game_Match registeredGame = null;
+            Gamematch registeredGame = null;
 
             try
             {
-                using (var context = new hangman_dbEntities())
+                using (var context = new HangmanDbEntities())
                 {
                     
-                    Game_Match gameToRegister = new Game_Match()
+                    Gamematch gameToRegister = new Gamematch()
                     {
                         language = language,
                         code = new Random().Next(0, 100000).ToString("D5")
                      };
-                    context.Game_Match.Add(gameToRegister);
+                    context.Gamematch.Add(gameToRegister);
                     context.SaveChanges();
                     registeredGame = gameToRegister;
                     
@@ -48,16 +48,16 @@ namespace Logic
         {
             bool status = false;
 
-            using (var context = new hangman_dbEntities())
+            using (var context = new HangmanDbEntities())
             {
                 Player recordPlayer = new Player()
                 {
-                    username = newPlayer.username,
-                    name = newPlayer.name,
-                    birthdate = newPlayer.birthdate,
-                    phonenumber = newPlayer.phonenumber,
-                    email = newPlayer.email,
-                    password = newPlayer.password,
+                    username = newPlayer.Username,
+                    name = newPlayer.Name,
+                    birthdate = newPlayer.Birthdate,
+                    phonenumber = newPlayer.Phonenumber,
+                    email = newPlayer.Email,
+                    password = newPlayer.Password,
                 };
 
                 context.Player.Add(recordPlayer);
@@ -71,12 +71,12 @@ namespace Logic
             bool status = false;
             try
             {
-                using (var context = new hangman_dbEntities())
+                using (var context = new HangmanDbEntities())
                 {
-                    var juegoAEliminar = context.Game_Match.FirstOrDefault(Game_Match => Game_Match.id_gamematch == id_gamematch);
+                    var juegoAEliminar = context.Gamematch.FirstOrDefault(Game_Match => Game_Match.idGamematch == id_gamematch);
                     if (juegoAEliminar != null)
                     {
-                        context.Game_Match.Remove(juegoAEliminar); 
+                        context.Gamematch.Remove(juegoAEliminar); 
                         context.SaveChanges(); 
                         status = true;
                     }

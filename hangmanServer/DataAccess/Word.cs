@@ -17,18 +17,20 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Word()
         {
-            this.Game_Match = new HashSet<Game_Match>();
+            this.Gamematch = new HashSet<Gamematch>();
         }
     
-        public int id_word { get; set; }
+        public int idWord { get; set; }
         public string name { get; set; }
-        public string name_EN { get; set; }
+        public string nameEN { get; set; }
         public string hint { get; set; }
+        public string hintEN { get; set; }
         public string description { get; set; }
-        public Nullable<int> id_category { get; set; }
+        public string description_EN { get; set; }
+        public Nullable<int> idCategory { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Game_Match> Game_Match { get; set; }
+        public virtual ICollection<Gamematch> Gamematch { get; set; }
     }
 }

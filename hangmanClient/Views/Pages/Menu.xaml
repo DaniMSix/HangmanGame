@@ -5,18 +5,48 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="180"
+      d:DesignHeight="500" d:DesignWidth="211"
       Title="Menu">
 
     <Grid>
         <Grid.Background>
             <SolidColorBrush Color="#7868DE" Opacity="0.56" />
         </Grid.Background>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\pen.png" Content="Editar perfil" Margin="10,10,50,415"/>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\dashboard-icon.png" Content="Ver estadísticas" Margin="10,40,19,385"/>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\trash-can-icon.png" Content="Eliminar perfil" Margin="10,70,19,355"/>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\EU Flag Icon.png" Content="Cambiar idioma" Margin="10,95,19,330"/>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource ResourceKey=FuenteVT323}" FontSize="16" Tag="C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\Images\arrow.png" Content="Salir" Margin="10,125,19,300"/>
 
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20"  Margin="9,63,36,357">
+            <StackPanel  Orientation="Horizontal" Height="20" Width="132">
+                <Image Source="\Images\pen.png" Width="23" Height="23" />
+                <TextBlock Text="Editar perfil" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </Button>
+
+        <Button Cursor="" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Tag="\Images\arrow-icon.png" Margin="7,97,13,323">
+            <StackPanel  Orientation="Horizontal" Height="33" Width="155">
+                <Image Source="\Images\dashboard-icon.png" Width="25" Height="25" />
+                <TextBlock Text="Ver estadísticas" VerticalAlignment="Center" Width="130"/>
+            </StackPanel>
+        </Button>
+
+        <Button Cursor="" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20"  Margin="9,131,11,285">
+            <StackPanel  Orientation="Horizontal" Height="33" Width="157">
+                <Image Source="\Images\trash-can-icon.png" Width="25" Height="25" />
+                <TextBlock Text="Eliminar perfil" VerticalAlignment="Center" Width="122"/>
+            </StackPanel>
+        </Button>
+        <Button Cursor="" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="7,166,13,250">
+            <StackPanel  Orientation="Horizontal" Height="33" Width="150">
+                <Image Source="/Images/EU-Flag-Icon.png" Width="25" Height="25" />
+                <TextBlock Text="Cambiar idioma" VerticalAlignment="Center" Width="122"/>
+            </StackPanel>
+        </Button>
+        <Button Cursor="" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Tag="\Images\arrow-icon.png" Margin="8,201,12,215">
+            <StackPanel  Orientation="Horizontal" Height="33" Width="150">
+                <Image Source="/Images/arrow.png" Width="25" Height="25" />
+                <TextBlock Text="Cerrar sesión" VerticalAlignment="Center" Width="122"/>
+            </StackPanel>
+        </Button>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="57,32,0,0" VerticalAlignment="Top"/>
+
+        
     </Grid>
 </Page>
