@@ -1,0 +1,27 @@
+﻿<Page x:Class="Views.Pages.PageWaitingRoom"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="517" d:DesignWidth="1005"
+      Title="PageWaitingRoom">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\Challenging-Waiting-Room.png"/>
+        </Grid.Background>
+
+
+        <Label Content="Código de la partida" FontFamily="{StaticResource PressStart2P}" Foreground="White" FontSize="33" HorizontalAlignment="Center" Margin="0,159,0,0" VerticalAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect Color="Black" Direction="315" ShadowDepth="2" Opacity="0.3"/>
+            </Label.Effect>
+        </Label>
+        <Image Source="\Images\game-flag.png" HorizontalAlignment="Left" Height="83" Margin="474,240,0,0" VerticalAlignment="Top" Width="82"/>
+        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Cancelar partida" FontSize="22" HorizontalAlignment="Left" Margin="398,328,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"/>
+        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="30" Foreground="#3D408F" Content="Danimsix se ha unido a la partida" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

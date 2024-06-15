@@ -53,7 +53,7 @@ namespace Views.Pages
                         IdPlayer = playerLogin.IdPlayer,
                         Username = playerLogin.Username,
                         Name = playerLogin.Name,
-                        Birthdate = playerLogin.Birthdate,
+                        Birthday = playerLogin.Birthdate,
                         Phonenumber = playerLogin.Phonenumber,
                         Email = playerLogin.Email,
                         Score = playerLogin.Score
@@ -65,14 +65,14 @@ namespace Views.Pages
                     brdGrayBackground.Visibility = Visibility.Visible;
 
                     // Crear una instancia de SuccessPage con el título y contenido deseado
-                    var successPage = new SuccessPage("¡Éxito!", "Inicio de sesión exitoso.");
+                    var successPage = new PageSuccess("¡Éxito!", "Inicio de sesión exitoso.");
 
                     // Suscribirse al evento MessageClosed de SuccessPage
                     successPage.MessageClosed += (s, args) =>
                     {
                         txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
                         brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
-                        var home = new Home(newPlayeraActive);
+                        var home = new PageHome(newPlayeraActive);
                         if (NavigationService != null)
                         {
                             NavigationService.Navigate(home);
@@ -104,7 +104,7 @@ namespace Views.Pages
         private void TxtClicRegister(object sender, MouseButtonEventArgs e)
         {
             // Crear una instancia de la página de registro (suponiendo que se llama RegisterPage)
-            var registerPage = new CreateProfile();
+            var registerPage = new PageCreateProfile();
 
             // Navegar a la página de registro
             NavigationService.Navigate(registerPage);

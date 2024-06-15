@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +14,6 @@ namespace Logic
     {
         public DTOPlayer AuthenticationLogin(string username, string password)
         {
-            Console.WriteLine("LLEGUE A LA AUTENTICACIÓN");
-            Console.WriteLine($"{username}:{password}");
 
             DTOPlayer playerDTO = null;
 
@@ -28,6 +27,7 @@ namespace Logic
                     {
                         IdPlayer = player.idPlayer,
                         Username = player.username,
+                        Name = player.name,
                         Phonenumber = player.phonenumber,
                         Email = player.email,
                     };
@@ -36,7 +36,6 @@ namespace Logic
 
             return playerDTO;
         }
-
 
         public bool UpdateEmailPassword(DTOPlayer dataPlayer)
         {
@@ -62,26 +61,76 @@ namespace Logic
         public bool UpdateFullProfile(DTOPlayer dataPlayer)
         {
             int playerIdToUpdate = dataPlayer.IdPlayer;
+            Console.WriteLine("ACTUALIZAR PERFIL");
+            Console.WriteLine("Id " + dataPlayer.IdPlayer);
 
             using (var context = new HangmanDbEntities())
             {
                 var player = context.Player.FirstOrDefault(user => user.idPlayer == playerIdToUpdate);
 
-                if (player != null)
+                if (player == null)
                 {
-                    player.username = dataPlayer.Username;
-                    player.name = dataPlayer.Name;
-                    player.birthdate = dataPlayer.Birthdate;
-                    player.email = dataPlayer.Email;
-                    player.phonenumber = dataPlayer.Phonenumber;
-                    player.password = dataPlayer.Password;
-
-                    context.Entry(player).State = EntityState.Modified;
-
-                    context.SaveChanges();
+                    Console.WriteLine("Jugador no encontrado.");
+                    return false;
                 }
-                return true;
+
+                Console.WriteLine("Datos antes de la actualización:");
+                Console.WriteLine($"Nombre actual: {player.name}");
+                Console.WriteLine($"Username actual: {player.username}");
+                Console.WriteLine($"Email actual: {player.email}");
+                Console.WriteLine($"Phonenumber actual: {player.phonenumber}");
+
+                player.username = dataPlayer.Username;
+                player.name = dataPlayer.Name;
+                player.birthdate = dataPlayer.Birthdate;
+                player.phonenumber = dataPlayer.Phonenumber;
+
+                context.Entry(player).State = EntityState.Modified;
+
+                Console.WriteLine("Datos a actualizar:");
+                Console.WriteLine($"Nuevo Nombre: {player.name}");
+                Console.WriteLine($"Nuevo Username: {player.username}");
+                Console.WriteLine($"Nuevo Email: {player.email}");
+                Console.WriteLine($"Nuevo Phonenumber: {player.phonenumber}");
+
+                try
+                {
+                    Console.WriteLine("ANTES de guardar los cambios");
+                    context.SaveChanges();
+                    Console.WriteLine("DESPUÉS de guardar los cambios");
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al guardar los cambios: {ex.Message}");
+                    return false;
+                }
             }
+        }
+
+
+        public bool RegisterPlayer(DTOPlayer newPlayer)
+        {
+
+            Console.WriteLine("Register server");
+            bool status = false;
+
+            using (var context = new HangmanDbEntities())
+            {
+                Player recordPlayer = new Player()
+                {
+                    username = newPlayer.Username,
+                    name = newPlayer.Name,
+                    birthdate = newPlayer.Birthdate,
+                    password = newPlayer.Password,
+                    email = newPlayer.Email,
+                    phonenumber = newPlayer.Phonenumber,
+                };
+
+                context.Player.Add(recordPlayer);
+                status = context.SaveChanges() > 0;
+            }
+            return status;
         }
     }
 }

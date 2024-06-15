@@ -57,6 +57,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Connected Services\SRIManageGameService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SRIPlayerManagement\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,6 +70,13 @@
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageSelectWord.xaml.cs">
+      <DependentUpon>PageSelectWord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageStatistics.xaml.cs">
+      <DependentUpon>PageStatistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServerManageGame\ManageGame.cs" />
     <Compile Include="Utils\ButtonAnimation.cs" />
     <Compile Include="Utils\SoundManager.cs" />
     <Page Include="MainWindow.xaml">
@@ -79,23 +91,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Challenging Waiting Room.xaml">
+    <Page Include="Pages\PageSelectWord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ChangeLanguage.xaml">
+    <Page Include="Pages\PageWaitingRoom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CreateProfile.xaml">
+    <Page Include="Pages\PageChangeLanguage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ErrorPage.xaml">
+    <Page Include="Pages\PageCreateProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Home.xaml">
+    <Page Include="Notifications\PageError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,38 +139,42 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SuccessPage.xaml">
+    <Page Include="Pages\PageStatistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Waiting room fortune teller.xaml">
+    <Page Include="Notifications\PageSuccess.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\warningPage.xaml">
+    <Page Include="Pages\PageWaitingRoomFortuneTeller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\winning.xaml">
+    <Page Include="Notifications\PageWarning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageWinning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Challenging Waiting Room.xaml.cs">
-      <DependentUpon>Challenging Waiting Room.xaml</DependentUpon>
+    <Compile Include="Pages\PageWaitingRoom.xaml.cs">
+      <DependentUpon>PageWaitingRoom.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChangeLanguage.xaml.cs">
-      <DependentUpon>ChangeLanguage.xaml</DependentUpon>
+    <Compile Include="Pages\PageChangeLanguage.xaml.cs">
+      <DependentUpon>PageChangeLanguage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CreateProfile.xaml.cs">
-      <DependentUpon>CreateProfile.xaml</DependentUpon>
+    <Compile Include="Pages\PageCreateProfile.xaml.cs">
+      <DependentUpon>PageCreateProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ErrorPage.xaml.cs">
-      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    <Compile Include="Notifications\PageError.xaml.cs">
+      <DependentUpon>PageError.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
+    <Compile Include="Pages\PageHome.xaml.cs">
+      <DependentUpon>PageHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\loser.xaml.cs">
       <DependentUpon>loser.xaml</DependentUpon>
@@ -171,17 +191,17 @@
     <Compile Include="Pages\PageCategories.xaml.cs">
       <DependentUpon>PageCategories.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SuccessPage.xaml.cs">
-      <DependentUpon>SuccessPage.xaml</DependentUpon>
+    <Compile Include="Notifications\PageSuccess.xaml.cs">
+      <DependentUpon>PageSuccess.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Waiting room fortune teller.xaml.cs">
-      <DependentUpon>Waiting room fortune teller.xaml</DependentUpon>
+    <Compile Include="Pages\PageWaitingRoomFortuneTeller.xaml.cs">
+      <DependentUpon>PageWaitingRoomFortuneTeller.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\warningPage.xaml.cs">
-      <DependentUpon>warningPage.xaml</DependentUpon>
+    <Compile Include="Notifications\PageWarning.xaml.cs">
+      <DependentUpon>PageWarning.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\winning.xaml.cs">
-      <DependentUpon>winning.xaml</DependentUpon>
+    <Compile Include="Pages\PageWinning.xaml.cs">
+      <DependentUpon>PageWinning.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -212,6 +232,22 @@
     <Resource Include="Fonts\VT323-Regular.ttf" />
     <Resource Include="Fonts\PressStart2P-Regular.ttf" />
     <Resource Include="Fonts\Retro Gaming.ttf" />
+    <None Include="Connected Services\SRIManageGameService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\ServicesExposed.wsdl" />
+    <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOPlayer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SRIPlayerManagement\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -357,6 +393,17 @@
     <Resource Include="Image1.png" />
     <Resource Include="Images\menu.png" />
     <Resource Include="Images\exit.png" />
+    <Resource Include="Images\question.png" />
+    <Resource Include="Images\arrow-left.png" />
+    <Resource Include="Images\background-statistics.png" />
+    <Resource Include="Images\block-label.png" />
+    <None Include="Connected Services\SRIManageGameService\item.disco" />
+    <None Include="Connected Services\SRIManageGameService\configuration91.svcinfo" />
+    <None Include="Connected Services\SRIManageGameService\configuration.svcinfo" />
+    <None Include="Connected Services\SRIManageGameService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Music\button-sound.mp3" />
     <Resource Include="Images\note.png" />
     <Resource Include="Images\musical note.png" />
@@ -365,7 +412,9 @@
     <Content Include="Music\retro-videogame.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRIManageGameService\" />
     <WCFMetadataStorage Include="Connected Services\SRIPlayerManagement\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

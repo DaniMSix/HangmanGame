@@ -1,0 +1,28 @@
+﻿<Page x:Class="Views.Pages.PageWarning"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="251" d:DesignWidth="518"
+      Title="PageWarning">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\Background-warning.png"/>
+        </Grid.Background>
+        <Label FontFamily="{StaticResource PressStart2P}" Content="Campos vacíos" FontSize="20" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top"/>
+        <Label FontFamily="{StaticResource FuenteVT323}"  
+FontSize="17" 
+HorizontalAlignment="Center" 
+VerticalAlignment="Top" 
+Margin="0,122,0,0" 
+Width="370">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Hay campos vacíos. Complételos o cámbielos para continuar" Width="370"/>
+        </Label>
+        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+
+
+    </Grid>
+</Page>

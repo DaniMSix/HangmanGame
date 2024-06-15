@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\App.xaml
-161927775853
+17-1597364909
 2776373018
-24140648354
+26-486559808
 171641283455
-MainWindow.xaml;Pages\Challenging Waiting Room.xaml;Pages\ChangeLanguage.xaml;Pages\CreateProfile.xaml;Pages\ErrorPage.xaml;Pages\Home.xaml;Pages\Login.xaml;Pages\loser.xaml;Pages\Menu.xaml;Pages\PageAccessCode.xaml;Pages\PageAnimalCategory.xaml;Pages\PageCategories.xaml;Pages\SuccessPage.xaml;Pages\Waiting room fortune teller.xaml;Pages\warningPage.xaml;Pages\winning.xaml;
+MainWindow.xaml;Pages\PageWaitingRoom.xaml;Pages\PageChangeLanguage.xaml;Pages\PageCreateProfile.xaml;Notifications\PageError.xaml;Pages\PageHome.xaml;Pages\Login.xaml;Pages\loser.xaml;Pages\Menu.xaml;Pages\PageAccessCode.xaml;Pages\PageAnimalCategory.xaml;Pages\PageCategories.xaml;Pages\PageStatistics.xaml;Notifications\PageSuccess.xaml;Pages\PageWaitingRoomFortuneTeller.xaml;Notifications\PageWarning.xaml;Pages\PageWinning.xaml;
 
 False
 

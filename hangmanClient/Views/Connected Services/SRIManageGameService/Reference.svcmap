@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8a5954df-f58d-4f35-9e9a-674597b3e5a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:8080/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6c430aea-9b07-45fb-96d8-b09d22688bc5" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="6a53f8b1-65de-442f-9758-d1e3b0bb1933" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="05c77f73-f9be-4fcc-b666-c61b12583443" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="c5cc5aa5-0621-4165-bc29-1fe7a99da5e0" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd0" />
+    <MetadataFile FileName="ServicesExposed.wsdl" MetadataType="Wsdl" ID="8c44db4d-ecc9-4a1e-82ca-15863c0e7e9c" SourceId="1" SourceUrl="http://127.0.0.1:8080/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="2df27c53-6f58-4cb8-b8e1-0aaaad813679" SourceId="1" SourceUrl="http://127.0.0.1:8080/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

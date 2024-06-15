@@ -85,7 +85,7 @@ namespace Comunication
 
         public void NewGame(int hostUserId, string gameName)
         {
-            /*ManageGame manageGame = new ManageGame();
+            ManageGame manageGame = new ManageGame();
             Gamematch registeredGame = null;
             try
             {
@@ -113,19 +113,19 @@ namespace Comunication
                 players.Add(hostUserId, callBackGameService);
                 callBackGameService.StartGameRoom(registeredGame);
             }
-            */
+            
         }
 
         public void JoinGame(int userId, string accessCode)
         {
-            /*var error = 1;
+            var error = 1;
 
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
             {
                 foreach (Room room in globalRooms)
                 {
-                    if (room.GameMatch & room.GameMatch.code == accessCode)
+                    if (room.GameMatch != null && room.GameMatch.code == accessCode)
                     {
                         if (room.Players.Count >= room.MAXPLAYERS)
                         {
@@ -151,7 +151,7 @@ namespace Comunication
                 {
                     callBackGameService.CompleteRoom();
                 }
-            }*/
+            }
         }
 
         public void DisconnectGame(int userId, int gameId)

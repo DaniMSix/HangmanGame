@@ -14,7 +14,7 @@ namespace Domain
 
         public String Name { get; set; }
 
-        public DateTime Birthdate { get; set; }
+        public DateTime Birthday { get; set; }
 
         public string Phonenumber { get; set; }
 
