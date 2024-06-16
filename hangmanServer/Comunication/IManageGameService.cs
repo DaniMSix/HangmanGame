@@ -1,7 +1,5 @@
 ﻿using DataAccess;
-using System;
 using System.ServiceModel;
-using System.Windows.Controls;
 
 namespace Comunication
 {

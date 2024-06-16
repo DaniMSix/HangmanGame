@@ -147,14 +147,11 @@ namespace Comunication
                             players.Add(gamematch.idGuesser.Value, callBackGameService);
                             guessRegistered = manageGame.RegisterGuestPlayerByAccessCode(gamematch);
                             callBackGameService.StartGameRoom(room.GameMatch);
+
+                            players[room.GameMatch.idChallenger.Value].UserConnectionNotification(room.GameMatch);
                         }
                         break;
                     }
-                }
-
-                if (error == 0)
-                {
-                    callBackGameService.UserConnectionNotification(gamematch);
                 }
 
                 if (error == 1)

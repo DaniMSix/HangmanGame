@@ -25,6 +25,7 @@ namespace Logic
                         idWord = gameMatch.idWord,
                         idChallenger = gameMatch.idChallenger,
                         idMatchStatus = gameMatch.idMatchStatus
+
                     };
                     context.Gamematch.Add(gameToRegister);
                     context.SaveChanges();

@@ -17,13 +17,13 @@ using ServerManageGame;
 
 namespace Views.Pages
 {
-    
+
     public partial class PageWaitingRoom : Page
     {
         DTOPlayer activePlayer;
         private ManageGame manageGame;
         Frame frCurrentFrame;
-        int count = 0;
+
         public PageWaitingRoom(DTOPlayer activePlayer, ManageGame manageGame, Frame homeFrame)
         {
             this.activePlayer = activePlayer;
@@ -31,7 +31,10 @@ namespace Views.Pages
             InitializeComponent();
 
             Console.WriteLine("------------------ PageWaitingRoom -------------------");
-            Console.WriteLine("idGuesser" + manageGame.gameMatch.idGuesser);
+            Console.WriteLine("idGuesser" + manageGame?.gameMatch.idGuesser);
+
+            this.manageGame = manageGame;
+            this.manageGame.PlayerJoined += OnPlayerJoined;  // Subscribirse al evento
 
             if (manageGame.gameMatch.idGuesser > 0)
             {
@@ -49,10 +52,17 @@ namespace Views.Pages
             }
         }
 
+        private void OnPlayerJoined(int idPlayer)
+        {
+            lbGuestPlayer.Content = $"{idPlayer} se ha unido a la partida";
+            lbGuestPlayer.Visibility = Visibility.Visible;
+        }
+
         private void BtnClickCancelGame(object sender, RoutedEventArgs e)
         {
             var pageHome = new PageHome(activePlayer);
             frCurrentFrame.Navigate(pageHome);
         }
     }
+
 }

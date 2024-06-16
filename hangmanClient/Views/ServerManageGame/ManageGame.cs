@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,7 +13,9 @@ namespace ServerManageGame
         private ManageGameServiceClient manageGameServiceClient;
         private Domain.DTOPlayer activePlayer;
         public Gamematch gameMatch = new Gamematch();
+        private PageWaitingRoom waitingRoomPage;
         Frame frCurrentFrame;
+        public event Action<int> PlayerJoined;
 
         public ManageGame(Domain.DTOPlayer activePlayer, Frame frame)
         {
@@ -63,6 +66,14 @@ namespace ServerManageGame
         public void UserConnectionNotification(Gamematch game)
         {
             this.gameMatch = game;
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                PlayerJoined?.Invoke(game.idGuesser.Value);  // Invocar el evento cuando un jugador se una
+            });
+            /*
+            this.gameMatch = game;
+            Console.WriteLine("id ");
+            MessageBox.Show("se unio un jugador");*/
         }
     }
 }

@@ -24,6 +24,7 @@
           <Property Name="idChallenger" Type="int" />
           <Property Name="idGuesser" Type="int" />
           <Property Name="idMatchStatus" Type="int" />
+          <Property Name="creationDate" Type="date" />
         </EntityType>
         <EntityType Name="MatchStatus">
           <Key>
@@ -178,6 +179,7 @@
           <Property Name="idChallenger" Type="Int32" />
           <Property Name="idGuesser" Type="Int32" />
           <Property Name="idMatchStatus" Type="Int32" />
+          <Property Name="creationDate" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Player" Relationship="Self.FK_gamematch_challenger" FromRole="Gamematch" ToRole="Player" />
           <NavigationProperty Name="Player1" Relationship="Self.FK_gamematch_guesser" FromRole="Gamematch" ToRole="Player" />
           <NavigationProperty Name="MatchStatus" Relationship="Self.FK_gamematch_match_status" FromRole="Gamematch" ToRole="MatchStatus" />
@@ -341,6 +343,7 @@
                 <ScalarProperty Name="idChallenger" ColumnName="idChallenger" />
                 <ScalarProperty Name="idGuesser" ColumnName="idGuesser" />
                 <ScalarProperty Name="idMatchStatus" ColumnName="idMatchStatus" />
+                <ScalarProperty Name="creationDate" ColumnName="creationDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

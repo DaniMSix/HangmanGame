@@ -19,6 +19,7 @@
     <Property Name="idChallenger" Type="int" />
     <Property Name="idGuesser" Type="int" />
     <Property Name="idMatchStatus" Type="int" />
+    <Property Name="creationDate" Type="date" />
   </EntityType>
   <EntityType Name="MatchStatus">
     <Key>

@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="78f5955dac8e4c00923c0df2192c578c" Name="Diagram1">
+      <Diagram DiagramId="48e21dc03db9414cacb337aa0139700a" Name="Diagram1">
         <EntityTypeShape EntityType="HangmanDbModel.Category" Width="1.5" PointX="1.5" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="HangmanDbModel.Gamematch" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="HangmanDbModel.MatchStatus" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HangmanDbModel.MatchStatus" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="HangmanDbModel.Player" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="HangmanDbModel.Word" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HangmanDbModel.Word" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="HangmanDbModel.FK_word_category" ManuallyRouted="false" />
         <AssociationConnector Association="HangmanDbModel.FK_gamematch_challenger" ManuallyRouted="false" />
         <AssociationConnector Association="HangmanDbModel.FK_gamematch_guesser" ManuallyRouted="false" />
