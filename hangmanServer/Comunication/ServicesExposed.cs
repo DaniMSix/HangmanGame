@@ -83,13 +83,16 @@ namespace Comunication
         private List<Room> globalRooms = new List<Room>();
         private Dictionary<int, IManageGameServiceCallback> players = new Dictionary<int, IManageGameServiceCallback>();
 
-        public void NewGame(int hostUserId, string gameName)
+        public void NewGame(Gamematch gamematch)
         {
             ManageGame manageGame = new ManageGame();
             Gamematch registeredGame = null;
             try
             {
-                registeredGame = manageGame.RegisterGame(gameName);
+                registeredGame = manageGame.RegisterGame(gamematch);
+                Console.WriteLine("Code1 " +  registeredGame.code);
+
+                Console.WriteLine("RegisterLanguage " + registeredGame.language);
             }
             catch (EntityException entityException)
             {
@@ -101,31 +104,36 @@ namespace Comunication
                 Room room = new Room()
                 {
                     GameMatch = registeredGame,
-                    HostUserId = hostUserId,
+                    HostUserId = gamematch.idChallenger.Value,
                     Players = new List<int>()
                 };
-                room.Players.Add(hostUserId);
+                
+                room.Players.Add(gamematch.idChallenger.Value);
                 globalRooms.Add(room);
             }
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
             {
-                players.Add(hostUserId, callBackGameService);
+                Console.WriteLine("Code " + gamematch.code);
+                players.Add(gamematch.idChallenger.Value, callBackGameService);
                 callBackGameService.StartGameRoom(registeredGame);
             }
             
         }
 
-        public void JoinGame(int userId, string accessCode)
+        public void JoinGame(Gamematch gamematch)
         {
             var error = 1;
+            bool guessRegistered = false;
+            ManageGame manageGame = new ManageGame();
+
 
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
             {
                 foreach (Room room in globalRooms)
                 {
-                    if (room.GameMatch != null && room.GameMatch.code == accessCode)
+                    if (room.GameMatch != null && room.GameMatch.code == gamematch.code)
                     {
                         if (room.Players.Count >= room.MAXPLAYERS)
                         {
@@ -134,12 +142,19 @@ namespace Comunication
                         else
                         {
                             error = 0;
-                            room.Players.Add(userId);
-                            players.Add(userId, callBackGameService);
+                            room.Players.Add(gamematch.idGuesser.Value);
+                            room.GameMatch.idGuesser = gamematch.idGuesser.Value;
+                            players.Add(gamematch.idGuesser.Value, callBackGameService);
+                            guessRegistered = manageGame.RegisterGuestPlayerByAccessCode(gamematch);
                             callBackGameService.StartGameRoom(room.GameMatch);
                         }
                         break;
                     }
+                }
+
+                if (error == 0)
+                {
+                    callBackGameService.UserConnectionNotification(gamematch);
                 }
 
                 if (error == 1)
@@ -156,7 +171,6 @@ namespace Comunication
 
         public void DisconnectGame(int userId, int gameId)
         {
-            Console.WriteLine($"disconnected {userId}");
             foreach (Room room in globalRooms)
             {
                 if (room.GameMatch.idGamematch == gameId)

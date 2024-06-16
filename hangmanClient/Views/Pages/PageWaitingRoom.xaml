@@ -14,14 +14,20 @@
         </Grid.Background>
 
 
-        <Label Content="Código de la partida" FontFamily="{StaticResource PressStart2P}" Foreground="White" FontSize="33" HorizontalAlignment="Center" Margin="0,159,0,0" VerticalAlignment="Top">
+        <Label x:Name="lbTitle" FontFamily="{StaticResource PressStart2P}" Foreground="White" FontSize="33" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top">
             <Label.Effect>
                 <DropShadowEffect Color="Black" Direction="315" ShadowDepth="2" Opacity="0.3"/>
             </Label.Effect>
         </Label>
         <Image Source="\Images\game-flag.png" HorizontalAlignment="Left" Height="83" Margin="474,240,0,0" VerticalAlignment="Top" Width="82"/>
-        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Cancelar partida" FontSize="22" HorizontalAlignment="Left" Margin="398,328,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"/>
-        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="30" Foreground="#3D408F" Content="Danimsix se ha unido a la partida" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnStartGame" Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" HorizontalAlignment="Left" Margin="398,328,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"
+                Click="BtnClickCancelGame"/>
+        <Label x:Name="lbGuestPlayer" HorizontalContentAlignment="Center" FontFamily="{StaticResource FuenteVT323}" FontSize="30" Foreground="#3D408F"  HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbAccessCode" FontFamily="{StaticResource PressStart2P}" HorizontalContentAlignment="Center" Foreground="White" FontSize="33" HorizontalAlignment="Center" Margin="0,161,0,0" VerticalAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect Color="Black" Direction="315" ShadowDepth="2" Opacity="0.3"/>
+            </Label.Effect>
+        </Label>
 
     </Grid>
 </Page>

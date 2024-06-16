@@ -59,9 +59,6 @@
     <Compile Include="Gamematch.cs">
       <DependentUpon>Modelhangman.tt</DependentUpon>
     </Compile>
-    <Compile Include="MatchLanguage.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
-    </Compile>
     <Compile Include="MatchStatus.cs">
       <DependentUpon>Modelhangman.tt</DependentUpon>
     </Compile>

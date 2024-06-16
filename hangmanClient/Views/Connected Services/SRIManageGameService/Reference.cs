@@ -180,9 +180,6 @@ namespace Views.SRIManageGameService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Views.SRIManageGameService.MatchLanguage MatchLanguageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Views.SRIManageGameService.MatchStatus MatchStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -207,9 +204,6 @@ namespace Views.SRIManageGameService {
         private System.Nullable<int> idGuesserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> idMatchLanguageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> idMatchStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -225,19 +219,6 @@ namespace Views.SRIManageGameService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Views.SRIManageGameService.MatchLanguage MatchLanguage {
-            get {
-                return this.MatchLanguageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MatchLanguageField, value) != true)) {
-                    this.MatchLanguageField = value;
-                    this.RaisePropertyChanged("MatchLanguage");
-                }
             }
         }
         
@@ -346,19 +327,6 @@ namespace Views.SRIManageGameService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> idMatchLanguage {
-            get {
-                return this.idMatchLanguageField;
-            }
-            set {
-                if ((this.idMatchLanguageField.Equals(value) != true)) {
-                    this.idMatchLanguageField = value;
-                    this.RaisePropertyChanged("idMatchLanguage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> idMatchStatus {
             get {
                 return this.idMatchStatusField;
@@ -409,83 +377,6 @@ namespace Views.SRIManageGameService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MatchLanguage", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class MatchLanguage : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Views.SRIManageGameService.Gamematch[] GamematchField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idMatchLanguageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> nameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Views.SRIManageGameService.Gamematch[] Gamematch {
-            get {
-                return this.GamematchField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.GamematchField, value) != true)) {
-                    this.GamematchField = value;
-                    this.RaisePropertyChanged("Gamematch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int idMatchLanguage {
-            get {
-                return this.idMatchLanguageField;
-            }
-            set {
-                if ((this.idMatchLanguageField.Equals(value) != true)) {
-                    this.idMatchLanguageField = value;
-                    this.RaisePropertyChanged("idMatchLanguage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((this.nameField.Equals(value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MatchStatus", Namespace="http://schemas.datacontract.org/2004/07/DataAccess")]
     [System.SerializableAttribute()]
     public partial class MatchStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -500,7 +391,7 @@ namespace Views.SRIManageGameService {
         private int idMatchStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> nameField;
+        private string nameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -539,12 +430,12 @@ namespace Views.SRIManageGameService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> name {
+        public string name {
             get {
                 return this.nameField;
             }
             set {
-                if ((this.nameField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
                     this.nameField = value;
                     this.RaisePropertyChanged("name");
                 }
@@ -1126,16 +1017,16 @@ namespace Views.SRIManageGameService {
     public interface IManageGameService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/NewGame")]
-        void NewGame(int hostUserId, string gameName);
+        void NewGame(Views.SRIManageGameService.Gamematch game);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/NewGame")]
-        System.Threading.Tasks.Task NewGameAsync(int hostUserId, string gameName);
+        System.Threading.Tasks.Task NewGameAsync(Views.SRIManageGameService.Gamematch game);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/JoinGame")]
-        void JoinGame(int userId, string accessCode);
+        void JoinGame(Views.SRIManageGameService.Gamematch gamematch);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/JoinGame")]
-        System.Threading.Tasks.Task JoinGameAsync(int userId, string accessCode);
+        System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/DisconnectGame")]
         void DisconnectGame(int userId, int gameId);
@@ -1159,8 +1050,8 @@ namespace Views.SRIManageGameService {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/CanceledGame")]
         void CanceledGame();
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGame")]
-        void StartGame(Views.SRIManageGameService.Gamematch game);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/UserConnectionNotification")]
+        void UserConnectionNotification(Views.SRIManageGameService.Gamematch game);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1191,20 +1082,20 @@ namespace Views.SRIManageGameService {
                 base(callbackInstance, binding, remoteAddress) {
         }
         
-        public void NewGame(int hostUserId, string gameName) {
-            base.Channel.NewGame(hostUserId, gameName);
+        public void NewGame(Views.SRIManageGameService.Gamematch game) {
+            base.Channel.NewGame(game);
         }
         
-        public System.Threading.Tasks.Task NewGameAsync(int hostUserId, string gameName) {
-            return base.Channel.NewGameAsync(hostUserId, gameName);
+        public System.Threading.Tasks.Task NewGameAsync(Views.SRIManageGameService.Gamematch game) {
+            return base.Channel.NewGameAsync(game);
         }
         
-        public void JoinGame(int userId, string accessCode) {
-            base.Channel.JoinGame(userId, accessCode);
+        public void JoinGame(Views.SRIManageGameService.Gamematch gamematch) {
+            base.Channel.JoinGame(gamematch);
         }
         
-        public System.Threading.Tasks.Task JoinGameAsync(int userId, string accessCode) {
-            return base.Channel.JoinGameAsync(userId, accessCode);
+        public System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch) {
+            return base.Channel.JoinGameAsync(gamematch);
         }
         
         public void DisconnectGame(int userId, int gameId) {

@@ -69,8 +69,8 @@
   <wsdl:message name="IManageGameService_CanceledGame_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:CanceledGame" />
   </wsdl:message>
-  <wsdl:message name="IManageGameService_StartGame_OutputCallbackMessage">
-    <wsdl:part name="parameters" element="tns:StartGame" />
+  <wsdl:message name="IManageGameService_UserConnectionNotification_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserConnectionNotification" />
   </wsdl:message>
   <wsdl:portType name="IPlayerManagement">
     <wsdl:operation name="AuthenticateLogin">
@@ -112,8 +112,8 @@
     <wsdl:operation name="CanceledGame">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/CanceledGame" message="tns:IManageGameService_CanceledGame_OutputCallbackMessage" />
     </wsdl:operation>
-    <wsdl:operation name="StartGame">
-      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGame" message="tns:IManageGameService_StartGame_OutputCallbackMessage" />
+    <wsdl:operation name="UserConnectionNotification">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserConnectionNotification" message="tns:IManageGameService_UserConnectionNotification_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IPlayerManagement" type="tns:IPlayerManagement">
@@ -201,8 +201,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="StartGame">
-      <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGame" style="document" />
+    <wsdl:operation name="UserConnectionNotification">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserConnectionNotification" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>

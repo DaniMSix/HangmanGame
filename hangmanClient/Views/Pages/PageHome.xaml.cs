@@ -13,8 +13,6 @@ namespace Views.Pages
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
-            Console.WriteLine("----- HOME ----");
-            Console.WriteLine("ID JUGADOR" + activePlayer.IdPlayer);
             ShowPlayerGreeting();
         }
 
@@ -25,7 +23,7 @@ namespace Views.Pages
 
         private void BtnClicShowMenu(object sender, RoutedEventArgs e)
         {
-            var menuPage = new Menu(frHome, activePlayer);
+            var menuPage = new FrameMenu(frHome, activePlayer);
             frMenu.Navigate(menuPage);
             frMenu.Visibility = Visibility.Visible;
             btnExit.Visibility = Visibility.Visible;
@@ -45,8 +43,8 @@ namespace Views.Pages
 
         private void BtnClickCreateGame(object sender, RoutedEventArgs e)
         {
-            var createGame = new PageAccessCode(activePlayer, frHome);
-            frHome.Navigate(createGame);
+            var pageSelectWord = new PageSelectWord(activePlayer, frHome);
+            frHome.Navigate(pageSelectWord);
         }
     }
 }

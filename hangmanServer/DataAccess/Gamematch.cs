@@ -21,11 +21,9 @@ namespace DataAccess
         public Nullable<int> idChallenger { get; set; }
         public Nullable<int> idGuesser { get; set; }
         public Nullable<int> idMatchStatus { get; set; }
-        public Nullable<int> idMatchLanguage { get; set; }
     
         public virtual Player Player { get; set; }
         public virtual Player Player1 { get; set; }
-        public virtual MatchLanguage MatchLanguage { get; set; }
         public virtual MatchStatus MatchStatus { get; set; }
         public virtual Word Word { get; set; }
     }

@@ -12,7 +12,7 @@ namespace Logic
     {
         private Gamematch game;
         private int hostUserId;
-        private const int MAX_PLAYERS = 4;
+        private const int MAX_PLAYERS = 2;
         private const int MIN_PLAYERS = 1;
         private List<int> players;
 

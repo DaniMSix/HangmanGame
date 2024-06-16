@@ -62,16 +62,14 @@
   <xs:element name="NewGame">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="hostUserId" type="xs:int" />
-        <xs:element minOccurs="0" name="gameName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q5:Gamematch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="JoinGame">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
-        <xs:element minOccurs="0" name="accessCode" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="gamematch" nillable="true" type="q6:Gamematch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -86,7 +84,7 @@
   <xs:element name="StartGameRoom">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q5:Gamematch" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q7:Gamematch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,10 +103,10 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="StartGame">
+  <xs:element name="UserConnectionNotification">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q6:Gamematch" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q8:Gamematch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

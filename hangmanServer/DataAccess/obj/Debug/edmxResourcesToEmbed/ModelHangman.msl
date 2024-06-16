@@ -20,15 +20,6 @@
           <ScalarProperty Name="idChallenger" ColumnName="idChallenger" />
           <ScalarProperty Name="idGuesser" ColumnName="idGuesser" />
           <ScalarProperty Name="idMatchStatus" ColumnName="idMatchStatus" />
-          <ScalarProperty Name="idMatchLanguage" ColumnName="idMatchLanguage" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="MatchLanguage">
-      <EntityTypeMapping TypeName="HangmanDbModel.MatchLanguage">
-        <MappingFragment StoreEntitySet="MatchLanguage">
-          <ScalarProperty Name="idMatchLanguage" ColumnName="idMatchLanguage" />
-          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Views.Pages
 {
     /// <summary>
-    /// Lógica de interacción para PageCategories.xaml
+    /// Lógica de interacción para PageGamePlay.xaml
     /// </summary>
-    public partial class PageCategories : Page
+    public partial class PageGamePlay : Page
     {
-        public PageCategories()
+        public PageGamePlay()
         {
             InitializeComponent();
         }

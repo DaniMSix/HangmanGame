@@ -8,11 +8,20 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="NetTcpBinding_IManageGameService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic.DTO" />
+      <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPlayerManagement_AuthenticateLogin_InputMessage">
@@ -39,6 +48,30 @@
   <wsdl:message name="IPlayerManagement_UpdateFullProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateFullProfileResponse" />
   </wsdl:message>
+  <wsdl:message name="IManageGameService_NewGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewGame" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_JoinGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:JoinGame" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_DisconnectGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectGame" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_StartGameRoom_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StartGameRoom" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_AccessCodeNotFound_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AccessCodeNotFound" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_CompleteRoom_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CompleteRoom" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_CanceledGame_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CanceledGame" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_UserConnectionNotification_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserConnectionNotification" />
+  </wsdl:message>
   <wsdl:portType name="IPlayerManagement">
     <wsdl:operation name="AuthenticateLogin">
       <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/AuthenticateLogin" message="tns:IPlayerManagement_AuthenticateLogin_InputMessage" />
@@ -55,6 +88,32 @@
     <wsdl:operation name="UpdateFullProfile">
       <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile" message="tns:IPlayerManagement_UpdateFullProfile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse" message="tns:IPlayerManagement_UpdateFullProfile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IManageGameService">
+    <wsdl:operation name="NewGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/NewGame" message="tns:IManageGameService_NewGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JoinGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/JoinGame" message="tns:IManageGameService_JoinGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/DisconnectGame" message="tns:IManageGameService_DisconnectGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartGameRoom">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameRoom" message="tns:IManageGameService_StartGameRoom_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccessCodeNotFound">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/AccessCodeNotFound" message="tns:IManageGameService_AccessCodeNotFound_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteRoom">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/CompleteRoom" message="tns:IManageGameService_CompleteRoom_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CanceledGame">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/CanceledGame" message="tns:IManageGameService_CanceledGame_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserConnectionNotification">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserConnectionNotification" message="tns:IManageGameService_UserConnectionNotification_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IPlayerManagement" type="tns:IPlayerManagement">
@@ -97,11 +156,69 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="NetTcpBinding_IManageGameService" type="tns:IManageGameService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IManageGameService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="NewGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/NewGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="JoinGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/JoinGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/DisconnectGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="StartGameRoom">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGameRoom" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccessCodeNotFound">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/AccessCodeNotFound" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteRoom">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/CompleteRoom" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanceledGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/CanceledGame" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserConnectionNotification">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserConnectionNotification" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="ServicesExposed">
     <wsdl:port name="NetTcpBinding_IPlayerManagement" binding="tns:NetTcpBinding_IPlayerManagement">
       <soap12:address location="net.tcp://127.0.0.1:8090/PlayerManagementService" />
       <wsa10:EndpointReference>
         <wsa10:Address>net.tcp://127.0.0.1:8090/PlayerManagementService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IManageGameService" binding="tns:NetTcpBinding_IManageGameService">
+      <soap12:address location="net.tcp://127.0.0.1:8090/ManageGameService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:8090/ManageGameService</wsa10:Address>
       </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>

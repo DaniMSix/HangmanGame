@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ServerManageGame;
 
 namespace Views.Pages
 {
@@ -20,10 +21,38 @@ namespace Views.Pages
     public partial class PageWaitingRoom : Page
     {
         DTOPlayer activePlayer;
-        public PageWaitingRoom(DTOPlayer activePlayer)
+        private ManageGame manageGame;
+        Frame frCurrentFrame;
+        int count = 0;
+        public PageWaitingRoom(DTOPlayer activePlayer, ManageGame manageGame, Frame homeFrame)
         {
-            InitializeComponent();
             this.activePlayer = activePlayer;
-    }
+            this.frCurrentFrame = homeFrame;
+            InitializeComponent();
+
+            Console.WriteLine("------------------ PageWaitingRoom -------------------");
+            Console.WriteLine("idGuesser" + manageGame.gameMatch.idGuesser);
+
+            if (manageGame.gameMatch.idGuesser > 0)
+            {
+                Console.WriteLine("------------------ GUESSER -------------------");
+                lbGuestPlayer.Visibility = Visibility.Collapsed;
+                lbTitle.Content = "Estás a punto de jugar con " + manageGame.gameMatch.idChallenger;
+                btnStartGame.Content = "Salir";
+            }
+            else
+            {
+                lbTitle.Content = "Código de la partida";
+                lbAccessCode.Content = manageGame.gameMatch.code;
+                lbGuestPlayer.Visibility = Visibility.Visible;
+                btnStartGame.Content = "Empezar";
+            }
+        }
+
+        private void BtnClickCancelGame(object sender, RoutedEventArgs e)
+        {
+            var pageHome = new PageHome(activePlayer);
+            frCurrentFrame.Navigate(pageHome);
+        }
     }
 }

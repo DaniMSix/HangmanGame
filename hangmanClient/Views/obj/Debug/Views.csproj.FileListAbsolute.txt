@@ -72,11 +72,8 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views.csproj.AssemblyReference.cache
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\MainWindow.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Login.g.cs
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\loser.g.cs
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Menu.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAccessCode.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAnimalCategory.g.cs
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCategories.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\App.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views_Content.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -85,11 +82,8 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\App.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\MainWindow.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Login.baml
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\loser.baml
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\Menu.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAccessCode.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageAnimalCategory.baml
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCategories.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views.g.resources
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views.Properties.Resources-en.resources
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views.Properties.Resources.resources
@@ -118,3 +112,11 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageWaitingRoomFortuneTeller.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Notifications\PageWarning.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageWinning.baml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectWord.g.cs
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectWord.baml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageGamePlay.g.cs
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Notifications\PageLoser.g.cs
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageGamePlay.baml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Notifications\PageLoser.baml
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameMenu.g.cs
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameMenu.baml

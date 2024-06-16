@@ -19,7 +19,7 @@
         <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Tengo un código" HorizontalAlignment="Left" Margin="626,414,0,0" 
                 VerticalAlignment="Top" Width="187" Height="38" Click="BtnClickJoinGameWithCode"/>
         <Label FontFamily="{StaticResource FuenteVT323}" Content="Partidas disponibles" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="449,97,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbPlayerGreeting" FontFamily="{StaticResource FuenteVT323}" FontSize="17" HorizontalAlignment="Left" Margin="40,164,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPlayerGreeting" FontFamily="{StaticResource FuenteVT323}" FontSize="20" HorizontalAlignment="Left" Margin="50,154,0,0" VerticalAlignment="Top"/>
 
         <Frame x:Name="frMenu" HorizontalAlignment="Left" Height="500" Margin="784,0,0,0" VerticalAlignment="Top" Width="211" Visibility="Collapsed"/>
 

@@ -19,21 +19,13 @@
     <Property Name="idChallenger" Type="int" />
     <Property Name="idGuesser" Type="int" />
     <Property Name="idMatchStatus" Type="int" />
-    <Property Name="idMatchLanguage" Type="int" />
-  </EntityType>
-  <EntityType Name="MatchLanguage">
-    <Key>
-      <PropertyRef Name="idMatchLanguage" />
-    </Key>
-    <Property Name="idMatchLanguage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="int" />
   </EntityType>
   <EntityType Name="MatchStatus">
     <Key>
       <PropertyRef Name="idMatchStatus" />
     </Key>
     <Property Name="idMatchStatus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Player">
     <Key>
@@ -87,20 +79,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_gamematch_match_language">
-    <End Role="MatchLanguage" Type="Self.MatchLanguage" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Gamematch" Type="Self.Gamematch" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MatchLanguage">
-        <PropertyRef Name="idMatchLanguage" />
-      </Principal>
-      <Dependent Role="Gamematch">
-        <PropertyRef Name="idMatchLanguage" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_gamematch_match_status">
     <End Role="MatchStatus" Type="Self.MatchStatus" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
@@ -146,7 +124,6 @@
   <EntityContainer Name="HangmanDbModelStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Gamematch" EntityType="Self.Gamematch" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="MatchLanguage" EntityType="Self.MatchLanguage" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MatchStatus" EntityType="Self.MatchStatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Word" EntityType="Self.Word" Schema="dbo" store:Type="Tables" />
@@ -156,10 +133,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_gamematch_guesser" Association="Self.FK_gamematch_guesser">
       <End Role="Player" EntitySet="Player" />
-      <End Role="Gamematch" EntitySet="Gamematch" />
-    </AssociationSet>
-    <AssociationSet Name="FK_gamematch_match_language" Association="Self.FK_gamematch_match_language">
-      <End Role="MatchLanguage" EntitySet="MatchLanguage" />
       <End Role="Gamematch" EntitySet="Gamematch" />
     </AssociationSet>
     <AssociationSet Name="FK_gamematch_match_status" Association="Self.FK_gamematch_match_status">

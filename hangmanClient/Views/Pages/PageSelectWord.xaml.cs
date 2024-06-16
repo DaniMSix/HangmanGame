@@ -1,28 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain;
+using System;
+using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using ServerManageGame;
+using Views.SRIPlayerManagement;
 
 namespace Views.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para PageSelectWord.xaml
-    /// </summary>
+    [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple)]
     public partial class PageSelectWord : Page
     {
-        public PageSelectWord()
+        private ManageGame manageGame;
+        Domain.DTOPlayer activePlayer;
+        Frame frCurrentFrame;
+        public PageSelectWord(Domain.DTOPlayer activePlayer, Frame frHome)
         {
             InitializeComponent();
+            manageGame = new ManageGame(activePlayer, frHome);
+            this.activePlayer = activePlayer;
+        }
+
+        private void BtnClickGameCreate(object sender, RoutedEventArgs e)
+        {
+            SRIManageGameService.Gamematch gamematch = new SRIManageGameService.Gamematch
+            {
+                idChallenger = activePlayer.IdPlayer,
+                language = "Español",
+                idWord = 1,
+                idMatchStatus = 2
+            };
+
+            manageGame.StartGameConection(gamematch);
         }
     }
 }

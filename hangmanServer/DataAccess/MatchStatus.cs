@@ -21,7 +21,7 @@ namespace DataAccess
         }
     
         public int idMatchStatus { get; set; }
-        public Nullable<int> name { get; set; }
+        public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Gamematch> Gamematch { get; set; }

@@ -1,10 +1,7 @@
 ﻿using DataAccess;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Comunication
 {
@@ -12,10 +9,10 @@ namespace Comunication
     public interface IManageGameService
     {
         [OperationContract(IsOneWay = true)]
-        void NewGame(int hostUserId, String gameName);
+        void NewGame(Gamematch game);
 
         [OperationContract(IsOneWay = true)]
-        void JoinGame(int userId, String accessCode);
+        void JoinGame(Gamematch gamematch);
 
         [OperationContract(IsOneWay = true)]
         void DisconnectGame(int userId, int gameId);
@@ -37,6 +34,6 @@ namespace Comunication
         void CanceledGame();
 
         [OperationContract(IsOneWay = true)]
-        void StartGame(Gamematch game);
+        void UserConnectionNotification(Gamematch game);
     }
 }

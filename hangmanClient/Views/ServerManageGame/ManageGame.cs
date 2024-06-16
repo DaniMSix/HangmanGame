@@ -1,40 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using Views.Pages;
 using Views.SRIManageGameService;
 
-namespace Views.ServerManageGame
+namespace ServerManageGame
 {
     public class ManageGame : IManageGameServiceCallback
     {
         private ManageGameServiceClient manageGameServiceClient;
-        Domain.DTOPlayer activePlayer;
-        Gamematch gameMatch;
-
-        Frame frame;
+        private Domain.DTOPlayer activePlayer;
+        public Gamematch gameMatch = new Gamematch();
+        Frame frCurrentFrame;
 
         public ManageGame(Domain.DTOPlayer activePlayer, Frame frame)
         {
             this.activePlayer = activePlayer;
-            this.frame = frame;
+            this.frCurrentFrame = frame;
             InstanceContext context = new InstanceContext(this);
             manageGameServiceClient = new ManageGameServiceClient(context);
         }
 
-        public void StartGameConection(String gameName)
+        public void StartGameConection(Gamematch gameMatch)
         {
-            manageGameServiceClient.NewGame(activePlayer.IdPlayer, gameName);
+            manageGameServiceClient.NewGame(gameMatch);
         }
 
-        public void StartJoinGame(String accessCode)
+        public void StartJoinGame(Gamematch gamematch)
         {
-            manageGameServiceClient.JoinGame(activePlayer.IdPlayer, accessCode);
+            manageGameServiceClient.JoinGame(gamematch);
         }
 
         public void FinishGameConnectionn(int idPlayer, int IdGame)
@@ -50,7 +45,7 @@ namespace Views.ServerManageGame
         public void CanceledGame()
         {
             var canceledGame = new PageHome(activePlayer);
-            frame.Navigate(canceledGame);
+            frCurrentFrame.Navigate(canceledGame);
         }
 
         public void CompleteRoom()
@@ -58,17 +53,16 @@ namespace Views.ServerManageGame
             MessageBox.Show("La sala ya esta completa");
         }
 
-        public void StartGame(Gamematch game)
-        {
-            throw new NotImplementedException();
-        }
-
         public void StartGameRoom(Gamematch game)
         {
             this.gameMatch = game;
+            var lobby = new PageWaitingRoom(activePlayer, this, frCurrentFrame);
+            frCurrentFrame.Navigate(lobby);
+        }
 
-            var lobby = new PageWaitingRoom(activePlayer);
-            frame.Navigate(lobby);
+        public void UserConnectionNotification(Gamematch game)
+        {
+            this.gameMatch = game;
         }
     }
 }

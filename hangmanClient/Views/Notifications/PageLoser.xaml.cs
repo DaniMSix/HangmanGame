@@ -18,9 +18,9 @@ namespace Views.Pages
     /// <summary>
     /// Lógica de interacción para loser.xaml
     /// </summary>
-    public partial class loser : Page
+    public partial class PageLoser : Page
     {
-        public loser()
+        public PageLoser()
         {
             InitializeComponent();
         }

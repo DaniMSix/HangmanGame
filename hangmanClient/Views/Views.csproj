@@ -70,6 +70,9 @@
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageGamePlay.xaml.cs">
+      <DependentUpon>PageGamePlay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageSelectWord.xaml.cs">
       <DependentUpon>PageSelectWord.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PageGamePlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageSelectWord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,11 +126,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\loser.xaml">
+    <Page Include="Notifications\PageLoser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Menu.xaml">
+    <Page Include="Frame\FrameMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,10 +139,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageAnimalCategory.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageCategories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,20 +179,17 @@
     <Compile Include="Pages\PageHome.xaml.cs">
       <DependentUpon>PageHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\loser.xaml.cs">
-      <DependentUpon>loser.xaml</DependentUpon>
+    <Compile Include="Notifications\PageLoser.xaml.cs">
+      <DependentUpon>PageLoser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="Frame\FrameMenu.xaml.cs">
+      <DependentUpon>FrameMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageAccessCode.xaml.cs">
       <DependentUpon>PageAccessCode.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageAnimalCategory.xaml.cs">
       <DependentUpon>PageAnimalCategory.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageCategories.xaml.cs">
-      <DependentUpon>PageCategories.xaml</DependentUpon>
     </Compile>
     <Compile Include="Notifications\PageSuccess.xaml.cs">
       <DependentUpon>PageSuccess.xaml</DependentUpon>
@@ -255,6 +255,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SRIPlayerManagement\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\item3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SRIPlayerManagement\ServicesExposed.wsdl" />
@@ -390,7 +393,6 @@
     </None>
     <Resource Include="Images\Background-home.png" />
     <Resource Include="Images\error-label.png" />
-    <Resource Include="Image1.png" />
     <Resource Include="Images\menu.png" />
     <Resource Include="Images\exit.png" />
     <Resource Include="Images\question.png" />
