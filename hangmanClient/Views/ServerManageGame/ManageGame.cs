@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
+using Views.Notifications;
 using Views.Pages;
 using Views.SRIManageGameService;
 
@@ -17,8 +18,10 @@ namespace ServerManageGame
         Frame frCurrentFrame;
         public event Action<string> PlayerJoined;
         public event Action<string> PlayerDisconnected;
-        public DTOGameMatch[] gamematches { get; set; } // Cambiado a array
-        public DTOStatistics[] statistics { get; set; } // Cambiado a array
+        public event Action<char[], int, bool> IfGuessed;
+        public event Action<Domain.DTOPlayer, Frame, string, int, bool, bool> GameFinished;
+        public DTOGameMatch[] gamematches { get; set; }
+        public DTOStatistics[] statistics { get; set; } 
         private IManageGameService iManageGame;
 
         public ManageGame()
@@ -89,8 +92,6 @@ namespace ServerManageGame
             {
                 PlayerDisconnected?.Invoke(namePlayerGuesser);
             });
-
-            Console.WriteLine("player: " + gamematch.idGuesser);
         }
 
         public DTOGameMatch[] RecoveringGames()
@@ -111,25 +112,43 @@ namespace ServerManageGame
             return statistics = manageGameServiceClient.GetStatistics(idPlayer);
         }
 
+        public void StartGame()
+        {
+            manageGameServiceClient.StartGame(gameMatch.idGamematch);
+        }
+
         public void StartGameChallenger(string word, string hint)
         {
-            var pageGame = new PageGamePlay(activePlayer, this, frCurrentFrame);
-            frCurrentFrame.Navigate(lobby);
+            var pageGame = new PageGamePlay(this, frCurrentFrame, word, hint);
+            frCurrentFrame.Navigate(pageGame);
         }
 
         public void StartGameGuesser(string hint)
         {
+            var pageGame = new PageGamePlay(this, frCurrentFrame, hint);
+            frCurrentFrame.Navigate(pageGame);
 
+        }
+
+        public void ValidateLetter(char letter)
+        {
+            manageGameServiceClient.ValidateLetter(gameMatch.idGamematch, letter);
         }
 
         public void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess)
         {
-
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                IfGuessed?.Invoke(letters, failedAttempts, isGuess);
+            });
         }
 
-        public void FinishGame(string word, int score, bool win)
+        public void FinishGame(string word, int score, bool win, bool challenger)
         {
-
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                GameFinished?.Invoke(activePlayer, frCurrentFrame, word, score, win, challenger);
+            });
         }
     }
 }

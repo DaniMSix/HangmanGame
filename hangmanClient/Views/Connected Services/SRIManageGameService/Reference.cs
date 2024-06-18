@@ -1481,10 +1481,10 @@ namespace Views.SRIManageGameService {
         void StartGameGuesser(string hint);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/NotificationIfGuessed")]
-        void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess);
+        void NotificationIfGuessed(char[] letters, int failedAttempts, bool guesser);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/FinishGame")]
-        void FinishGame(string word, int score, bool win);
+        void FinishGame(string word, int score, bool win, bool challenger);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

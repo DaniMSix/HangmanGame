@@ -19,7 +19,6 @@ namespace Views.Pages
         private DTOPlayer activePlayer;
         private Frame homeFrame;
 
-
         public PageCreateProfile()
         {
             InitializeComponent();
@@ -104,7 +103,6 @@ namespace Views.Pages
             var home = new PageHome(activePlayer);
             homeFrame.Navigate(home);
 
-            // Restaurar la visibilidad del DataGrid al volver a PageHome
             if (homeFrame.Content is PageHome pageHome)
             {
                 pageHome.dataGridItemsGames.Visibility = Visibility.Visible;

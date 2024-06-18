@@ -1,18 +1,6 @@
 ﻿using Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ServerManageGame;
 
 namespace Views.Pages
@@ -33,21 +21,22 @@ namespace Views.Pages
             this.manageGame = manageGame;
             this.manageGame.PlayerJoined += OnPlayerJoined;  // Subscribirse al evento
             this.manageGame.PlayerDisconnected += OnPlayerDisconnected;
-
+            btnStartGame.Visibility = Visibility.Collapsed;
 
 
             if (manageGame.gameMatch.idGuesser > 0)
             {
                 lbGuestPlayer.Visibility = Visibility.Collapsed;
                 lbTitle.Content = "Estás a punto de jugar con " + manageGame.gameMatch.idChallenger;
-                btnStartGame.Content = "Salir";
+                btnCancel.Content = "Salir";
+                
             }
             else
             {
                 lbTitle.Content = "Código de la partida";
                 lbAccessCode.Content = manageGame.gameMatch.code;
                 lbGuestPlayer.Visibility = Visibility.Visible;
-                btnStartGame.Content = "Cancelar";
+                btnCancel.Content = "Cancelar";
             }
         }
 
@@ -55,21 +44,26 @@ namespace Views.Pages
         {
             lbGuestPlayer.Content = $"{namePlayerGuesser} se ha unido a la partida";
             lbGuestPlayer.Visibility = Visibility.Visible;
-            btnStartGame.Content = "Empezar";
+            btnStartGame.Visibility = Visibility.Visible;
         }
 
         private void OnPlayerDisconnected(string namePlayerGuesser)
         {
             lbGuestPlayer.Content = $"{namePlayerGuesser} se ha desconectado de la partida";
             lbGuestPlayer.Visibility = Visibility.Visible;
-            btnStartGame.Content = "Cancelar";
+            btnStartGame.Visibility = Visibility.Collapsed;
         }
 
-        private void BtnClickManageGame(object sender, RoutedEventArgs e)
+        private void BtnClickOutGame(object sender, RoutedEventArgs e)
         {
             manageGame.FinishGameConnectionn();
             var pageHome = new PageHome(activePlayer);
             frCurrentFrame.Navigate(pageHome);
+        }
+
+        private void BtnStartManageGame(object sender, RoutedEventArgs e)
+        {
+            manageGame.StartGame();
         }
     }
 

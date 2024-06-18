@@ -183,7 +183,7 @@
       <xs:sequence>
         <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="letters" nillable="true" type="q13:ArrayOfchar" />
         <xs:element minOccurs="0" name="failedAttempts" type="xs:int" />
-        <xs:element minOccurs="0" name="isGuess" type="xs:boolean" />
+        <xs:element minOccurs="0" name="guesser" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -193,6 +193,7 @@
         <xs:element minOccurs="0" name="word" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="score" type="xs:int" />
         <xs:element minOccurs="0" name="win" type="xs:boolean" />
+        <xs:element minOccurs="0" name="challenger" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

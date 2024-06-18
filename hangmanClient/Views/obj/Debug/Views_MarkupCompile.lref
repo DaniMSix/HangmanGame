@@ -1,6 +1,8 @@
 ﻿
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\App.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\MainWindow.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageLoserChallenger.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageWinningGuesser.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageGamePlay.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageSelectWord.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageWaitingRoom.xaml;;
@@ -9,12 +11,12 @@ FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageError.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageHome.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\Login.xaml;;
-FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageLoser.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageLoserGuesser.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Frame\FrameMenu.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageAccessCode.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageAnimalCategory.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageStatistics.xaml;;
-FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageWaitingRoomFortuneTeller.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageWarning.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageWinning.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageWinningChallenger.xaml;;
 

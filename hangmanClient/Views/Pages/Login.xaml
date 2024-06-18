@@ -21,7 +21,6 @@
             <PasswordBox x:Name="psdPassword" HorizontalAlignment="Left" Margin="387,332,0,0" VerticalAlignment="Top"
             Width="240" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0"/>
         </Grid>
-        <!-- TextBlock para los puntos suspensivos -->
         <TextBlock x:Name="txtLoadingDots" FontFamily="{StaticResource FuenteVT323}" Visibility="Collapsed" Text="..." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,427,0,0" >
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="TextBlock.Loaded">
@@ -53,7 +52,6 @@
         <Label x:Name="lbPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
         <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="¿No tienes perfil aún? ¡Regístrate aquí!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
                MouseUp="TxtClicRegister"/>
-        <!-- Aquí debes ajustar la ruta de la música -->
         <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
         <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Click="ClicPlayMusicButtonClick" Margin="929,-3,-9,430">

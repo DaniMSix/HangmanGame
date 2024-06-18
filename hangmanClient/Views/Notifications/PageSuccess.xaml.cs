@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 
 namespace Views.Pages
 {
@@ -18,11 +17,9 @@ namespace Views.Pages
 
         private void CloseMessage()
         {
-            // Lógica para cerrar el mensaje de éxito
             MessageClosed?.Invoke(this, EventArgs.Empty);
         }
 
-        // Llama a este método cuando quieras cerrar el mensaje
         private void SomeActionThatClosesTheMessage()
         {
             CloseMessage();
@@ -30,7 +27,6 @@ namespace Views.Pages
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
-            // Lógica para el clic del botón de aceptar
             SomeActionThatClosesTheMessage();
         }
     }

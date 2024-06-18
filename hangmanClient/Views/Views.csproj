@@ -67,6 +67,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Notifications\PageLoserChallenger.xaml.cs">
+      <DependentUpon>PageLoserChallenger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\PageWinningChallenger.xaml.cs">
+      <DependentUpon>PageWinningChallenger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\PageWinningGuesser.xaml.cs">
+      <DependentUpon>PageWinningGuesser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -94,6 +103,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Notifications\PageLoserChallenger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Notifications\PageWinningChallenger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Notifications\PageWinningGuesser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageGamePlay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Notifications\PageLoser.xaml">
+    <Page Include="Notifications\PageLoserGuesser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,10 +168,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Notifications\PageSuccess.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\PageWaitingRoomFortuneTeller.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,8 +196,8 @@
     <Compile Include="Pages\PageHome.xaml.cs">
       <DependentUpon>PageHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Notifications\PageLoser.xaml.cs">
-      <DependentUpon>PageLoser.xaml</DependentUpon>
+    <Compile Include="Notifications\PageLoserGuesser.xaml.cs">
+      <DependentUpon>PageLoserGuesser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Frame\FrameMenu.xaml.cs">
       <DependentUpon>FrameMenu.xaml</DependentUpon>
@@ -193,9 +210,6 @@
     </Compile>
     <Compile Include="Notifications\PageSuccess.xaml.cs">
       <DependentUpon>PageSuccess.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageWaitingRoomFortuneTeller.xaml.cs">
-      <DependentUpon>PageWaitingRoomFortuneTeller.xaml</DependentUpon>
     </Compile>
     <Compile Include="Notifications\PageWarning.xaml.cs">
       <DependentUpon>PageWarning.xaml</DependentUpon>

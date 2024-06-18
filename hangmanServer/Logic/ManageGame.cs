@@ -25,6 +25,7 @@ namespace Logic
                         code = new Random().Next(0, 100000).ToString("D5"),
                         language = gameMatch.language,
                         idWord = gameMatch.idWord,
+                        creationDate = DateTime.Now,
                         idChallenger = gameMatch.idChallenger,
                         idMatchStatus = gameMatch.idMatchStatus
 
@@ -260,6 +261,10 @@ namespace Logic
                     else
                     {
                         score = playerToUpdate.score.Value - 10;
+                        if (score < 0)
+                        {
+                            score = 0;
+                        }
                         playerToUpdate.score = score;
                     }
 

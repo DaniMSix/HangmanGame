@@ -59,9 +59,9 @@ namespace Comunication
         void StartGameGuesser(string hint);
 
         [OperationContract(IsOneWay = true)]
-        void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess);
+        void NotificationIfGuessed(char[] letters, int failedAttempts, bool guesser);
 
         [OperationContract(IsOneWay = true)]
-        void FinishGame(string word, int score, bool win);
+        void FinishGame(string word, int score, bool win, bool challenger);
     }
 }

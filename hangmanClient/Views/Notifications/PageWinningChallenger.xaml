@@ -1,0 +1,22 @@
+﻿<Page x:Class="Views.Notifications.PageWinningChallenger"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Views.Notifications"
+      mc:Ignorable="d" 
+      d:DesignHeight="251" d:DesignWidth="518"
+      Title="PageWinningChallenger">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\Background-winning.png"/>
+        </Grid.Background>
+        <Label FontFamily="{StaticResource PressStart2P}" FontSize="18" Content="¡Felicidades!" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top"/>
+        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="18" Content="¡No han adivinado la palabra correctamente!" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,106,0,0"/>
+        <Image Source="\Images\sign.png" HorizontalAlignment="Left" Height="68" Margin="224,129,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="15" Content="puntos" HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbScore" FontFamily="{StaticResource FuenteVT323}" FontSize="23" Foreground="White" HorizontalAlignment="Left" Margin="233,158,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Height="29" Width="90" Click="BtnAcceptClick"/>
+    </Grid>
+</Page>

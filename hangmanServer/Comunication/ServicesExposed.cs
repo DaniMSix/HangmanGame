@@ -244,9 +244,10 @@ namespace Comunication
                     int index = 0;
                     foreach (char wordLetter in room.Word)
                     {
-                        if (wordLetter == letter)
+                        if (Char.ToUpper(wordLetter) == Char.ToUpper(letter))
                         {
                             room.LettersGuessed[index] = letter;
+                            
                             isGuess = true;
                         }
                         index++;
@@ -259,7 +260,7 @@ namespace Comunication
 
                     if (room.FailedAttempts < room.MAXATTEMPTS)
                     {
-                        if (new string(room.LettersGuessed) == room.Word)
+                        if ((new string(room.LettersGuessed)).ToUpper() == room.Word.ToUpper())
                         {
                             manageGame.UpdateGameMatchStatus(gameId, 5);
                             manageGame.UpdateGameWinChallenger(gameId, false);
@@ -267,8 +268,8 @@ namespace Comunication
                             int challengerScore = manageGame.UpdatePlayerScore(room.GameMatch.idChallenger.Value, false);
                             int guesserScore = manageGame.UpdatePlayerScore(room.GameMatch.idGuesser.Value, true);
 
-                            players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, false);
-                            players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, true);
+                            players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, false, true);
+                            players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, true, false);
 
                             players.Remove(room.GameMatch.idChallenger.Value);
                             players.Remove(room.GameMatch.idGuesser.Value);
@@ -277,8 +278,8 @@ namespace Comunication
                         }
                         else
                         {
-                            players[room.GameMatch.idChallenger.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, isGuess);
-                            players[room.GameMatch.idGuesser.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, isGuess);
+                            players[room.GameMatch.idChallenger.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, false);
+                            players[room.GameMatch.idGuesser.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, true);
                         }
                     }
                     else
@@ -289,8 +290,8 @@ namespace Comunication
                         int challengerScore = manageGame.UpdatePlayerScore(room.GameMatch.idChallenger.Value, true);
                         int guesserScore = manageGame.UpdatePlayerScore(room.GameMatch.idGuesser.Value, false);
 
-                        players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, true);
-                        players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, false);
+                        players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, true, true);
+                        players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, false, false);
 
                         players.Remove(room.GameMatch.idChallenger.Value);
                         players.Remove(room.GameMatch.idGuesser.Value);
