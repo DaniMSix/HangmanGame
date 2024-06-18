@@ -1,10 +1,6 @@
 ﻿using DataAccess;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logic
 {
@@ -15,6 +11,10 @@ namespace Logic
         private const int MAX_PLAYERS = 2;
         private const int MIN_PLAYERS = 1;
         private List<int> players;
+        private string word;
+        private char[] lettersGuessed;
+        private int failedAttempts;
+        private const int MAX_ATTEMPTS = 6;
 
         [DataMember]
         public Gamematch GameMatch { get; set; }
@@ -30,5 +30,17 @@ namespace Logic
 
         [DataMember]
         public List<int> Players { get; set; }
+
+        [DataMember]
+        public string Word { get; set; }
+
+        [DataMember]
+        public char[] LettersGuessed {  get; set; }
+
+        [DataMember]
+        public int FailedAttempts {  get; set; }
+
+        [DataMember]
+        public int MAXATTEMPTS => MAX_ATTEMPTS;
     }
 }

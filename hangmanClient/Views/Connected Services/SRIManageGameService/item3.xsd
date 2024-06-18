@@ -2,6 +2,9 @@
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic.DTO" />
   <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+  <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Logic" />
+  <xs:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="AuthenticateLogin">
     <xs:complexType>
       <xs:sequence>
@@ -81,10 +84,51 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="StartGame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="gameId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateLetter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="gameId" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="letter" type="q7:char" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGamematches">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGamematchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Logic" minOccurs="0" name="GetGamematchesResult" nillable="true" type="q8:ArrayOfDTOGameMatch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idChallenger" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Logic.DTO" minOccurs="0" name="GetStatisticsResult" nillable="true" type="q9:ArrayOfDTOStatistics" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="StartGameRoom">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q7:Gamematch" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q10:Gamematch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -106,7 +150,49 @@
   <xs:element name="UserConnectionNotification">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="game" nillable="true" type="q8:Gamematch" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="gamematch" nillable="true" type="q11:Gamematch" />
+        <xs:element minOccurs="0" name="namePlayerGuesser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserDisconectionNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DataAccess" minOccurs="0" name="gamematch" nillable="true" type="q12:Gamematch" />
+        <xs:element minOccurs="0" name="namePlayerGuesser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartGameChallenger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="word" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartGameGuesser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotificationIfGuessed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="letters" nillable="true" type="q13:ArrayOfchar" />
+        <xs:element minOccurs="0" name="failedAttempts" type="xs:int" />
+        <xs:element minOccurs="0" name="isGuess" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinishGame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="word" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="score" type="xs:int" />
+        <xs:element minOccurs="0" name="win" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -21,6 +21,7 @@
     <Property Name="idGuesser" Type="Int32" />
     <Property Name="idMatchStatus" Type="Int32" />
     <Property Name="creationDate" Type="DateTime" Precision="0" />
+    <Property Name="winChallenger" Type="Boolean" />
     <NavigationProperty Name="Player" Relationship="Self.FK_gamematch_challenger" FromRole="Gamematch" ToRole="Player" />
     <NavigationProperty Name="Player1" Relationship="Self.FK_gamematch_guesser" FromRole="Gamematch" ToRole="Player" />
     <NavigationProperty Name="MatchStatus" Relationship="Self.FK_gamematch_match_status" FromRole="Gamematch" ToRole="MatchStatus" />

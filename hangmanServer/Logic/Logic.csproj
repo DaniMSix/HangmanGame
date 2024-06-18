@@ -55,7 +55,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\DTOGameMatch.cs" />
     <Compile Include="DTO\DTOPlayer.cs" />
+    <Compile Include="DTO\DTOStatistics.cs" />
+    <Compile Include="DTO\DTOWord.cs" />
     <Compile Include="GameStatus.cs" />
     <Compile Include="ManageGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

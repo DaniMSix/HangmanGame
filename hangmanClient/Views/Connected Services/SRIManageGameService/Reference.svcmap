@@ -22,6 +22,8 @@
     <MetadataSource Address="http://127.0.0.1:8080/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="item5.xsd" MetadataType="Schema" ID="036fbb5b-e925-4f4c-84bf-71314be100ba" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd5" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="1a59255e-4b9e-40b0-8b34-418e40b6f344" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd4" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6c430aea-9b07-45fb-96d8-b09d22688bc5" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd3" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="6a53f8b1-65de-442f-9758-d1e3b0bb1933" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd2" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="05c77f73-f9be-4fcc-b666-c61b12583443" SourceId="1" SourceUrl="http://127.0.0.1:8080/?xsd=xsd1" />

@@ -244,8 +244,20 @@
     <None Include="Connected Services\SRIManageGameService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SRIManageGameService\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SRIManageGameService\ServicesExposed.wsdl" />
+    <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOGameMatch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOPlayer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOStatistics.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SRIPlayerManagement\item.xsd">
@@ -260,8 +272,20 @@
     <None Include="Connected Services\SRIPlayerManagement\item3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\SRIPlayerManagement\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\item5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\SRIPlayerManagement\ServicesExposed.wsdl" />
+    <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOGameMatch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOPlayer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOStatistics.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -406,6 +430,11 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Resource Include="Images\icon-lose.png" />
+    <Resource Include="Images\icon-win.png" />
+    <Resource Include="Images\background-game.png" />
+    <Resource Include="Images\backgroundGame.png" />
+    <Resource Include="Images\icon-buttonNumber.png" />
     <Content Include="Music\button-sound.mp3" />
     <Resource Include="Images\note.png" />
     <Resource Include="Images\musical note.png" />

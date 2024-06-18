@@ -30,15 +30,14 @@ namespace Views.Pages
             this.frCurrentFrame = homeFrame;
             InitializeComponent();
 
-            Console.WriteLine("------------------ PageWaitingRoom -------------------");
-            Console.WriteLine("idGuesser" + manageGame?.gameMatch.idGuesser);
-
             this.manageGame = manageGame;
             this.manageGame.PlayerJoined += OnPlayerJoined;  // Subscribirse al evento
+            this.manageGame.PlayerDisconnected += OnPlayerDisconnected;
+
+
 
             if (manageGame.gameMatch.idGuesser > 0)
             {
-                Console.WriteLine("------------------ GUESSER -------------------");
                 lbGuestPlayer.Visibility = Visibility.Collapsed;
                 lbTitle.Content = "Estás a punto de jugar con " + manageGame.gameMatch.idChallenger;
                 btnStartGame.Content = "Salir";
@@ -48,18 +47,27 @@ namespace Views.Pages
                 lbTitle.Content = "Código de la partida";
                 lbAccessCode.Content = manageGame.gameMatch.code;
                 lbGuestPlayer.Visibility = Visibility.Visible;
-                btnStartGame.Content = "Empezar";
+                btnStartGame.Content = "Cancelar";
             }
         }
 
-        private void OnPlayerJoined(int idPlayer)
+        private void OnPlayerJoined(string namePlayerGuesser)
         {
-            lbGuestPlayer.Content = $"{idPlayer} se ha unido a la partida";
+            lbGuestPlayer.Content = $"{namePlayerGuesser} se ha unido a la partida";
             lbGuestPlayer.Visibility = Visibility.Visible;
+            btnStartGame.Content = "Empezar";
         }
 
-        private void BtnClickCancelGame(object sender, RoutedEventArgs e)
+        private void OnPlayerDisconnected(string namePlayerGuesser)
         {
+            lbGuestPlayer.Content = $"{namePlayerGuesser} se ha desconectado de la partida";
+            lbGuestPlayer.Visibility = Visibility.Visible;
+            btnStartGame.Content = "Cancelar";
+        }
+
+        private void BtnClickManageGame(object sender, RoutedEventArgs e)
+        {
+            manageGame.FinishGameConnectionn();
             var pageHome = new PageHome(activePlayer);
             frCurrentFrame.Navigate(pageHome);
         }

@@ -7,12 +7,14 @@
       <xs:element minOccurs="0" name="Player1" nillable="true" type="tns:Player" />
       <xs:element minOccurs="0" name="Word" nillable="true" type="tns:Word" />
       <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="creationDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="idChallenger" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="idGamematch" type="xs:int" />
       <xs:element minOccurs="0" name="idGuesser" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="idMatchStatus" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="idWord" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="winChallenger" nillable="true" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Gamematch" nillable="true" type="tns:Gamematch" />

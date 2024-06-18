@@ -35,5 +35,10 @@ namespace Views.Pages
 
             manageGame.StartJoinGame(gamematch);
         }
+
+        private void txtCodeOneNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

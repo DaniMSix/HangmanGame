@@ -13,4 +13,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DTOPlayer" nillable="true" type="tns:DTOPlayer" />
+  <xs:complexType name="ArrayOfDTOStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOStatistics" nillable="true" type="tns:DTOStatistics" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOStatistics" nillable="true" type="tns:ArrayOfDTOStatistics" />
+  <xs:complexType name="DTOStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dateGame" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:float" />
+      <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usernameGuesser" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOStatistics" nillable="true" type="tns:DTOStatistics" />
 </xs:schema>

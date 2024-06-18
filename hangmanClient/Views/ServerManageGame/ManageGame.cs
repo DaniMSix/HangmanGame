@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,7 +15,17 @@ namespace ServerManageGame
         public Gamematch gameMatch = new Gamematch();
         private PageWaitingRoom waitingRoomPage;
         Frame frCurrentFrame;
-        public event Action<int> PlayerJoined;
+        public event Action<string> PlayerJoined;
+        public event Action<string> PlayerDisconnected;
+        public DTOGameMatch[] gamematches { get; set; } // Cambiado a array
+        public DTOStatistics[] statistics { get; set; } // Cambiado a array
+        private IManageGameService iManageGame;
+
+        public ManageGame()
+        {
+            // Inicialización básica, podría ser útil dependiendo de cómo lo uses.
+            manageGameServiceClient = new ManageGameServiceClient(new InstanceContext(this));
+        }
 
         public ManageGame(Domain.DTOPlayer activePlayer, Frame frame)
         {
@@ -35,9 +45,9 @@ namespace ServerManageGame
             manageGameServiceClient.JoinGame(gamematch);
         }
 
-        public void FinishGameConnectionn(int idPlayer, int IdGame)
+        public void FinishGameConnectionn()
         {
-            manageGameServiceClient.DisconnectGame(idPlayer, IdGame);
+            manageGameServiceClient.DisconnectGame(activePlayer.IdPlayer, gameMatch.idGamematch);
         }
 
         public void AccessCodeNotFound()
@@ -63,17 +73,63 @@ namespace ServerManageGame
             frCurrentFrame.Navigate(lobby);
         }
 
-        public void UserConnectionNotification(Gamematch game)
+        public void UserConnectionNotification(Gamematch gamematch, string namePlayerGuesser)
         {
-            this.gameMatch = game;
+            this.gameMatch = gamematch;
             Application.Current.Dispatcher.Invoke(() =>
             {
-                PlayerJoined?.Invoke(game.idGuesser.Value);  // Invocar el evento cuando un jugador se una
+                PlayerJoined?.Invoke(namePlayerGuesser);  // Invocar el evento cuando un jugador se una
             });
-            /*
-            this.gameMatch = game;
-            Console.WriteLine("id ");
-            MessageBox.Show("se unio un jugador");*/
+        }
+
+        public void UserDisconectionNotification(Gamematch gamematch, string namePlayerGuesser)
+        {
+            this.gameMatch = gamematch;
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                PlayerDisconnected?.Invoke(namePlayerGuesser);
+            });
+
+            Console.WriteLine("player: " + gamematch.idGuesser);
+        }
+
+        public DTOGameMatch[] RecoveringGames()
+        {
+            if (manageGameServiceClient == null)
+            {
+                throw new InvalidOperationException("manageGameServiceClient no ha sido inicializado correctamente.");
+            }
+            return gamematches = manageGameServiceClient.GetGamematches();
+        }
+
+        public DTOStatistics[] RecoveringStatistics(int idPlayer)
+        {
+            if (manageGameServiceClient == null)
+            {
+                throw new InvalidOperationException("manageGameServiceClient no ha sido inicializado correctamente.");
+            }
+            return statistics = manageGameServiceClient.GetStatistics(idPlayer);
+        }
+
+        public void StartGameChallenger(string word, string hint)
+        {
+            var pageGame = new PageGamePlay(activePlayer, this, frCurrentFrame);
+            frCurrentFrame.Navigate(lobby);
+        }
+
+        public void StartGameGuesser(string hint)
+        {
+
+        }
+
+        public void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess)
+        {
+
+        }
+
+        public void FinishGame(string word, int score, bool win)
+        {
+
         }
     }
 }

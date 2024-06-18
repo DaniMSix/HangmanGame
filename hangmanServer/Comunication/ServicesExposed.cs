@@ -126,7 +126,7 @@ namespace Comunication
             var error = 1;
             bool guessRegistered = false;
             ManageGame manageGame = new ManageGame();
-
+            string namePlayer = "";
 
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
@@ -147,8 +147,8 @@ namespace Comunication
                             players.Add(gamematch.idGuesser.Value, callBackGameService);
                             guessRegistered = manageGame.RegisterGuestPlayerByAccessCode(gamematch);
                             callBackGameService.StartGameRoom(room.GameMatch);
-
-                            players[room.GameMatch.idChallenger.Value].UserConnectionNotification(room.GameMatch);
+                            namePlayer = manageGame.GetPlayerName(gamematch.idGuesser.Value);
+                            players[room.GameMatch.idChallenger.Value].UserConnectionNotification(room.GameMatch, namePlayer);
                         }
                         break;
                     }
@@ -168,42 +168,151 @@ namespace Comunication
 
         public void DisconnectGame(int userId, int gameId)
         {
+            ManageGame manageGame = new ManageGame();
             foreach (Room room in globalRooms)
             {
                 if (room.GameMatch.idGamematch == gameId)
                 {
-                    if (room.HostUserId == userId)
+                    if (room.GameMatch.idChallenger.Value == userId)
                     {
-                        ManageGame manageGame = new ManageGame();
                         manageGame.DeleteGameId(gameId);
 
-                        List<int> roomPlayers = room.Players;
-                        globalRooms.Remove(room);
+                        players[room.GameMatch.idGuesser.Value].CanceledGame();
+                        players.Remove(userId);
+                        players.Remove(room.GameMatch.idGuesser.Value);
 
-                        foreach (var roomPlayer in roomPlayers)
-                        {
-                            if (players.ContainsKey(roomPlayer))
-                            {
-                                if (roomPlayer != userId)
-                                {
-                                    players[roomPlayer].CanceledGame();
-                                }
-                                players.Remove(roomPlayer);
-                            }
-                        }
+                        globalRooms.Remove(room);
                     }
                     else
                     {
+                        string namePlayer = "";
                         room.Players.Remove(userId);
-
-                        if (players.ContainsKey(userId))
-                        {
-                            players.Remove(userId);
-                        }
+                        players.Remove(userId);
+                        room.GameMatch.idGuesser = null;
+                        namePlayer = manageGame.GetPlayerName(userId);
+                        players[room.GameMatch.idChallenger.Value].UserDisconectionNotification(room.GameMatch, namePlayer);
                     }
                     break;
                 }
             }
+        }
+
+        public void StartGame(int gameId)
+        {
+            ManageGame manageGame = new ManageGame();
+            foreach (Room room in globalRooms)
+            {
+                if (room.GameMatch.idGamematch == gameId)
+                {
+                    manageGame.UpdateGameMatchStatus(gameId, 3);
+                    DTOWord dtoWord = manageGame.GetWord(room.GameMatch.idWord.Value);
+
+                    string word = "";
+                    string hint = "";
+
+                    if (room.GameMatch.language == "Ingles")
+                    {
+                        word = dtoWord.NameEn;
+                        hint = dtoWord.HintEn;
+                        room.Word = word;
+                    }
+                    else
+                    {
+                        word = dtoWord.Name;
+                        hint = dtoWord.Hint;
+                        room.Word = word;
+                    }
+                    room.LettersGuessed = new char[room.Word.Length];
+                    room.FailedAttempts = 0;
+
+                    players[room.GameMatch.idChallenger.Value].StartGameChallenger(word, hint);
+                    players[room.GameMatch.idGuesser.Value].StartGameGuesser(hint);
+
+                    break;
+                }
+            }
+        }
+
+        public void ValidateLetter(int gameId, char letter)
+        {
+            ManageGame manageGame = new ManageGame();
+            foreach (Room room in globalRooms)
+            {
+                if (room.GameMatch.idGamematch == gameId)
+                {
+                    bool isGuess = false;
+                    int index = 0;
+                    foreach (char wordLetter in room.Word)
+                    {
+                        if (wordLetter == letter)
+                        {
+                            room.LettersGuessed[index] = letter;
+                            isGuess = true;
+                        }
+                        index++;
+                    }
+
+                    if (!isGuess)
+                    {
+                        room.FailedAttempts++;
+                    }
+
+                    if (room.FailedAttempts < room.MAXATTEMPTS)
+                    {
+                        if (new string(room.LettersGuessed) == room.Word)
+                        {
+                            manageGame.UpdateGameMatchStatus(gameId, 5);
+                            manageGame.UpdateGameWinChallenger(gameId, false);
+
+                            int challengerScore = manageGame.UpdatePlayerScore(room.GameMatch.idChallenger.Value, false);
+                            int guesserScore = manageGame.UpdatePlayerScore(room.GameMatch.idGuesser.Value, true);
+
+                            players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, false);
+                            players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, true);
+
+                            players.Remove(room.GameMatch.idChallenger.Value);
+                            players.Remove(room.GameMatch.idGuesser.Value);
+
+                            globalRooms.Remove(room);
+                        }
+                        else
+                        {
+                            players[room.GameMatch.idChallenger.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, isGuess);
+                            players[room.GameMatch.idGuesser.Value].NotificationIfGuessed(room.LettersGuessed, room.FailedAttempts, isGuess);
+                        }
+                    }
+                    else
+                    {
+                        manageGame.UpdateGameMatchStatus(gameId, 5);
+                        manageGame.UpdateGameWinChallenger(gameId, true);
+
+                        int challengerScore = manageGame.UpdatePlayerScore(room.GameMatch.idChallenger.Value, true);
+                        int guesserScore = manageGame.UpdatePlayerScore(room.GameMatch.idGuesser.Value, false);
+
+                        players[room.GameMatch.idChallenger.Value].FinishGame(room.Word, challengerScore, true);
+                        players[room.GameMatch.idGuesser.Value].FinishGame(room.Word, guesserScore, false);
+
+                        players.Remove(room.GameMatch.idChallenger.Value);
+                        players.Remove(room.GameMatch.idGuesser.Value);
+
+                        globalRooms.Remove(room);
+                    }
+
+                    break;
+                }
+            }
+        }
+
+        public List<DTOGameMatch> GetGamematches()
+        {
+            ManageGame manageGame = new ManageGame();
+            return manageGame.GetGamematches();
+        }
+
+        public List<DTOStatistics> GetStatistics(int idChallenger)
+        {
+            ManageGame manageGame = new ManageGame();
+            return manageGame.GetStatistics(idChallenger);
         }
     }
 }

@@ -54,45 +54,45 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
     <Compile Include="Gamematch.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
     <Compile Include="MatchStatus.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelhangman.Context.cs">
+    <Compile Include="ModelHangman.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelhangman.Context.tt</DependentUpon>
+      <DependentUpon>ModelHangman.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelhangman.cs">
+    <Compile Include="ModelHangman.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelhangman.Designer.cs">
+    <Compile Include="ModelHangman.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Modelhangman.edmx</DependentUpon>
+      <DependentUpon>ModelHangman.edmx</DependentUpon>
     </Compile>
     <Compile Include="Player.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Word.cs">
-      <DependentUpon>Modelhangman.tt</DependentUpon>
+      <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Modelhangman.edmx">
+    <EntityDeploy Include="ModelHangman.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Modelhangman.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelHangman.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="Modelhangman.edmx.diagram">
-      <DependentUpon>Modelhangman.edmx</DependentUpon>
+    <None Include="ModelHangman.edmx.diagram">
+      <DependentUpon>ModelHangman.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -103,15 +103,15 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Modelhangman.Context.tt">
+    <Content Include="ModelHangman.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelhangman.edmx</DependentUpon>
-      <LastGenOutput>Modelhangman.Context.cs</LastGenOutput>
+      <DependentUpon>ModelHangman.edmx</DependentUpon>
+      <LastGenOutput>ModelHangman.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Modelhangman.tt">
+    <Content Include="ModelHangman.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Modelhangman.edmx</DependentUpon>
-      <LastGenOutput>Modelhangman.cs</LastGenOutput>
+      <DependentUpon>ModelHangman.edmx</DependentUpon>
+      <LastGenOutput>ModelHangman.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

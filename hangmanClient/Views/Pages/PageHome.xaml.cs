@@ -1,19 +1,25 @@
 ﻿using Domain;
-using System;
+using ServerManageGame;
 using System.Windows;
 using System.Windows.Controls;
+
 
 namespace Views.Pages
 {
     public partial class PageHome : Page
     {
         DTOPlayer activePlayer;
+        ManageGame manageGame;
+        DataGrid datagridGames;
 
         public PageHome(DTOPlayer activePlayer)
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
+            manageGame = new ManageGame();
             ShowPlayerGreeting();
+            LoadGames();
+            datagridGames = dataGridItemsGames;
         }
 
         public void ShowPlayerGreeting()
@@ -45,6 +51,12 @@ namespace Views.Pages
         {
             var pageSelectWord = new PageSelectWord(activePlayer, frHome);
             frHome.Navigate(pageSelectWord);
+        }
+
+        public void LoadGames()
+        {
+            var games = manageGame.RecoveringGames();
+            dataGridItemsGames.ItemsSource = games;
         }
     }
 }

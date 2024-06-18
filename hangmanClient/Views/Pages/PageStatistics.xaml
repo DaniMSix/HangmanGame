@@ -5,10 +5,59 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="496" d:DesignWidth="1005"
       Title="PageStatistics">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\Background-statistics.png"/>
+        </Grid.Background>
+
+        <Label FontFamily="{StaticResource FuenteVT323}" Content="Estadísticas" HorizontalContentAlignment="Center" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="429,208,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label x:Name="lbGamesWon" FontFamily="{StaticResource PressStart2P}" Content="partidas ganadas" Foreground="White" FontSize="25" HorizontalAlignment="Left" Margin="370,115,0,0" VerticalAlignment="Top"/>
+
+        <DataGrid x:Name="dataGridStatistics" AutoGenerateColumns="False" Margin="272,252,219,41" Background="Transparent" Foreground="Black" 
+            BorderBrush="Transparent" GridLinesVisibility="None" HeadersVisibility="None" SelectionMode="Single">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                </Style>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre de Usuario" Binding="{Binding usernameGuesser}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
+                  Width="*" />
+                <DataGridTextColumn Header="Correo" Binding="{Binding state}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
+                  Width="*" />
+                <DataGridTextColumn Header="Fecha de Creación" Binding="{Binding dateGame, StringFormat=\{0:dd/MM/yyyy\}}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
+                  Width="*" />
+            </DataGrid.Columns>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Margin" Value="0 5"/>
+                    <!-- Espacio vertical entre filas -->
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#DED4B1" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+
+
+        <Frame x:Name="frMenu" HorizontalAlignment="Left" Height="500" Margin="784,0,0,0" VerticalAlignment="Top" Width="211" Visibility="Collapsed"/>
+
         
+
+       <Frame x:Name="frHome" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" />
+        <Image Source="\Images\icon-win.png" HorizontalAlignment="Left" Height="90" Margin="300,80,0,0" VerticalAlignment="Top" Width="80"/>
+       
     </Grid>
 </Page>

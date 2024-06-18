@@ -20,6 +20,7 @@
     <Property Name="idGuesser" Type="int" />
     <Property Name="idMatchStatus" Type="int" />
     <Property Name="creationDate" Type="date" />
+    <Property Name="winChallenger" Type="bit" />
   </EntityType>
   <EntityType Name="MatchStatus">
     <Key>

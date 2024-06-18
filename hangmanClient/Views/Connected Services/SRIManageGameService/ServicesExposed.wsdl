@@ -22,6 +22,8 @@
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Logic.DTO" />
       <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DataAccess" />
+      <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Logic" />
+      <xsd:import schemaLocation="http://127.0.0.1:8080/?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IPlayerManagement_AuthenticateLogin_InputMessage">
@@ -57,6 +59,24 @@
   <wsdl:message name="IManageGameService_DisconnectGame_InputMessage">
     <wsdl:part name="parameters" element="tns:DisconnectGame" />
   </wsdl:message>
+  <wsdl:message name="IManageGameService_StartGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartGame" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_ValidateLetter_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateLetter" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetGamematches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamematches" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetGamematches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamematchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatisticsResponse" />
+  </wsdl:message>
   <wsdl:message name="IManageGameService_StartGameRoom_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:StartGameRoom" />
   </wsdl:message>
@@ -71,6 +91,21 @@
   </wsdl:message>
   <wsdl:message name="IManageGameService_UserConnectionNotification_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:UserConnectionNotification" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_UserDisconectionNotification_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserDisconectionNotification" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_StartGameChallenger_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StartGameChallenger" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_StartGameGuesser_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StartGameGuesser" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_NotificationIfGuessed_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NotificationIfGuessed" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_FinishGame_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:FinishGame" />
   </wsdl:message>
   <wsdl:portType name="IPlayerManagement">
     <wsdl:operation name="AuthenticateLogin">
@@ -100,6 +135,20 @@
     <wsdl:operation name="DisconnectGame">
       <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/DisconnectGame" message="tns:IManageGameService_DisconnectGame_InputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="StartGame">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/StartGame" message="tns:IManageGameService_StartGame_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLetter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/ValidateLetter" message="tns:IManageGameService_ValidateLetter_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGamematches">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetGamematches" message="tns:IManageGameService_GetGamematches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetGamematchesResponse" message="tns:IManageGameService_GetGamematches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetStatistics" message="tns:IManageGameService_GetStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetStatisticsResponse" message="tns:IManageGameService_GetStatistics_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="StartGameRoom">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameRoom" message="tns:IManageGameService_StartGameRoom_OutputCallbackMessage" />
     </wsdl:operation>
@@ -114,6 +163,21 @@
     </wsdl:operation>
     <wsdl:operation name="UserConnectionNotification">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserConnectionNotification" message="tns:IManageGameService_UserConnectionNotification_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserDisconectionNotification">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserDisconectionNotification" message="tns:IManageGameService_UserDisconectionNotification_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartGameChallenger">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameChallenger" message="tns:IManageGameService_StartGameChallenger_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartGameGuesser">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameGuesser" message="tns:IManageGameService_StartGameGuesser_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotificationIfGuessed">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/NotificationIfGuessed" message="tns:IManageGameService_NotificationIfGuessed_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinishGame">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/FinishGame" message="tns:IManageGameService_FinishGame_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IPlayerManagement" type="tns:IPlayerManagement">
@@ -177,6 +241,36 @@
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
+    <wsdl:operation name="StartGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLetter">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/ValidateLetter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetGamematches">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetGamematches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatistics">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="StartGameRoom">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGameRoom" style="document" />
       <wsdl:output>
@@ -203,6 +297,36 @@
     </wsdl:operation>
     <wsdl:operation name="UserConnectionNotification">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserConnectionNotification" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserDisconectionNotification">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserDisconectionNotification" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartGameChallenger">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGameChallenger" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartGameGuesser">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/StartGameGuesser" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotificationIfGuessed">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/NotificationIfGuessed" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinishGame">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/FinishGame" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>

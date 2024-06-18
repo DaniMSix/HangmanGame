@@ -1,4 +1,7 @@
 ﻿using DataAccess;
+using Logic;
+using Logic.DTO;
+using System.Collections.Generic;
 using System.ServiceModel;
 
 namespace Comunication
@@ -14,6 +17,18 @@ namespace Comunication
 
         [OperationContract(IsOneWay = true)]
         void DisconnectGame(int userId, int gameId);
+
+        [OperationContract(IsOneWay = true)]
+        void StartGame(int gameId);
+
+        [OperationContract(IsOneWay = true)]
+        void ValidateLetter(int gameId, char letter);
+
+        [OperationContract]
+        List<DTOGameMatch> GetGamematches();
+
+        [OperationContract]
+        List<DTOStatistics> GetStatistics(int idChallenger);
     }
 
     [ServiceContract]
@@ -32,6 +47,21 @@ namespace Comunication
         void CanceledGame();
 
         [OperationContract(IsOneWay = true)]
-        void UserConnectionNotification(Gamematch game);
+        void UserConnectionNotification(Gamematch gamematch, string namePlayerGuesser);
+
+        [OperationContract(IsOneWay = true)]
+        void UserDisconectionNotification(Gamematch gamematch, string namePlayerGuesser);
+
+        [OperationContract(IsOneWay = true)]
+        void StartGameChallenger(string word, string hint);
+
+        [OperationContract(IsOneWay = true)]
+        void StartGameGuesser(string hint);
+
+        [OperationContract(IsOneWay = true)]
+        void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess);
+
+        [OperationContract(IsOneWay = true)]
+        void FinishGame(string word, int score, bool win);
     }
 }

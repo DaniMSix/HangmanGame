@@ -195,6 +195,9 @@ namespace Views.SRIPlayerManagement {
         private string codeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> creationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> idChallengerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -211,6 +214,9 @@ namespace Views.SRIPlayerManagement {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string languageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> winChallengerField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -283,6 +289,19 @@ namespace Views.SRIPlayerManagement {
                 if ((object.ReferenceEquals(this.codeField, value) != true)) {
                     this.codeField = value;
                     this.RaisePropertyChanged("code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                if ((this.creationDateField.Equals(value) != true)) {
+                    this.creationDateField = value;
+                    this.RaisePropertyChanged("creationDate");
                 }
             }
         }
@@ -361,6 +380,19 @@ namespace Views.SRIPlayerManagement {
                 if ((object.ReferenceEquals(this.languageField, value) != true)) {
                     this.languageField = value;
                     this.RaisePropertyChanged("language");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> winChallenger {
+            get {
+                return this.winChallengerField;
+            }
+            set {
+                if ((this.winChallengerField.Equals(value) != true)) {
+                    this.winChallengerField = value;
+                    this.RaisePropertyChanged("winChallenger");
                 }
             }
         }
@@ -923,6 +955,368 @@ namespace Views.SRIPlayerManagement {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DTOGameMatch", Namespace="http://schemas.datacontract.org/2004/07/Logic")]
+    [System.SerializableAttribute()]
+    public partial class DTOGameMatch : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ChallengerBirthdateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChallengerEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChallengerNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChallengerPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChallengerPhoneNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ChallengerScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChallengerUsernameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Views.SRIPlayerManagement.DTOGameMatch[] GamematchesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime creationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idChallengerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idGamematchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idMatchStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idWordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string languageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ChallengerBirthdate {
+            get {
+                return this.ChallengerBirthdateField;
+            }
+            set {
+                if ((this.ChallengerBirthdateField.Equals(value) != true)) {
+                    this.ChallengerBirthdateField = value;
+                    this.RaisePropertyChanged("ChallengerBirthdate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChallengerEmail {
+            get {
+                return this.ChallengerEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChallengerEmailField, value) != true)) {
+                    this.ChallengerEmailField = value;
+                    this.RaisePropertyChanged("ChallengerEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChallengerName {
+            get {
+                return this.ChallengerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChallengerNameField, value) != true)) {
+                    this.ChallengerNameField = value;
+                    this.RaisePropertyChanged("ChallengerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChallengerPassword {
+            get {
+                return this.ChallengerPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChallengerPasswordField, value) != true)) {
+                    this.ChallengerPasswordField = value;
+                    this.RaisePropertyChanged("ChallengerPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChallengerPhoneNumber {
+            get {
+                return this.ChallengerPhoneNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChallengerPhoneNumberField, value) != true)) {
+                    this.ChallengerPhoneNumberField = value;
+                    this.RaisePropertyChanged("ChallengerPhoneNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ChallengerScore {
+            get {
+                return this.ChallengerScoreField;
+            }
+            set {
+                if ((this.ChallengerScoreField.Equals(value) != true)) {
+                    this.ChallengerScoreField = value;
+                    this.RaisePropertyChanged("ChallengerScore");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ChallengerUsername {
+            get {
+                return this.ChallengerUsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChallengerUsernameField, value) != true)) {
+                    this.ChallengerUsernameField = value;
+                    this.RaisePropertyChanged("ChallengerUsername");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Views.SRIPlayerManagement.DTOGameMatch[] Gamematches {
+            get {
+                return this.GamematchesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GamematchesField, value) != true)) {
+                    this.GamematchesField = value;
+                    this.RaisePropertyChanged("Gamematches");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string code {
+            get {
+                return this.codeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codeField, value) != true)) {
+                    this.codeField = value;
+                    this.RaisePropertyChanged("code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime creationDate {
+            get {
+                return this.creationDateField;
+            }
+            set {
+                if ((this.creationDateField.Equals(value) != true)) {
+                    this.creationDateField = value;
+                    this.RaisePropertyChanged("creationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idChallenger {
+            get {
+                return this.idChallengerField;
+            }
+            set {
+                if ((this.idChallengerField.Equals(value) != true)) {
+                    this.idChallengerField = value;
+                    this.RaisePropertyChanged("idChallenger");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idGamematch {
+            get {
+                return this.idGamematchField;
+            }
+            set {
+                if ((this.idGamematchField.Equals(value) != true)) {
+                    this.idGamematchField = value;
+                    this.RaisePropertyChanged("idGamematch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idMatchStatus {
+            get {
+                return this.idMatchStatusField;
+            }
+            set {
+                if ((this.idMatchStatusField.Equals(value) != true)) {
+                    this.idMatchStatusField = value;
+                    this.RaisePropertyChanged("idMatchStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idWord {
+            get {
+                return this.idWordField;
+            }
+            set {
+                if ((this.idWordField.Equals(value) != true)) {
+                    this.idWordField = value;
+                    this.RaisePropertyChanged("idWord");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string language {
+            get {
+                return this.languageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.languageField, value) != true)) {
+                    this.languageField = value;
+                    this.RaisePropertyChanged("language");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DTOStatistics", Namespace="http://schemas.datacontract.org/2004/07/Logic.DTO")]
+    [System.SerializableAttribute()]
+    public partial class DTOStatistics : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dateGameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float scoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string stateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string usernameGuesserField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dateGame {
+            get {
+                return this.dateGameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dateGameField, value) != true)) {
+                    this.dateGameField = value;
+                    this.RaisePropertyChanged("dateGame");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float score {
+            get {
+                return this.scoreField;
+            }
+            set {
+                if ((this.scoreField.Equals(value) != true)) {
+                    this.scoreField = value;
+                    this.RaisePropertyChanged("score");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string state {
+            get {
+                return this.stateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.stateField, value) != true)) {
+                    this.stateField = value;
+                    this.RaisePropertyChanged("state");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string usernameGuesser {
+            get {
+                return this.usernameGuesserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.usernameGuesserField, value) != true)) {
+                    this.usernameGuesserField = value;
+                    this.RaisePropertyChanged("usernameGuesser");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SRIPlayerManagement.IPlayerManagement")]
     public interface IPlayerManagement {
@@ -1033,6 +1427,30 @@ namespace Views.SRIPlayerManagement {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/DisconnectGame")]
         System.Threading.Tasks.Task DisconnectGameAsync(int userId, int gameId);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGame")]
+        void StartGame(int gameId);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGame")]
+        System.Threading.Tasks.Task StartGameAsync(int gameId);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/ValidateLetter")]
+        void ValidateLetter(int gameId, char letter);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/ValidateLetter")]
+        System.Threading.Tasks.Task ValidateLetterAsync(int gameId, char letter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetGamematches", ReplyAction="http://tempuri.org/IManageGameService/GetGamematchesResponse")]
+        Views.SRIPlayerManagement.DTOGameMatch[] GetGamematches();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetGamematches", ReplyAction="http://tempuri.org/IManageGameService/GetGamematchesResponse")]
+        System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOGameMatch[]> GetGamematchesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetStatistics", ReplyAction="http://tempuri.org/IManageGameService/GetStatisticsResponse")]
+        Views.SRIPlayerManagement.DTOStatistics[] GetStatistics(int idChallenger);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetStatistics", ReplyAction="http://tempuri.org/IManageGameService/GetStatisticsResponse")]
+        System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOStatistics[]> GetStatisticsAsync(int idChallenger);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1051,7 +1469,22 @@ namespace Views.SRIPlayerManagement {
         void CanceledGame();
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/UserConnectionNotification")]
-        void UserConnectionNotification(Views.SRIPlayerManagement.Gamematch game);
+        void UserConnectionNotification(Views.SRIPlayerManagement.Gamematch gamematch, string namePlayerGuesser);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/UserDisconectionNotification")]
+        void UserDisconectionNotification(Views.SRIPlayerManagement.Gamematch gamematch, string namePlayerGuesser);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGameChallenger")]
+        void StartGameChallenger(string word, string hint);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGameGuesser")]
+        void StartGameGuesser(string hint);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/NotificationIfGuessed")]
+        void NotificationIfGuessed(char[] letters, int failedAttempts, bool isGuess);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/FinishGame")]
+        void FinishGame(string word, int score, bool win);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1104,6 +1537,38 @@ namespace Views.SRIPlayerManagement {
         
         public System.Threading.Tasks.Task DisconnectGameAsync(int userId, int gameId) {
             return base.Channel.DisconnectGameAsync(userId, gameId);
+        }
+        
+        public void StartGame(int gameId) {
+            base.Channel.StartGame(gameId);
+        }
+        
+        public System.Threading.Tasks.Task StartGameAsync(int gameId) {
+            return base.Channel.StartGameAsync(gameId);
+        }
+        
+        public void ValidateLetter(int gameId, char letter) {
+            base.Channel.ValidateLetter(gameId, letter);
+        }
+        
+        public System.Threading.Tasks.Task ValidateLetterAsync(int gameId, char letter) {
+            return base.Channel.ValidateLetterAsync(gameId, letter);
+        }
+        
+        public Views.SRIPlayerManagement.DTOGameMatch[] GetGamematches() {
+            return base.Channel.GetGamematches();
+        }
+        
+        public System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOGameMatch[]> GetGamematchesAsync() {
+            return base.Channel.GetGamematchesAsync();
+        }
+        
+        public Views.SRIPlayerManagement.DTOStatistics[] GetStatistics(int idChallenger) {
+            return base.Channel.GetStatistics(idChallenger);
+        }
+        
+        public System.Threading.Tasks.Task<Views.SRIPlayerManagement.DTOStatistics[]> GetStatisticsAsync(int idChallenger) {
+            return base.Channel.GetStatisticsAsync(idChallenger);
         }
     }
 }

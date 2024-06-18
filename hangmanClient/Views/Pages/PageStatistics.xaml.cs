@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using Domain;
+using ServerManageGame;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Views.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para Statistics.xaml
-    /// </summary>
     public partial class PageStatistics : Page
     {
-        public PageStatistics()
+        DTOPlayer activePlayer;
+        ManageGame manageGame;
+        public PageStatistics(DTOPlayer activePlayer)
         {
             InitializeComponent();
+            this.activePlayer = activePlayer;
+            manageGame = new ManageGame();
+            LoadStatistics();
+        }
+
+        public void LoadStatistics()
+        {
+            var statistics = manageGame.RecoveringStatistics(activePlayer.IdPlayer);
+            dataGridStatistics.ItemsSource = statistics;
         }
     }
 }

@@ -1,14 +1,16 @@
 ﻿using DataAccess;
 using Logic.DTO;
-using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Numerics;
 
 namespace Logic
 {
     public class ManageGame
     {
+        public List<DTOGameMatch> Gamematches { get; set; }
+
         public Gamematch RegisterGame(Gamematch gameMatch)
         {
             Gamematch registeredGame = null;
@@ -46,7 +48,6 @@ namespace Logic
 
             return registeredGame;
         }
-
         
         public bool RegisterPlayer(DTOPlayer newPlayer)
         {
@@ -123,7 +124,169 @@ namespace Logic
             }
             return status;
         }
-    }
-    
 
+        public string GetPlayerName(int idPlayer)
+        {
+            string playerName = "";
+            using (var context = new HangmanDbEntities())
+            {
+                var playerNameContext = (from p in context.Player
+                                      where p.idPlayer == idPlayer
+                                  select p.name).FirstOrDefault();
+                if (playerNameContext != null)
+                {
+                    playerName = playerNameContext;
+                }
+                else
+                {
+                    Console.WriteLine("No se encontró un jugador con el id especificado.");
+                }
+                return playerName;
+            }
+        }
+
+        public List<DTOGameMatch> GetGamematches()
+        {
+            try
+            {
+                using (var context = new HangmanDbEntities())
+                {
+                    var gamematches = (from g in context.Gamematch
+                                       join p in context.Player on g.idChallenger equals p.idPlayer
+                                       select new DTOGameMatch
+                                       {
+                                           idGamematch = g.idGamematch,
+                                           code = g.code,
+                                           language = g.language,
+                                           idWord = g.idWord.Value,
+                                           idChallenger = g.idChallenger.Value,
+                                           idMatchStatus = g.idMatchStatus.Value,
+                                           creationDate = g.creationDate.Value,
+                                           ChallengerUsername = p.username,
+                                           ChallengerName = p.name,
+                                       }).ToList();
+                    return gamematches;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los juegos: " + ex.Message);
+                throw; 
+            }
+        }
+
+        public List<DTOStatistics> GetStatistics(int idChallenger)
+        {
+            try
+            {
+                using (var context = new HangmanDbEntities())
+                {
+                    var gamematches = (from g in context.Gamematch
+                                       join c in context.Player on g.idChallenger equals c.idPlayer
+                                       join u in context.Player on g.idGuesser equals u.idPlayer
+                                       join s in context.MatchStatus on g.idMatchStatus equals s.idMatchStatus
+                                       where g.idChallenger == idChallenger
+                                       select new
+                                       {
+                                           usernameGuesser = u.username,
+                                           dateGame = g.creationDate.Value,
+                                           score = c.score.Value,
+                                       }).AsEnumerable() // This will execute the query and bring the results into memory
+                     .Select(x => new DTOStatistics
+                     {
+                         usernameGuesser = x.usernameGuesser,
+                         dateGame = x.dateGame.ToString("yyyy-MM-dd"),
+                         score = x.score,
+                     }).ToList();
+
+                    return gamematches;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los juegos: " + ex.Message);
+                throw;
+            }
+        }
+
+        public void UpdateGameMatchStatus(int gameId, int status)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                var gameMatch = context.Gamematch.FirstOrDefault(game => game.idGamematch == gameId);
+
+                if (gameMatch != null)
+                {
+                    gameMatch.idMatchStatus = status;
+
+                    context.Entry(gameMatch).State = EntityState.Modified;
+
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public void UpdateGameWinChallenger(int gameId, bool win)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                var gameMatch = context.Gamematch.FirstOrDefault(game => game.idGamematch == gameId);
+
+                if (gameMatch != null)
+                {
+                    gameMatch.winChallenger = win;
+
+                    context.Entry(gameMatch).State = EntityState.Modified;
+
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public int UpdatePlayerScore(int playerId, bool win)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                int score = 0;
+                var playerToUpdate = context.Player.FirstOrDefault(player => player.idPlayer == playerId);
+
+                if (playerToUpdate != null)
+                {
+                    if (win)
+                    {
+                        score = playerToUpdate.score.Value + 10;
+                        playerToUpdate.score = score;
+                    }
+                    else
+                    {
+                        score = playerToUpdate.score.Value - 10;
+                        playerToUpdate.score = score;
+                    }
+
+                    context.Entry(playerToUpdate).State = EntityState.Modified;
+
+                    context.SaveChanges();
+                }
+
+                return score;
+            }
+        }
+
+        public DTOWord GetWord(int wordId)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                var word = context.Word.FirstOrDefault(w => w.idWord == wordId);
+
+                return new DTOWord
+                {
+                    IdWord = wordId,
+                    Name = word.name,
+                    NameEn = word.nameEN,
+                    Hint = word.hint,
+                    HintEn = word.hintEN
+                };
+            }
+        }
+    }
 }

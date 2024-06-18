@@ -1,5 +1,4 @@
 ﻿using Domain;
-using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -15,8 +14,6 @@ namespace Views.Pages
             InitializeComponent();
             homeFrame = frHome;
             this.playerActive = playerActive;
-            Console.WriteLine("MENU------------------");
-            Console.WriteLine("ID JUGADOR" + playerActive.IdPlayer);
         }
 
         private void BtnClicHideMenu(object sender, RoutedEventArgs e)
@@ -30,15 +27,18 @@ namespace Views.Pages
 
         private void ClickEditProfile(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("EDITAR");
-            Console.WriteLine("ID JUGADOR" + playerActive.IdPlayer);
-            var registerPage = new PageCreateProfile(playerActive);
+            var registerPage = new PageCreateProfile(playerActive, homeFrame);
+            if (homeFrame.Content is PageHome pageHome)
+            {
+                pageHome.dataGridItemsGames.Visibility = Visibility.Collapsed;
+            }
+
             homeFrame.Navigate(registerPage);
         }
 
         private void ClickViewStatistics(object sender, RoutedEventArgs e)
         {
-            var statistics = new PageStatistics();
+            var statistics = new PageStatistics(playerActive);
             homeFrame.Navigate(statistics);
         }
 

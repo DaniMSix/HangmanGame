@@ -173,5 +173,16 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="ButtonWithImageBackground" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="\Images\icon-buttonNumber.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="46"/>
+            <Setter Property="Height" Value="34"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
     </Application.Resources>
 </Application>

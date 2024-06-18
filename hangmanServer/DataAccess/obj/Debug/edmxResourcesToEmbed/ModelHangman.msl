@@ -21,6 +21,7 @@
           <ScalarProperty Name="idGuesser" ColumnName="idGuesser" />
           <ScalarProperty Name="idMatchStatus" ColumnName="idMatchStatus" />
           <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="winChallenger" ColumnName="winChallenger" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

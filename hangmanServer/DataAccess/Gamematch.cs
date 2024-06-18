@@ -22,6 +22,7 @@ namespace DataAccess
         public Nullable<int> idGuesser { get; set; }
         public Nullable<int> idMatchStatus { get; set; }
         public Nullable<System.DateTime> creationDate { get; set; }
+        public Nullable<bool> winChallenger { get; set; }
     
         public virtual Player Player { get; set; }
         public virtual Player Player1 { get; set; }

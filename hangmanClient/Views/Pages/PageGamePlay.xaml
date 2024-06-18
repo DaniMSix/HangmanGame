@@ -5,10 +5,71 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="495" d:DesignWidth="1005"
+      d:DesignHeight="500" d:DesignWidth="1000"
       Title="PageGamePlay">
 
-    <Grid>
-        
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="\Images\BackgroundGame.png"/>
+        </Grid.Background>
+        <Button Content="U" x:Name="btnU" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+                FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="721,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="Y" x:Name="btnY" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="661,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="T" x:Name="btnT" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="601,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="R" x:Name="btnR" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="544,250,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button Content="I" x:Name="btnI" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="780,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="O" x:Name="btnO" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="840,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="P" x:Name="btnP" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="900,250,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="btnE" Content="E" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="486,250,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button x:Name="btnW" Content="W" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="428,250,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button x:Name="btnQ" Content="Q" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="368,250,0,0" VerticalAlignment="Top" Width="53"/>
+        <Button Content="J" x:Name="btnJ" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="723,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="H" x:Name="btnH" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="663,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="G" x:Name="btnG" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="603,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="F" x:Name="btnF" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="546,306,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button Content="K" x:Name="btnK" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="782,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="L" x:Name="btnL" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="842,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="Ñ" x:Name="btnEne" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="902,306,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="btnD" Content="D" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="488,306,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button Content="S" x:Name="btnS" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="430,306,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button Content="A" FontSize="27" x:Name="btnA" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="370,306,0,0" VerticalAlignment="Top" Width="53"/>
+        <Button Content="M" x:Name="btnM" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="812,361,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="N" x:Name="btnN" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="754,362,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="B" x:Name="btnB" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="694,361,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="V" x:Name="btnV" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="634,362,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="C" x:Name="btnC" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="576,362,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="X" x:Name="btnX" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="516,362,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button Content="Z" x:Name="btnZ" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" 
+            FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="458,362,0,0" VerticalAlignment="Top" Width="58"/>
+
+
+
+
+
     </Grid>
 </Page>
