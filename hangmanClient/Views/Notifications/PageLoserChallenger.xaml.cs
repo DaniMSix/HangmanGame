@@ -6,19 +6,21 @@ namespace Views.Notifications
 {
     public partial class PageLoserChallenger : Page
     {
-        Frame homeFrame;
+        System.Windows.Controls.Frame homeFrame;
         Domain.DTOPlayer activePlayer;
-        public PageLoserChallenger(Domain.DTOPlayer activePlayer, Frame homeFrame, int score)
+        string language;
+        public PageLoserChallenger(Domain.DTOPlayer activePlayer, System.Windows.Controls.Frame homeFrame, int score, string language)
         {
             InitializeComponent();
             this.homeFrame = homeFrame;
             this.activePlayer = activePlayer;
             lbScore.Content = score;
+            this.language = language;
         }
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
-            var home = new PageHome(activePlayer);
+            var home = new PageHome(activePlayer, language);
             homeFrame.Navigate(home);
         }
     }

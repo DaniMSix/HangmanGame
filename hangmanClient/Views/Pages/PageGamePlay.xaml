@@ -67,16 +67,24 @@
             FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="516,362,0,0" VerticalAlignment="Top" Width="58"/>
             <Button Content="Z" x:Name="btnZ" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" Click="BtnGetLetter"
             FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="458,362,0,0" VerticalAlignment="Top" Width="58"/>
+           
 
         </Grid>
         <Label x:Name="lbWordGuess" HorizontalAlignment="Left" Margin="511,152,0,0" VerticalAlignment="Top"/>
 
         <Label x:Name="lbWord" HorizontalAlignment="Left" Margin="511,121,0,0" VerticalAlignment="Top"/>
 
+        <Image x:Name="imgStepOne" Visibility="Collapsed" Source="\Images\img-stepOne.png" HorizontalAlignment="Left" Height="113" Margin="198,150,0,0" VerticalAlignment="Top" Width="113"/>
+        <Image x:Name="imgStepTwo" Visibility="Collapsed" Source="\Images\img-stepTwo.png" HorizontalAlignment="Left" Height="252" Margin="198,148,0,0" VerticalAlignment="Top" Width="112"/>
+        <Image x:Name="imgStepThree" Visibility="Collapsed" Source="\Images\img-stepThree.png" HorizontalAlignment="Left" Height="219" Margin="198,148,0,0" VerticalAlignment="Top" Width="112"/>
+        <Image x:Name="imgStepFour"  Visibility="Collapsed" Source="\Images\img-stepFour.png" HorizontalAlignment="Left" Height="225" Margin="198,148,0,0" VerticalAlignment="Top" Width="112"/>
+        <Image x:Name="imgStepFive" Visibility="Collapsed" Source="\Images\img-stepFive.png" HorizontalAlignment="Left" Height="267" Margin="194,138,0,0" VerticalAlignment="Top" Width="130"/>
+        <Image x:Name="imgStepSix" Visibility="Collapsed"  Source="\Images\img-stepSix.png" HorizontalAlignment="Left" Height="267" Margin="194,138,0,0" VerticalAlignment="Top" Width="151"/>
 
         <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
         <Label x:Name="lbHint" HorizontalAlignment="Left" Margin="546,35,0,0" VerticalAlignment="Top"/>
-
+    
+        <Button x:Name="btnLogin" Content="Salir" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="864,447,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSalir"/>
 
 
     </Grid>

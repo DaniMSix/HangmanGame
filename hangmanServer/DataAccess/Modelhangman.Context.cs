@@ -29,6 +29,7 @@ namespace DataAccess
         public virtual DbSet<Gamematch> Gamematch { get; set; }
         public virtual DbSet<MatchStatus> MatchStatus { get; set; }
         public virtual DbSet<Player> Player { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Word> Word { get; set; }
     }
 }

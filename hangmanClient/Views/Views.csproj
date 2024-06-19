@@ -67,6 +67,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Frame\FrameCities.xaml.cs">
+      <DependentUpon>FrameCities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\FrameOccupations.xaml.cs">
+      <DependentUpon>FrameOccupations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\FrameFruits.xaml.cs">
+      <DependentUpon>FrameFruits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\FrameInstruments.xaml.cs">
+      <DependentUpon>FrameInstruments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\FrameAnimals.xaml.cs">
+      <DependentUpon>FrameAnimals.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Notifications\PageLoserChallenger.xaml.cs">
       <DependentUpon>PageLoserChallenger.xaml</DependentUpon>
     </Compile>
@@ -91,6 +106,26 @@
     <Compile Include="ServerManageGame\ManageGame.cs" />
     <Compile Include="Utils\ButtonAnimation.cs" />
     <Compile Include="Utils\SoundManager.cs" />
+    <Page Include="Frame\FrameCities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\FrameOccupations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\FrameFruits.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\FrameInstruments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\FrameAnimals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -159,10 +194,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageAnimalCategory.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\PageStatistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,9 +235,6 @@
     </Compile>
     <Compile Include="Pages\PageAccessCode.xaml.cs">
       <DependentUpon>PageAccessCode.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageAnimalCategory.xaml.cs">
-      <DependentUpon>PageAnimalCategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Notifications\PageSuccess.xaml.cs">
       <DependentUpon>PageSuccess.xaml</DependentUpon>
@@ -274,6 +302,9 @@
     <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOStatistics.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SRIManageGameService\Views.SRIManageGameService.DTOWord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SRIPlayerManagement\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -300,6 +331,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOStatistics.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOWord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -449,6 +483,62 @@
     <Resource Include="Images\background-game.png" />
     <Resource Include="Images\backgroundGame.png" />
     <Resource Include="Images\icon-buttonNumber.png" />
+    <Resource Include="Images\img-stepFive.png" />
+    <Resource Include="Images\img-stepFour.png" />
+    <Resource Include="Images\img-stepOne.png" />
+    <Resource Include="Images\img-stepSix.png" />
+    <Resource Include="Images\img-stepthree.png" />
+    <Resource Include="Images\img-stepTwo.png" />
+    <Resource Include="Images\Animals\img-Bat.png" />
+    <Resource Include="Images\Animals\img-cat.png" />
+    <Resource Include="Images\Animals\img-Crab.png" />
+    <Resource Include="Images\Animals\img-dog.png" />
+    <Resource Include="Images\Animals\img-fox.png" />
+    <Resource Include="Images\Animals\img-Hen.png" />
+    <Resource Include="Images\Animals\img-rabbit.png" />
+    <Resource Include="Images\Animals\img-Raccoon.png" />
+    <Resource Include="Images\Animals\img-rhinoceros.png" />
+    <Resource Include="Images\Animals\img-squirrel.png" />
+    <Resource Include="Images\Instruments\img-citara.png" />
+    <Resource Include="Images\Instruments\img-drum.png" />
+    <Resource Include="Images\Instruments\img-flute.png" />
+    <Resource Include="Images\Instruments\img-guitar.png" />
+    <Resource Include="Images\Instruments\img-piano.png" />
+    <Resource Include="Images\Instruments\img-Saxophone.png" />
+    <Resource Include="Images\Instruments\img-Triangle.png" />
+    <Resource Include="Images\Instruments\img-Trumpet.png" />
+    <Resource Include="Images\Instruments\img-Violin.png" />
+    <Resource Include="Images\Instruments\img-Xylophone.png" />
+    <Resource Include="Images\Fruits\img-apple.png" />
+    <Resource Include="Images\Fruits\img-Avocado.png" />
+    <Resource Include="Images\Fruits\img-banana.png" />
+    <Resource Include="Images\Fruits\img-Eggplant.png" />
+    <Resource Include="Images\Fruits\img-Grapes.png" />
+    <Resource Include="Images\Fruits\img-orange.png" />
+    <Resource Include="Images\Fruits\img-Peach.png" />
+    <Resource Include="Images\Fruits\img-Pumpkin.png" />
+    <Resource Include="Images\Fruits\img-Tomato.png" />
+    <Resource Include="Images\Fruits\img-watermelon.png" />
+    <Resource Include="Images\Cities\img-Amsterdam.png" />
+    <Resource Include="Images\Cities\img-Argentina.png" />
+    <Resource Include="Images\Cities\img-Canada.png" />
+    <Resource Include="Images\Cities\img-Dublin.png" />
+    <Resource Include="Images\Cities\img-Egypt.png" />
+    <Resource Include="Images\Cities\img-Hamburg.png" />
+    <Resource Include="Images\Cities\img-India.png" />
+    <Resource Include="Images\Cities\img-London.png" />
+    <Resource Include="Images\Cities\img-Rome.png" />
+    <Resource Include="Images\Cities\img-Shangai.png" />
+    <Resource Include="Images\Occupations\img-Accountant.png" />
+    <Resource Include="Images\Occupations\img-Actress.png" />
+    <Resource Include="Images\Occupations\img-Doctor.png" />
+    <Resource Include="Images\Occupations\img-Electrician.png" />
+    <Resource Include="Images\Occupations\img-Lawyer.png" />
+    <Resource Include="Images\Occupations\img-Plumber.png" />
+    <Resource Include="Images\Occupations\img-Police.png" />
+    <Resource Include="Images\Occupations\img-secretary.png" />
+    <Resource Include="Images\Occupations\img-singer.png" />
+    <Resource Include="Images\Occupations\img-Teacher.png" />
     <Content Include="Music\button-sound.mp3" />
     <Resource Include="Images\note.png" />
     <Resource Include="Images\musical note.png" />

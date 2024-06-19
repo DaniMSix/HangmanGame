@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace Logic
 {
@@ -154,6 +155,7 @@ namespace Logic
                 {
                     var gamematches = (from g in context.Gamematch
                                        join p in context.Player on g.idChallenger equals p.idPlayer
+                                       where g.idMatchStatus == 2
                                        select new DTOGameMatch
                                        {
                                            idGamematch = g.idGamematch,
@@ -185,12 +187,12 @@ namespace Logic
                     var gamematches = (from g in context.Gamematch
                                        join c in context.Player on g.idChallenger equals c.idPlayer
                                        join u in context.Player on g.idGuesser equals u.idPlayer
-                                       join s in context.MatchStatus on g.idMatchStatus equals s.idMatchStatus
-                                       where g.idChallenger == idChallenger
+                                       where g.idChallenger == idChallenger && g.idMatchStatus == 5
                                        select new
                                        {
                                            usernameGuesser = u.username,
                                            dateGame = g.creationDate.Value,
+                                           win = g.winChallenger,
                                            score = c.score.Value,
                                        }).AsEnumerable() // This will execute the query and bring the results into memory
                      .Select(x => new DTOStatistics
@@ -200,7 +202,25 @@ namespace Logic
                          score = x.score,
                      }).ToList();
 
-                    return gamematches;
+                    var gamematches2 = (from g in context.Gamematch
+                                       join c in context.Player on g.idGuesser equals c.idPlayer
+                                       join u in context.Player on g.idChallenger equals u.idPlayer
+                                       where g.idGuesser == idChallenger && g.idMatchStatus == 5
+                                        select new
+                                       {
+                                           usernameGuesser = u.username,
+                                           dateGame = g.creationDate.Value,
+                                           win = !g.winChallenger,
+                                           score = c.score.Value,
+                                       }).AsEnumerable() // This will execute the query and bring the results into memory
+                     .Select(x => new DTOStatistics
+                     {
+                         usernameGuesser = x.usernameGuesser,
+                         dateGame = x.dateGame.ToString("yyyy-MM-dd"),
+                         score = x.score,
+                     }).ToList();
+
+                    return gamematches.Concat(gamematches2).ToList();
                 }
             }
             catch (Exception ex)
@@ -293,5 +313,27 @@ namespace Logic
                 };
             }
         }
+
+        public List<DTOWord> GetWordsForCategory(int categoryId)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                var words = context.Word
+            .Where(w => w.idCategory == categoryId)
+            .Select(w => new DTOWord
+            {
+                IdWord = w.idWord,
+                Name = w.name,
+                NameEn = w.nameEN,
+                Hint = w.hint,
+                HintEn = w.hintEN
+            })
+            .ToList();
+
+
+                return words;
+            }
+        }
+
     }
 }

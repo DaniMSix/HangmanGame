@@ -121,7 +121,7 @@ namespace Comunication
             
         }
 
-        public void JoinGame(Gamematch gamematch)
+        public void JoinGame(Gamematch gamematch, bool withAccessCode)
         {
             var error = 1;
             bool guessRegistered = false;
@@ -133,7 +133,7 @@ namespace Comunication
             {
                 foreach (Room room in globalRooms)
                 {
-                    if (room.GameMatch != null && room.GameMatch.code == gamematch.code)
+                    if (room.GameMatch != null && ((withAccessCode && room.GameMatch.code == gamematch.code) || !withAccessCode))
                     {
                         if (room.Players.Count >= room.MAXPLAYERS)
                         {
@@ -225,8 +225,14 @@ namespace Comunication
                     room.LettersGuessed = new char[room.Word.Length];
                     room.FailedAttempts = 0;
 
-                    players[room.GameMatch.idChallenger.Value].StartGameChallenger(word, hint);
-                    players[room.GameMatch.idGuesser.Value].StartGameGuesser(hint);
+                    string letters = ""; 
+                    foreach(char letter in word)
+                    {
+                        letters += "?";
+                    }
+
+                    players[room.GameMatch.idChallenger.Value].StartGameChallenger(word, hint, letters);
+                    players[room.GameMatch.idGuesser.Value].StartGameGuesser(hint, letters);
 
                     break;
                 }
@@ -304,6 +310,32 @@ namespace Comunication
             }
         }
 
+        public void Disconnect(int userId, int gameId)
+        {
+            ManageGame manageGame = new ManageGame();
+            foreach (Room room in globalRooms)
+            {
+                if (room.GameMatch.idGamematch == gameId)
+                {
+                    if(userId == room.GameMatch.idChallenger.Value)
+                    {
+                        players[room.GameMatch.idGuesser.Value].UserDisconected();
+                        players.Remove(room.GameMatch.idGuesser.Value);
+                    }
+                    else
+                    {
+                        players[room.GameMatch.idChallenger.Value].UserDisconected();
+                        players.Remove(room.GameMatch.idChallenger.Value);
+                    }
+                    players.Remove(userId);
+                    manageGame.DeleteGameId(gameId);
+                    globalRooms.Remove(room);
+
+                    break;
+                }
+            }
+        }
+
         public List<DTOGameMatch> GetGamematches()
         {
             ManageGame manageGame = new ManageGame();
@@ -315,5 +347,13 @@ namespace Comunication
             ManageGame manageGame = new ManageGame();
             return manageGame.GetStatistics(idChallenger);
         }
+
+        public List<DTOWord> GetWords(int idCategory)
+        {
+            ManageGame manageGame = new ManageGame();
+            return manageGame.GetWordsForCategory(idCategory);
+        }
+
+        
     }
 }

@@ -42,6 +42,16 @@
     <Property Name="password" Type="varchar" MaxLength="20" />
     <Property Name="score" Type="int" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Word">
     <Key>
       <PropertyRef Name="idWord" />
@@ -49,10 +59,8 @@
     <Property Name="idWord" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="20" />
     <Property Name="nameEN" Type="varchar" MaxLength="20" />
-    <Property Name="hint" Type="varchar" MaxLength="40" />
-    <Property Name="hintEN" Type="varchar" MaxLength="40" />
-    <Property Name="description" Type="varchar" MaxLength="150" />
-    <Property Name="description_EN" Type="varchar" MaxLength="150" />
+    <Property Name="hint" Type="text" />
+    <Property Name="hintEN" Type="text" />
     <Property Name="idCategory" Type="int" />
   </EntityType>
   <Association Name="FK_gamematch_challenger">
@@ -128,6 +136,7 @@
     <EntitySet Name="Gamematch" EntityType="Self.Gamematch" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MatchStatus" EntityType="Self.MatchStatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Word" EntityType="Self.Word" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_gamematch_challenger" Association="Self.FK_gamematch_challenger">
       <End Role="Player" EntitySet="Player" />

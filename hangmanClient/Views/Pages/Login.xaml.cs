@@ -15,6 +15,7 @@ namespace Views.Pages
         private string username;
         private string password;
         Domain.DTOPlayer newPlayeraActive;
+        string language = "Español";
 
         public Login()
         {
@@ -72,7 +73,7 @@ namespace Views.Pages
                     {
                         txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
                         brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
-                        var home = new PageHome(newPlayeraActive);
+                        var home = new PageHome(newPlayeraActive, language);
                         if (NavigationService != null)
                         {
                             NavigationService.Navigate(home);

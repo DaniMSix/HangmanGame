@@ -1245,6 +1245,9 @@ namespace Views.SRIManageGameService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string usernameGuesserField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool winField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -1303,6 +1306,128 @@ namespace Views.SRIManageGameService {
                 if ((object.ReferenceEquals(this.usernameGuesserField, value) != true)) {
                     this.usernameGuesserField = value;
                     this.RaisePropertyChanged("usernameGuesser");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool win {
+            get {
+                return this.winField;
+            }
+            set {
+                if ((this.winField.Equals(value) != true)) {
+                    this.winField = value;
+                    this.RaisePropertyChanged("win");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DTOWord", Namespace="http://schemas.datacontract.org/2004/07/Logic.DTO")]
+    [System.SerializableAttribute()]
+    public partial class DTOWord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HintField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HintEnField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdWordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameEnField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Hint {
+            get {
+                return this.HintField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HintField, value) != true)) {
+                    this.HintField = value;
+                    this.RaisePropertyChanged("Hint");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HintEn {
+            get {
+                return this.HintEnField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HintEnField, value) != true)) {
+                    this.HintEnField = value;
+                    this.RaisePropertyChanged("HintEn");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdWord {
+            get {
+                return this.IdWordField;
+            }
+            set {
+                if ((this.IdWordField.Equals(value) != true)) {
+                    this.IdWordField = value;
+                    this.RaisePropertyChanged("IdWord");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NameEn {
+            get {
+                return this.NameEnField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameEnField, value) != true)) {
+                    this.NameEnField = value;
+                    this.RaisePropertyChanged("NameEn");
                 }
             }
         }
@@ -1417,10 +1542,10 @@ namespace Views.SRIManageGameService {
         System.Threading.Tasks.Task NewGameAsync(Views.SRIManageGameService.Gamematch game);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/JoinGame")]
-        void JoinGame(Views.SRIManageGameService.Gamematch gamematch);
+        void JoinGame(Views.SRIManageGameService.Gamematch gamematch, bool withAccessCode);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/JoinGame")]
-        System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch);
+        System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch, bool withAccessCode);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/DisconnectGame")]
         void DisconnectGame(int userId, int gameId);
@@ -1440,6 +1565,12 @@ namespace Views.SRIManageGameService {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/ValidateLetter")]
         System.Threading.Tasks.Task ValidateLetterAsync(int gameId, char letter);
         
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/Disconnect")]
+        void Disconnect(int userId, int gameId);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/Disconnect")]
+        System.Threading.Tasks.Task DisconnectAsync(int userId, int gameId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetGamematches", ReplyAction="http://tempuri.org/IManageGameService/GetGamematchesResponse")]
         Views.SRIManageGameService.DTOGameMatch[] GetGamematches();
         
@@ -1451,6 +1582,12 @@ namespace Views.SRIManageGameService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetStatistics", ReplyAction="http://tempuri.org/IManageGameService/GetStatisticsResponse")]
         System.Threading.Tasks.Task<Views.SRIManageGameService.DTOStatistics[]> GetStatisticsAsync(int idChallenger);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetWords", ReplyAction="http://tempuri.org/IManageGameService/GetWordsResponse")]
+        Views.SRIManageGameService.DTOWord[] GetWords(int idCategory);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetWords", ReplyAction="http://tempuri.org/IManageGameService/GetWordsResponse")]
+        System.Threading.Tasks.Task<Views.SRIManageGameService.DTOWord[]> GetWordsAsync(int idCategory);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1474,11 +1611,14 @@ namespace Views.SRIManageGameService {
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/UserDisconectionNotification")]
         void UserDisconectionNotification(Views.SRIManageGameService.Gamematch gamematch, string namePlayerGuesser);
         
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/UserDisconected")]
+        void UserDisconected();
+        
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGameChallenger")]
-        void StartGameChallenger(string word, string hint);
+        void StartGameChallenger(string word, string hint, string letter);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/StartGameGuesser")]
-        void StartGameGuesser(string hint);
+        void StartGameGuesser(string hint, string letters);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IManageGameService/NotificationIfGuessed")]
         void NotificationIfGuessed(char[] letters, int failedAttempts, bool guesser);
@@ -1523,12 +1663,12 @@ namespace Views.SRIManageGameService {
             return base.Channel.NewGameAsync(game);
         }
         
-        public void JoinGame(Views.SRIManageGameService.Gamematch gamematch) {
-            base.Channel.JoinGame(gamematch);
+        public void JoinGame(Views.SRIManageGameService.Gamematch gamematch, bool withAccessCode) {
+            base.Channel.JoinGame(gamematch, withAccessCode);
         }
         
-        public System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch) {
-            return base.Channel.JoinGameAsync(gamematch);
+        public System.Threading.Tasks.Task JoinGameAsync(Views.SRIManageGameService.Gamematch gamematch, bool withAccessCode) {
+            return base.Channel.JoinGameAsync(gamematch, withAccessCode);
         }
         
         public void DisconnectGame(int userId, int gameId) {
@@ -1555,6 +1695,14 @@ namespace Views.SRIManageGameService {
             return base.Channel.ValidateLetterAsync(gameId, letter);
         }
         
+        public void Disconnect(int userId, int gameId) {
+            base.Channel.Disconnect(userId, gameId);
+        }
+        
+        public System.Threading.Tasks.Task DisconnectAsync(int userId, int gameId) {
+            return base.Channel.DisconnectAsync(userId, gameId);
+        }
+        
         public Views.SRIManageGameService.DTOGameMatch[] GetGamematches() {
             return base.Channel.GetGamematches();
         }
@@ -1569,6 +1717,14 @@ namespace Views.SRIManageGameService {
         
         public System.Threading.Tasks.Task<Views.SRIManageGameService.DTOStatistics[]> GetStatisticsAsync(int idChallenger) {
             return base.Channel.GetStatisticsAsync(idChallenger);
+        }
+        
+        public Views.SRIManageGameService.DTOWord[] GetWords(int idCategory) {
+            return base.Channel.GetWords(idCategory);
+        }
+        
+        public System.Threading.Tasks.Task<Views.SRIManageGameService.DTOWord[]> GetWordsAsync(int idCategory) {
+            return base.Channel.GetWordsAsync(idCategory);
         }
     }
 }

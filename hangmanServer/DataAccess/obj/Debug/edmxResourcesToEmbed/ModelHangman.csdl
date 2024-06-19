@@ -50,6 +50,16 @@
     <NavigationProperty Name="Gamematch" Relationship="Self.FK_gamematch_challenger" FromRole="Player" ToRole="Gamematch" />
     <NavigationProperty Name="Gamematch1" Relationship="Self.FK_gamematch_guesser" FromRole="Player" ToRole="Gamematch" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="Word">
     <Key>
       <PropertyRef Name="idWord" />
@@ -57,10 +67,8 @@
     <Property Name="idWord" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="nameEN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="hint" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="hintEN" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-    <Property Name="description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-    <Property Name="description_EN" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="hint" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hintEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="idCategory" Type="Int32" />
     <NavigationProperty Name="Category" Relationship="Self.FK_word_category" FromRole="Word" ToRole="Category" />
     <NavigationProperty Name="Gamematch" Relationship="Self.FK_gamematch_word" FromRole="Word" ToRole="Gamematch" />
@@ -138,6 +146,7 @@
     <EntitySet Name="Gamematch" EntityType="Self.Gamematch" />
     <EntitySet Name="MatchStatus" EntityType="Self.MatchStatus" />
     <EntitySet Name="Player" EntityType="Self.Player" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Word" EntityType="Self.Word" />
     <AssociationSet Name="FK_word_category" Association="Self.FK_word_category">
       <End Role="Category" EntitySet="Category" />

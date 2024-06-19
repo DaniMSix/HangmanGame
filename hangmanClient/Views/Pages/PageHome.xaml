@@ -15,7 +15,8 @@
 
         
 
-        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"/>
+        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"
+                Click="BtnJoinGame"/>
         <Button Cursor="Hand" Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="Crear partida" HorizontalAlignment="Left" FontSize="22" Margin="433,414,0,0" VerticalAlignment="Top" Height="38" Width="175"
                 Click="BtnClickCreateGame"/>
         <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Tengo un código" HorizontalAlignment="Left" Margin="626,414,0,0" 

@@ -7,18 +7,20 @@ namespace Views.Pages
     
     public partial class FrameMenu : Page
     {
-        private Frame homeFrame;
+        private System.Windows.Controls.Frame homeFrame;
         private DTOPlayer playerActive;
-        public FrameMenu(Frame frHome, DTOPlayer playerActive)
+        string language;
+        public FrameMenu(System.Windows.Controls.Frame frHome, DTOPlayer playerActive, string language)
         {
             InitializeComponent();
             homeFrame = frHome;
             this.playerActive = playerActive;
+            this.language = language;
         }
 
         private void BtnClicHideMenu(object sender, RoutedEventArgs e)
         {
-            var parentFrame = this.Parent as Frame;
+            var parentFrame = this.Parent as System.Windows.Controls.Frame;
             if (parentFrame != null)
             {
                 parentFrame.Visibility = Visibility.Collapsed;
@@ -27,7 +29,7 @@ namespace Views.Pages
 
         private void ClickEditProfile(object sender, RoutedEventArgs e)
         {
-            var registerPage = new PageCreateProfile(playerActive, homeFrame);
+            var registerPage = new PageCreateProfile(playerActive, homeFrame, language);
             if (homeFrame.Content is PageHome pageHome)
             {
                 pageHome.dataGridItemsGames.Visibility = Visibility.Collapsed;
@@ -38,7 +40,7 @@ namespace Views.Pages
 
         private void ClickViewStatistics(object sender, RoutedEventArgs e)
         {
-            var statistics = new PageStatistics(playerActive);
+            var statistics = new PageStatistics(playerActive, language);
             homeFrame.Navigate(statistics);
         }
 

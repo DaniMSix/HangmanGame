@@ -13,24 +13,17 @@
             <ImageBrush ImageSource="\Images\Background-Categories.png"/>
         </Grid.Background>
 
-        <Button Cursor="Hand" Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Height="51" Width="91"
-                />
+        
         <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Animales" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="44" Width="177"
-                Click="BtnClickGameCreate"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Instrumentos musicales" FontSize="17" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Height="46" Width="177"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Frutas" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="44" Width="177"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Capitales" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="44" Width="177"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Profesiones" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="44" Width="177"/>
-        <Button Cursor="Hand" Style="{StaticResource button-back}" Content="Button" HorizontalAlignment="Left" Margin="55,417,0,0" VerticalAlignment="Top" Height="51" Width="91" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="179.546"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBox x:Name="txbGameName" HorizontalAlignment="Left" Margin="418,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="206" Height="44"/>
+                Click="BtnClickAnimals"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Instrumentos musicales" FontSize="17" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Height="46" Width="177"
+                Click="BtnClickInstruments"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Frutas" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="44" Width="177"
+                Click="BtnClickFruits"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Capitales" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="44" Width="177"
+                Click="BtnClickCities"/>
+        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Profesiones" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="44" Width="177"
+                Click="BtnClickOccupations"/>
+        <Frame x:Name="frCategories" HorizontalAlignment="Left" Height="400" Margin="233,50,0,0" VerticalAlignment="Top" Width="742"/>
     </Grid>
 </Page>

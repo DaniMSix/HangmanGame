@@ -17,14 +17,15 @@ namespace Views.Pages
         private string password;
         private string passwordConfirm;
         private DTOPlayer activePlayer;
-        private Frame homeFrame;
+        private System.Windows.Controls.Frame homeFrame;
+        string language;
 
         public PageCreateProfile()
         {
             InitializeComponent();
         }
 
-        public PageCreateProfile(DTOPlayer activePlayer, Frame homeFrame)
+        public PageCreateProfile(DTOPlayer activePlayer, System.Windows.Controls.Frame homeFrame, string language)
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
@@ -100,7 +101,7 @@ namespace Views.Pages
 
         private void BtnClickReturn(object sender, RoutedEventArgs e)
         {
-            var home = new PageHome(activePlayer);
+            var home = new PageHome(activePlayer, language);
             homeFrame.Navigate(home);
 
             if (homeFrame.Content is PageHome pageHome)

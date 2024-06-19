@@ -8,12 +8,14 @@ namespace Views.Pages
     {
         DTOPlayer activePlayer;
         ManageGame manageGame;
-        public PageStatistics(DTOPlayer activePlayer)
+        string language;
+        public PageStatistics(DTOPlayer activePlayer, string language)
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
-            manageGame = new ManageGame();
+            manageGame = new ManageGame(language);
             LoadStatistics();
+            this.language = language;
         }
 
         public void LoadStatistics()

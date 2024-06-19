@@ -2,24 +2,28 @@
 using ServerManageGame;
 using System.Windows;
 using System.Windows.Controls;
+using Views.SRIManageGameService;
 
 
 namespace Views.Pages
 {
     public partial class PageHome : Page
     {
-        DTOPlayer activePlayer;
+        Domain.DTOPlayer activePlayer;
         ManageGame manageGame;
         DataGrid datagridGames;
+        private Gamematch gamematch = new Gamematch();
+        string language;
 
-        public PageHome(DTOPlayer activePlayer)
+        public PageHome(Domain.DTOPlayer activePlayer, string language)
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
-            manageGame = new ManageGame();
+            manageGame = new ManageGame(activePlayer, frHome, language);
             ShowPlayerGreeting();
             LoadGames();
             datagridGames = dataGridItemsGames;
+            this.language = language;
         }
 
         public void ShowPlayerGreeting()
@@ -29,7 +33,7 @@ namespace Views.Pages
 
         private void BtnClicShowMenu(object sender, RoutedEventArgs e)
         {
-            var menuPage = new FrameMenu(frHome, activePlayer);
+            var menuPage = new FrameMenu(frHome, activePlayer, language);
             frMenu.Navigate(menuPage);
             frMenu.Visibility = Visibility.Visible;
             btnExit.Visibility = Visibility.Visible;
@@ -49,7 +53,7 @@ namespace Views.Pages
 
         private void BtnClickCreateGame(object sender, RoutedEventArgs e)
         {
-            var pageSelectWord = new PageSelectWord(activePlayer, frHome);
+            var pageSelectWord = new PageSelectWord(activePlayer, frHome, language);
             frHome.Navigate(pageSelectWord);
         }
 
@@ -57,6 +61,20 @@ namespace Views.Pages
         {
             var games = manageGame.RecoveringGames();
             dataGridItemsGames.ItemsSource = games;
+        }
+
+
+        private void BtnJoinGame(object sender, RoutedEventArgs e)
+        {
+            if (dataGridItemsGames.SelectedItem != null)
+            {
+                var selectedGame = (SRIManageGameService.DTOGameMatch)dataGridItemsGames.SelectedItem;
+
+                int gameId = selectedGame.idGamematch;
+                gamematch.idGuesser = activePlayer.IdPlayer;
+                manageGame.StartJoinGame(gamematch, false);
+            }
+            
         }
     }
 }

@@ -13,11 +13,12 @@ namespace Views.Pages
         private Domain.DTOPlayer activePlayer;
         string accessCode;
         private Gamematch gamematch = new Gamematch();
-        public PageAccessCode(Domain.DTOPlayer playerActive, Frame frameCurrent)
+        string language;
+        public PageAccessCode(Domain.DTOPlayer playerActive, System.Windows.Controls.Frame frameCurrent)
         {
             InitializeComponent();
             this.activePlayer = playerActive;
-            manageGame = new ManageGame(activePlayer, frameCurrent);
+            manageGame = new ManageGame(activePlayer, frameCurrent, language);
         }
 
         private void BtnClickJoinGame(object sender, RoutedEventArgs e)
@@ -27,13 +28,7 @@ namespace Views.Pages
 
             gamematch.idGuesser = activePlayer.IdPlayer;
             gamematch.code = accessCode;
-
-            Console.WriteLine("--------------- PageAccessCode -----------------");
-            Console.WriteLine("IdGuesser " + gamematch.idGuesser);
-
-            
-
-            manageGame.StartJoinGame(gamematch);
+            manageGame.StartJoinGame(gamematch, true);
         }
 
         private void txtCodeOneNumber_TextChanged(object sender, TextChangedEventArgs e)

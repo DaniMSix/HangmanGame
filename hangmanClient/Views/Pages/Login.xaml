@@ -44,7 +44,7 @@
             </TextBlock.Triggers>
         </TextBlock>
 
-        <Button x:Name="btnLogin" Cursor="Hand" Style="{StaticResource orange-button}" Content="Acceder" HorizontalAlignment="Left" Margin="447,427,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
+        <Button x:Name="btnLogin" Content="Iniciar sesión" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="431,425,0,0" VerticalAlignment="Top" Height="43" Width="153" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
 
         <Image Source="\Images\title-home-Spanish.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
         <Label x:Name="txtTitleLogin" HorizontalContentAlignment="Center" Content = "Iniciar sesión" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>

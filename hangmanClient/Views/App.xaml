@@ -152,7 +152,6 @@
             </Setter>
         </Style>
         
-        <!-- Oscurecer imagen -->
         <Style x:Key="ImageEnabled" TargetType="Image">
             <Style.Triggers>
                 <Trigger Property="IsEnabled" Value="False">
@@ -177,12 +176,82 @@
         <Style x:Key="ButtonWithImageBackground" TargetType="Button">
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="\Images\icon-buttonNumber.png"/>
+                    <ImageBrush ImageSource="/Images/icon-buttonNumber.png"/>
                 </Setter.Value>
             </Setter>
             <Setter Property="Width" Value="46"/>
             <Setter Property="Height" Value="34"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Image Source="/Images/icon-buttonNumber.png" Stretch="Fill"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
+
+
+        <Style TargetType="Button" x:Key="ButtonWithImageAndText">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Image x:Name="BackgroundImage" Source="{TemplateBinding Tag}" Stretch="Fill"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+        <Style x:Key="ImageButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5"
+                        ClipToBounds="True">
+                            <Grid>
+                                <!-- Background Image -->
+                                <Image Source="{Binding Path=Background.ImageSource, RelativeSource={RelativeSource TemplatedParent}}"
+                               Stretch="UniformToFill"
+                               Opacity="{TemplateBinding Opacity}" />
+
+                                <!-- Content Presenter for Button Text -->
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.6"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+
+
+
+
     </Application.Resources>
 </Application>

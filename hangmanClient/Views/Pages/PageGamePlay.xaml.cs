@@ -2,32 +2,37 @@
 using System.Windows.Controls;
 using System.Windows;
 using Views.Notifications;
+using System;
 
 namespace Views.Pages
 {
     public partial class PageGamePlay : Page
     {
         ManageGame manageGame;
-        Frame frame;
+        System.Windows.Controls.Frame frame;
+        string language;
 
-        public PageGamePlay(ManageGame manageGame, Frame frCurrentFrame, string word, string hint)
+        public PageGamePlay(ManageGame manageGame, System.Windows.Controls.Frame frCurrentFrame, string word, string hint, string letters)
         {
             InitializeComponent();
+
             this.manageGame = manageGame;
             this.frame = frCurrentFrame;
             lbWord.Content = word;
             lbHint.Content = hint;
+            lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
             this.manageGame.GameFinished += OnGameFinished;
             ButtonGrid.Visibility = Visibility.Collapsed;
         }
 
-        public PageGamePlay(ManageGame manageGame, Frame frCurrentFrame, string hint)
-        {
+        public PageGamePlay(ManageGame manageGame, System.Windows.Controls.Frame frCurrentFrame, string hint, string letters)
+        {   
             InitializeComponent();
             this.manageGame = manageGame;
             this.frame = frCurrentFrame;
             lbHint.Content = hint;
+            lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
             this.manageGame.GameFinished += OnGameFinished;
         }
@@ -52,31 +57,52 @@ namespace Views.Pages
                 ButtonGrid.Visibility = Visibility.Visible;
             }
 
-            //switch (failedAttempts)
+            switch (failedAttempts)
+            {
+                case 1:
+                    imgStepOne.Visibility = Visibility.Visible;
+                    break;
+                case 2:
+                    imgStepTwo.Visibility = Visibility.Visible;
+                    break;
+                case 3:
+                    imgStepThree.Visibility = Visibility.Visible;
+                    break;
+                case 4:
+                    imgStepFour.Visibility = Visibility.Visible;
+                    break;
+                case 5:
+                    imgStepFive.Visibility = Visibility.Visible;
+                    break;
+                case 6:
+                    imgStepSix.Visibility = Visibility.Visible;
+                    break;
+
+            }
         }
 
-        public void OnGameFinished(Domain.DTOPlayer activePlayer, Frame frame, string word, int score, bool win, bool challenger)
+        public void OnGameFinished(Domain.DTOPlayer activePlayer, System.Windows.Controls.Frame frame, string word, int score, bool win, bool challenger)
         {
             if (challenger)
             {
                 if (win)
                 {
-                    frMessage.Content = new PageWinningChallenger(activePlayer, frame, score);
+                    frMessage.Content = new PageWinningChallenger(activePlayer, frame, score, language);
                 }
                 else
                 {
-                    frMessage.Content = new PageLoserChallenger(activePlayer, frame, score);
+                    frMessage.Content = new PageLoserChallenger(activePlayer, frame, score, language);
                 }
             }
             else
             {
                 if (win)
                 {
-                    frMessage.Content = new PageWinningGuesser(activePlayer, frame, score);
+                    frMessage.Content = new PageWinningGuesser(activePlayer, frame, score, language);
                 }
                 else
                 {
-                    frMessage.Content = new PageLoserGuesser(activePlayer, frame, word, score);
+                    frMessage.Content = new PageLoserGuesser(activePlayer, frame, word, score, language);
                 }
             }
         }
@@ -93,6 +119,11 @@ namespace Views.Pages
                 manageGame.ValidateLetter(buttonText[0]);
                 ButtonGrid.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void BtnClickSalir(object sender, RoutedEventArgs e)
+        {
+            manageGame.Discconect();
         }
     }
 }

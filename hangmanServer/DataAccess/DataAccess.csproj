@@ -81,6 +81,9 @@
       <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelHangman.tt</DependentUpon>
+    </Compile>
     <Compile Include="Word.cs">
       <DependentUpon>ModelHangman.tt</DependentUpon>
     </Compile>

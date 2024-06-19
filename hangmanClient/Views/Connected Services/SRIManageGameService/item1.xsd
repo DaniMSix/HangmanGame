@@ -25,7 +25,24 @@
       <xs:element minOccurs="0" name="score" type="xs:float" />
       <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="usernameGuesser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="win" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DTOStatistics" nillable="true" type="tns:DTOStatistics" />
+  <xs:complexType name="ArrayOfDTOWord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DTOWord" nillable="true" type="tns:DTOWord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDTOWord" nillable="true" type="tns:ArrayOfDTOWord" />
+  <xs:complexType name="DTOWord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HintEn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdWord" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameEn" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DTOWord" nillable="true" type="tns:DTOWord" />
 </xs:schema>

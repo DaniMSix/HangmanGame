@@ -10,9 +10,10 @@ namespace Views.Pages
     {
         DTOPlayer activePlayer;
         private ManageGame manageGame;
-        Frame frCurrentFrame;
+        System.Windows.Controls.Frame frCurrentFrame;
+        string language;
 
-        public PageWaitingRoom(DTOPlayer activePlayer, ManageGame manageGame, Frame homeFrame)
+        public PageWaitingRoom(DTOPlayer activePlayer, ManageGame manageGame, System.Windows.Controls.Frame homeFrame, string language)
         {
             this.activePlayer = activePlayer;
             this.frCurrentFrame = homeFrame;
@@ -22,6 +23,7 @@ namespace Views.Pages
             this.manageGame.PlayerJoined += OnPlayerJoined;  // Subscribirse al evento
             this.manageGame.PlayerDisconnected += OnPlayerDisconnected;
             btnStartGame.Visibility = Visibility.Collapsed;
+            this.language = language;
 
 
             if (manageGame.gameMatch.idGuesser > 0)
@@ -57,7 +59,7 @@ namespace Views.Pages
         private void BtnClickOutGame(object sender, RoutedEventArgs e)
         {
             manageGame.FinishGameConnectionn();
-            var pageHome = new PageHome(activePlayer);
+            var pageHome = new PageHome(activePlayer, language);
             frCurrentFrame.Navigate(pageHome);
         }
 

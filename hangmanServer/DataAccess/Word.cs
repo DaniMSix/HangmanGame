@@ -25,8 +25,6 @@ namespace DataAccess
         public string nameEN { get; set; }
         public string hint { get; set; }
         public string hintEN { get; set; }
-        public string description { get; set; }
-        public string description_EN { get; set; }
         public Nullable<int> idCategory { get; set; }
     
         public virtual Category Category { get; set; }

@@ -13,7 +13,7 @@ namespace Comunication
         void NewGame(Gamematch game);
 
         [OperationContract(IsOneWay = true)]
-        void JoinGame(Gamematch gamematch);
+        void JoinGame(Gamematch gamematch, bool withAccessCode);
 
         [OperationContract(IsOneWay = true)]
         void DisconnectGame(int userId, int gameId);
@@ -24,11 +24,17 @@ namespace Comunication
         [OperationContract(IsOneWay = true)]
         void ValidateLetter(int gameId, char letter);
 
+        [OperationContract(IsOneWay = true)]
+        void Disconnect(int userId, int gameId);
+
         [OperationContract]
         List<DTOGameMatch> GetGamematches();
 
         [OperationContract]
         List<DTOStatistics> GetStatistics(int idChallenger);
+
+        [OperationContract]
+        List<DTOWord> GetWords(int idCategory);
     }
 
     [ServiceContract]
@@ -53,10 +59,13 @@ namespace Comunication
         void UserDisconectionNotification(Gamematch gamematch, string namePlayerGuesser);
 
         [OperationContract(IsOneWay = true)]
-        void StartGameChallenger(string word, string hint);
+        void UserDisconected();
 
         [OperationContract(IsOneWay = true)]
-        void StartGameGuesser(string hint);
+        void StartGameChallenger(string word, string hint, string letter);
+
+        [OperationContract(IsOneWay = true)]
+        void StartGameGuesser(string hint, string letters);
 
         [OperationContract(IsOneWay = true)]
         void NotificationIfGuessed(char[] letters, int failedAttempts, bool guesser);

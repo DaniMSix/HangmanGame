@@ -65,6 +65,9 @@
   <wsdl:message name="IManageGameService_ValidateLetter_InputMessage">
     <wsdl:part name="parameters" element="tns:ValidateLetter" />
   </wsdl:message>
+  <wsdl:message name="IManageGameService_Disconnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
   <wsdl:message name="IManageGameService_GetGamematches_InputMessage">
     <wsdl:part name="parameters" element="tns:GetGamematches" />
   </wsdl:message>
@@ -76,6 +79,12 @@
   </wsdl:message>
   <wsdl:message name="IManageGameService_GetStatistics_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWords" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordsResponse" />
   </wsdl:message>
   <wsdl:message name="IManageGameService_StartGameRoom_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:StartGameRoom" />
@@ -94,6 +103,9 @@
   </wsdl:message>
   <wsdl:message name="IManageGameService_UserDisconectionNotification_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:UserDisconectionNotification" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_UserDisconected_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserDisconected" />
   </wsdl:message>
   <wsdl:message name="IManageGameService_StartGameChallenger_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:StartGameChallenger" />
@@ -141,6 +153,9 @@
     <wsdl:operation name="ValidateLetter">
       <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/ValidateLetter" message="tns:IManageGameService_ValidateLetter_InputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/Disconnect" message="tns:IManageGameService_Disconnect_InputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetGamematches">
       <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetGamematches" message="tns:IManageGameService_GetGamematches_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetGamematchesResponse" message="tns:IManageGameService_GetGamematches_OutputMessage" />
@@ -148,6 +163,10 @@
     <wsdl:operation name="GetStatistics">
       <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetStatistics" message="tns:IManageGameService_GetStatistics_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetStatisticsResponse" message="tns:IManageGameService_GetStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetWords" message="tns:IManageGameService_GetWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetWordsResponse" message="tns:IManageGameService_GetWords_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="StartGameRoom">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameRoom" message="tns:IManageGameService_StartGameRoom_OutputCallbackMessage" />
@@ -166,6 +185,9 @@
     </wsdl:operation>
     <wsdl:operation name="UserDisconectionNotification">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserDisconectionNotification" message="tns:IManageGameService_UserDisconectionNotification_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserDisconected">
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/UserDisconected" message="tns:IManageGameService_UserDisconected_OutputCallbackMessage" />
     </wsdl:operation>
     <wsdl:operation name="StartGameChallenger">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameChallenger" message="tns:IManageGameService_StartGameChallenger_OutputCallbackMessage" />
@@ -253,6 +275,12 @@
         <soap12:body use="literal" />
       </wsdl:input>
     </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
     <wsdl:operation name="GetGamematches">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetGamematches" style="document" />
       <wsdl:input>
@@ -264,6 +292,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetStatistics">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWords">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetWords" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -303,6 +340,12 @@
     </wsdl:operation>
     <wsdl:operation name="UserDisconectionNotification">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserDisconectionNotification" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserDisconected">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/UserDisconected" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>

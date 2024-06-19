@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\comunication\\servicesexposed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\comunication\\servicesexposed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|solutionrelative:comunication\\servicesexposed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\logic\\managegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|solutionrelative:logic\\managegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\comunication\\imanagegameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A08A2A6-A01E-4873-BB0C-9D4E61CB599D}|Comunication\\Comunication.csproj|solutionrelative:comunication\\imanagegameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\logic\\managegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|solutionrelative:logic\\managegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6984868-2C03-4B56-8C57-C7B9522488E6}|DataAccess\\DataAccess.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\dataaccess\\modelhangman.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{D6984868-2C03-4B56-8C57-C7B9522488E6}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\modelhangman.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanserver\\logic\\dto\\dtoword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0EC0A37-33A6-49E3-AAD6-789FFB38620B}|Logic\\Logic.csproj|solutionrelative:logic\\dto\\dtoword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 360,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +38,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageGame.cs",
-              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\ManageGame.cs",
-              "RelativeDocumentMoniker": "Logic\\ManageGame.cs",
-              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\ManageGame.cs",
-              "RelativeToolTip": "Logic\\ManageGame.cs",
-              "ViewState": "AQIAANQAAAAAAAAAAAA9wOUAAAAUAAAA",
+              "DocumentIndex": 3,
+              "Title": "ModelHangman.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\DataAccess\\ModelHangman.edmx",
+              "RelativeDocumentMoniker": "DataAccess\\ModelHangman.edmx",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\DataAccess\\ModelHangman.edmx [Diagram1]",
+              "RelativeToolTip": "DataAccess\\ModelHangman.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-06-19T01:42:37.752Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DTOWord.cs",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\DTO\\DTOWord.cs",
+              "RelativeDocumentMoniker": "Logic\\DTO\\DTOWord.cs",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\DTO\\DTOWord.cs",
+              "RelativeToolTip": "Logic\\DTO\\DTOWord.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T04:10:28.818Z",
+              "WhenOpened": "2024-06-19T01:40:53.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IManageGameService.cs",
               "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Comunication\\IManageGameService.cs",
               "RelativeDocumentMoniker": "Comunication\\IManageGameService.cs",
               "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Comunication\\IManageGameService.cs",
               "RelativeToolTip": "Comunication\\IManageGameService.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAA2wD0AAABTAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T02:36:21.232Z",
+              "WhenOpened": "2024-06-19T01:20:06.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManageGame.cs",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\ManageGame.cs",
+              "RelativeDocumentMoniker": "Logic\\ManageGame.cs",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Logic\\ManageGame.cs",
+              "RelativeToolTip": "Logic\\ManageGame.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAWwJ0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T00:54:34.309Z",
               "EditorCaption": ""
             },
             {
@@ -62,7 +95,7 @@
               "RelativeDocumentMoniker": "Comunication\\ServicesExposed.cs",
               "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanServer\\Comunication\\ServicesExposed.cs",
               "RelativeToolTip": "Comunication\\ServicesExposed.cs",
-              "ViewState": "AQIAAP4AAAAAAAAAAAAqwAYBAABVAAAA",
+              "ViewState": "AQIAACoBAAAAAAAAAAAvwE0BAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T01:35:34.88Z",
               "EditorCaption": ""

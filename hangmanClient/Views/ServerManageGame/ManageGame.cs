@@ -19,23 +19,25 @@ namespace ServerManageGame
         public event Action<string> PlayerJoined;
         public event Action<string> PlayerDisconnected;
         public event Action<char[], int, bool> IfGuessed;
+        string language;
         public event Action<Domain.DTOPlayer, Frame, string, int, bool, bool> GameFinished;
         public DTOGameMatch[] gamematches { get; set; }
-        public DTOStatistics[] statistics { get; set; } 
+        public DTOStatistics[] statistics { get; set; }
+        public DTOWord[] words { get; set; }
         private IManageGameService iManageGame;
 
-        public ManageGame()
+        public ManageGame(string language)
         {
-            // Inicialización básica, podría ser útil dependiendo de cómo lo uses.
             manageGameServiceClient = new ManageGameServiceClient(new InstanceContext(this));
         }
 
-        public ManageGame(Domain.DTOPlayer activePlayer, Frame frame)
+        public ManageGame(Domain.DTOPlayer activePlayer, Frame frame, string language)
         {
             this.activePlayer = activePlayer;
             this.frCurrentFrame = frame;
             InstanceContext context = new InstanceContext(this);
             manageGameServiceClient = new ManageGameServiceClient(context);
+            this.language = language;
         }
 
         public void StartGameConection(Gamematch gameMatch)
@@ -43,9 +45,9 @@ namespace ServerManageGame
             manageGameServiceClient.NewGame(gameMatch);
         }
 
-        public void StartJoinGame(Gamematch gamematch)
+        public void StartJoinGame(Gamematch gamematch, bool accessCode)
         {
-            manageGameServiceClient.JoinGame(gamematch);
+            manageGameServiceClient.JoinGame(gamematch, accessCode);
         }
 
         public void FinishGameConnectionn()
@@ -60,7 +62,7 @@ namespace ServerManageGame
 
         public void CanceledGame()
         {
-            var canceledGame = new PageHome(activePlayer);
+            var canceledGame = new PageHome(activePlayer, language);
             frCurrentFrame.Navigate(canceledGame);
         }
 
@@ -72,7 +74,7 @@ namespace ServerManageGame
         public void StartGameRoom(Gamematch game)
         {
             this.gameMatch = game;
-            var lobby = new PageWaitingRoom(activePlayer, this, frCurrentFrame);
+            var lobby = new PageWaitingRoom(activePlayer, this, frCurrentFrame, language);
             frCurrentFrame.Navigate(lobby);
         }
 
@@ -103,6 +105,15 @@ namespace ServerManageGame
             return gamematches = manageGameServiceClient.GetGamematches();
         }
 
+        public DTOWord[] RecoveringWordsForCategory(int idCategory)
+        {
+            if (manageGameServiceClient == null)
+            {
+                throw new InvalidOperationException("manageGameServiceClient no ha sido inicializado correctamente.");
+            }
+            return words = manageGameServiceClient.GetWords(idCategory);
+        }
+
         public DTOStatistics[] RecoveringStatistics(int idPlayer)
         {
             if (manageGameServiceClient == null)
@@ -117,15 +128,15 @@ namespace ServerManageGame
             manageGameServiceClient.StartGame(gameMatch.idGamematch);
         }
 
-        public void StartGameChallenger(string word, string hint)
+        public void StartGameChallenger(string word, string hint, string letters)
         {
-            var pageGame = new PageGamePlay(this, frCurrentFrame, word, hint);
+            var pageGame = new PageGamePlay(this, frCurrentFrame, word, hint, letters);
             frCurrentFrame.Navigate(pageGame);
         }
 
-        public void StartGameGuesser(string hint)
+        public void StartGameGuesser(string hint, string letters)
         {
-            var pageGame = new PageGamePlay(this, frCurrentFrame, hint);
+            var pageGame = new PageGamePlay(this, frCurrentFrame, hint, letters);
             frCurrentFrame.Navigate(pageGame);
 
         }
@@ -149,6 +160,18 @@ namespace ServerManageGame
             {
                 GameFinished?.Invoke(activePlayer, frCurrentFrame, word, score, win, challenger);
             });
+        }
+
+        public void UserDisconected()
+        {
+            MessageBox.Show("", "El rival se desconecto");
+            var canceledGame = new PageHome(activePlayer, language);
+            frCurrentFrame.Navigate(canceledGame);
+        }
+
+        public void Discconect()
+        {
+            manageGameServiceClient.Disconnect(activePlayer.IdPlayer, gameMatch.idGamematch);
         }
     }
 }

@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5461ad52ae8f45169e3c9e034a2a6619" Name="Diagram1" ZoomLevel="63">
-        <EntityTypeShape EntityType="HangmanDbModel.Category" Width="1.5" PointX="9" PointY="1.875" IsExpanded="true" />
+      <Diagram DiagramId="6cd30b97e3b14b9e9ff46ff4c3e34697" Name="Diagram1">
+        <EntityTypeShape EntityType="HangmanDbModel.Category" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
         <EntityTypeShape EntityType="HangmanDbModel.Gamematch" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="HangmanDbModel.MatchStatus" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="HangmanDbModel.Player" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HangmanDbModel.Word" Width="1.5" PointX="6.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HangmanDbModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HangmanDbModel.Word" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
         <AssociationConnector Association="HangmanDbModel.FK_word_category" ManuallyRouted="false" />
         <AssociationConnector Association="HangmanDbModel.FK_gamematch_challenger" ManuallyRouted="false" />
         <AssociationConnector Association="HangmanDbModel.FK_gamematch_guesser" ManuallyRouted="false" />
