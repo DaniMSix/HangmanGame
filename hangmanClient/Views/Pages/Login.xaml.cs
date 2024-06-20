@@ -12,33 +12,33 @@ namespace Views.Pages
     {
         private SRIPlayerManagement.IPlayerManagement client = new SRIPlayerManagement.PlayerManagementClient();
         private Domain.DTOPlayer activePlayer;
-        private string language;
+        private string Language;
 
         public Login()
         {
             InitializeComponent();
-            SetLanguage(Thread.CurrentThread.CurrentUICulture.Name);
         }
-
 
         public Login(string language)
         {
             InitializeComponent();
-            this.language = language;
+            Console.WriteLine("-------LOGIN----------");
+            Console.WriteLine("language "+ language);
             SetLanguage(language);
-            // No se carga aquí, se asume que los recursos se cargan en el archivo xaml
+            Language = language;
+
+            
         }
 
         private void SetLanguage(string language)
         {
-            if (language == "Español")
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
-            }
-            else
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            }
+            var culture = new CultureInfo(language == "Ingles" ? "en" : "");
+            Thread.CurrentThread.CurrentUICulture = culture;
+
+            // Actualizar etiquetas y textos en la interfaz de usuario
+            lbUser.Content = Properties.Resources.lbUser;
+            lbPassword.Content = Properties.Resources.lbPassword;
+            btnLogin.Content = Properties.Resources.btnLogin;
         }
 
         private async void ClickLogin(object sender, RoutedEventArgs e)
@@ -81,7 +81,9 @@ namespace Views.Pages
                     {
                         txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
                         brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
-                        var home = new PageHome(activePlayer, language);
+                        Console.WriteLine("ANTES DE PAGEHOME");
+                        Console.WriteLine("Language " + Language);
+                        var home = new PageHome(activePlayer, Language);
                         NavigationService?.Navigate(home);
                     };
 

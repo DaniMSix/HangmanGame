@@ -127,58 +127,55 @@
     <value>I have a code</value>
   </data>
   <data name="btnAnimals" xml:space="preserve">
-    <value>Animales</value>
+    <value>Animals</value>
   </data>
   <data name="btnCities" xml:space="preserve">
-    <value>Ciudades</value>
+    <value>Cities</value>
   </data>
   <data name="btnCreate" xml:space="preserve">
-    <value>Crear</value>
+    <value>Create</value>
   </data>
   <data name="btnCreateGame" xml:space="preserve">
     <value>Crear game</value>
   </data>
   <data name="btnExit" xml:space="preserve">
-    <value>Salir</value>
+    <value>Out</value>
   </data>
   <data name="btnFruits" xml:space="preserve">
-    <value>Frutas</value>
+    <value>Fruits</value>
   </data>
   <data name="btnInstruments" xml:space="preserve">
-    <value>Instrumentos</value>
+    <value>Instruments</value>
   </data>
   <data name="btnJoinGame" xml:space="preserve">
-    <value>Unirse</value>
+    <value>Join game</value>
   </data>
   <data name="btnLogin" xml:space="preserve">
-    <value>Iniciar sesión</value>
+    <value>Login</value>
   </data>
   <data name="btnOccupations" xml:space="preserve">
-    <value>Ocupaciones</value>
+    <value>Occupations</value>
   </data>
   <data name="btnStart" xml:space="preserve">
-    <value>Empezar</value>
-  </data>
-  <data name="lb" xml:space="preserve">
-    <value />
+    <value>Start</value>
   </data>
   <data name="lbAccessCode" xml:space="preserve">
-    <value>Código de acceso</value>
+    <value>Access code</value>
   </data>
   <data name="lbBirthday" xml:space="preserve">
-    <value>Fecha de nacimiento</value>
+    <value>Date of birth</value>
   </data>
   <data name="lbChangeLanguage" xml:space="preserve">
-    <value>Cambiar idioma</value>
+    <value>Change language</value>
   </data>
   <data name="lbEmail" xml:space="preserve">
-    <value>Correo</value>
+    <value>Email</value>
   </data>
   <data name="lbFullName" xml:space="preserve">
-    <value>Nombre completo</value>
+    <value>FullName</value>
   </data>
   <data name="lbItemsGames" xml:space="preserve">
-    <value>Partidas disponibles</value>
+    <value>Available items</value>
   </data>
   <data name="lbLoginMessage" xml:space="preserve">
     <value>Are you ready 
@@ -188,64 +185,64 @@ to decipher words and save the hanged man?</value>
     <value>Hello again, </value>
   </data>
   <data name="lbLose" xml:space="preserve">
-    <value>¡Oh no han adivinado la palabra!</value>
+    <value>Oh you haven't guessed the word!</value>
   </data>
   <data name="lbMessageWinChallenger" xml:space="preserve">
-    <value>¡No han adivinado la palabra correctamente!</value>
+    <value>They didn't guess the word correctly!</value>
   </data>
   <data name="lbMessageWinningGuesser" xml:space="preserve">
-    <value>¡Adivinaste la palabra correcta!</value>
+    <value>You guessed the right word!</value>
   </data>
   <data name="lbPassword" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="lbPasswordConfirm" xml:space="preserve">
-    <value>s</value>
+    <value>Password confirm</value>
   </data>
   <data name="lbPhone" xml:space="preserve">
-    <value>Teléfono</value>
+    <value>Phone</value>
   </data>
   <data name="lbPlayerGreeting" xml:space="preserve">
-    <value>Bienvenido</value>
+    <value>Welcome</value>
   </data>
   <data name="lbPoints" xml:space="preserve">
-    <value>Puntos</value>
+    <value>Points</value>
   </data>
   <data name="lbRegister" xml:space="preserve">
-    <value>¿No tienes perfil aún? ¡Regístrate aquí!</value>
+    <value>Don't have a profile yet, register here!</value>
   </data>
   <data name="lbStadistics" xml:space="preserve">
-    <value>Estadísticas</value>
+    <value>Statistics</value>
   </data>
   <data name="lbTitle" xml:space="preserve">
-    <value>Registar jugador</value>
+    <value>Register player</value>
   </data>
   <data name="lbTitleAccesssCode" xml:space="preserve">
-    <value>Código de acceso</value>
+    <value>Access code</value>
   </data>
   <data name="lbTitleIdiom" xml:space="preserve">
-    <value>Seleccionar idioma</value>
+    <value>Select language</value>
   </data>
   <data name="lbTitleLogin" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="lbTitleLosser" xml:space="preserve">
-    <value>¡Oh no! ¡Haz sido ahorcado!</value>
+    <value>Oh no! You have been hanged!</value>
   </data>
   <data name="lbTitleWinChallenger" xml:space="preserve">
-    <value>¡Felicidades!</value>
+    <value>Congratulations!</value>
   </data>
   <data name="lbTitleWinningGuesser" xml:space="preserve">
-    <value>¡Felicidades!</value>
+    <value>Congratulations!</value>
   </data>
   <data name="lbUser" xml:space="preserve">
     <value>User</value>
   </data>
   <data name="lbWelcome" xml:space="preserve">
-    <value>Bienvenido</value>
+    <value>Welcome</value>
   </data>
   <data name="lbWordGuess" xml:space="preserve">
-    <value>La palabra  era:</value>
+    <value>The word was:</value>
   </data>
   <data name="txtRegister" xml:space="preserve">
     <value>Register</value>

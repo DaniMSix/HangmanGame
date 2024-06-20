@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
 using System.Threading;
 using System.Windows;
-using Views.Pages;
 
 namespace Views
 {
@@ -9,8 +8,7 @@ namespace Views
     {
         public App()
         {
-            // Configuración inicial de la cultura si es necesario
-            SetCulture(""); // O el idioma predeterminado que desees
+            SetCulture("");
         }
 
         public void SetCulture(string cultureCode)
@@ -21,12 +19,7 @@ namespace Views
 
             // Esto puede ser necesario si usas recursos
             Views.Properties.Resources.Culture = culture;
-
-            // Recarga la ventana principal
-            if (MainWindow != null)
-            {
-                MainWindow.Content = new Login(cultureCode);
-            }
         }
+
     }
 }

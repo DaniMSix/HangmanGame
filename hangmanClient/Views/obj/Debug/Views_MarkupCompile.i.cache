@@ -16,5 +16,5 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 171641283455
 Frame\FrameCities.xaml;Frame\FrameOccupations.xaml;Frame\FrameFruits.xaml;Frame\FrameInstruments.xaml;Frame\FrameAnimals.xaml;MainWindow.xaml;Notifications\PageLoserChallenger.xaml;Notifications\PageWinningChallenger.xaml;Notifications\PageWinningGuesser.xaml;Pages\PageGamePlay.xaml;Pages\PageSelectWord.xaml;Pages\PageSelectLanguage.xaml;Pages\PageWaitingRoom.xaml;Pages\PageCreateProfile.xaml;Notifications\PageError.xaml;Pages\PageHome.xaml;Pages\Login.xaml;Notifications\PageLoserGuesser.xaml;Frame\FrameMenu.xaml;Pages\PageAccessCode.xaml;Pages\PageStatistics.xaml;Notifications\PageSuccess.xaml;Notifications\PageWarning.xaml;Pages\PageWinning.xaml;
 
-True
+False
 

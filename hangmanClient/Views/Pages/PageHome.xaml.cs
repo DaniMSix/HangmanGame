@@ -1,4 +1,4 @@
-﻿using Domain;
+﻿using System;
 using ServerManageGame;
 using System.Globalization;
 using System.Threading;
@@ -28,10 +28,8 @@ namespace Views.Pages
             LoadGames();
             datagridGames = dataGridItemsGames;
             this.language = language;
-            //this.frame = frame;
+            
         }
-
-        // lbItemsGames
 
         private void SetLanguage(string language)
         {
