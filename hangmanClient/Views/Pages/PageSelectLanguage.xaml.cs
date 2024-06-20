@@ -9,15 +9,14 @@ namespace Views.Pages
     public partial class PageSelectLanguage : Page
     {
         public event EventHandler MessageClosed;
-        System.Windows.Controls.Frame frCurrentFrame;
+        System.Windows.Controls.Frame frMessage;
         System.Windows.Controls.Frame frHome;
         string language;
 
-        public PageSelectLanguage(System.Windows.Controls.Frame frCurrentFrame, 
-            System.Windows.Controls.Frame frHome)
+        public PageSelectLanguage(System.Windows.Controls.Frame frMessage, System.Windows.Controls.Frame frHome)
         {
             InitializeComponent();
-            this.frCurrentFrame = frCurrentFrame;
+            this.frMessage = frMessage;
             this.frHome = frHome;
         }
 
@@ -29,22 +28,23 @@ namespace Views.Pages
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Collapsed;
             SetLanguage(language);
             NavigateToLogin();
         }
 
         private void SetLanguage(string language)
         {
-            if (language == "Ingles")
+            var app = Application.Current as App;
+            if (app != null)
             {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            }
-            else
-            {
-                Console.WriteLine("................................w");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
-
+                if (language == "Ingles")
+                {
+                    app.SetCulture("en");
+                }
+                else
+                {
+                    app.SetCulture("es");
+                }
             }
         }
 

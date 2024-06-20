@@ -250,6 +250,25 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ¿Estás listo 
+        ///para descifrar palabras y salvar al ahorcado?.
+        /// </summary>
+        public static string lbLoginMessage {
+            get {
+                return ResourceManager.GetString("lbLoginMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ¡Hola de nuevo,.
+        /// </summary>
+        public static string lbLoginSucces {
+            get {
+                return ResourceManager.GetString("lbLoginSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¡Oh no han adivinado la palabra!.
         /// </summary>
         public static string lbLose {

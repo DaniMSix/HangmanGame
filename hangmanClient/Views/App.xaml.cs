@@ -1,48 +1,32 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Threading;
+using System.Windows;
+using Views.Pages;
 
 namespace Views
 {
     public partial class App : Application
     {
-        App()
+        public App()
         {
-            //System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("");
-            //System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en");
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("");
+            SetCulture(""); // Establece el idioma predeterminado aquí
         }
-        /*protected override void OnStartup(StartupEventArgs e)
+
+        public void SetCulture(string cultureCode)
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en"); 
+            var culture = new CultureInfo(cultureCode);
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
 
+            // Asegúrate de usar el espacio de nombres correcto para los recursos
+            Views.Properties.Resources.Culture = culture;
 
-            /*
-             * String idioma = "";
-            try
+            // Recargar la ventana principal
+            if (MainWindow != null)
             {
-                idioma = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Resources-en.txt").Substring(0, 5);
+                // Recarga la ventana principal o navega a la página de inicio
+                MainWindow.Content = new Login(cultureCode);
             }
-            catch (FileNotFoundException)
-            {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Resources.txt", "es-MX");
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Resources.txt", "es-MX");
-            }
-            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("");
-            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US");
-            if (idioma.Equals("en-US"))
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
-            }
-            else
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("");
-            }
-             
-        }*/
+        }
     }
 }
-

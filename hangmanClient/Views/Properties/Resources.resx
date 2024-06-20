@@ -180,6 +180,13 @@
   <data name="lbItemsGames" xml:space="preserve">
     <value>Partidas disponibles</value>
   </data>
+  <data name="lbLoginMessage" xml:space="preserve">
+    <value>¿Estás listo 
+para descifrar palabras y salvar al ahorcado?</value>
+  </data>
+  <data name="lbLoginSucces" xml:space="preserve">
+    <value>¡Hola de nuevo,</value>
+  </data>
   <data name="lbLose" xml:space="preserve">
     <value>¡Oh no han adivinado la palabra!</value>
   </data>

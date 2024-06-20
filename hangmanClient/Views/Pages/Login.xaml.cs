@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using System.Resources;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Navigation;
 using Views.Utils;
 
 namespace Views.Pages
@@ -14,37 +11,31 @@ namespace Views.Pages
     public partial class Login : Page
     {
         private SRIPlayerManagement.IPlayerManagement client = new SRIPlayerManagement.PlayerManagementClient();
-        private bool isPlaying = false;
-        private string username;
-        private string password;
-        Domain.DTOPlayer newPlayeraActive;
-        string language = "Ingles";
-        private ResourceManager resourceManager;
+        private Domain.DTOPlayer activePlayer;
+        private string language;
 
         public Login()
         {
             InitializeComponent();
+            SetLanguage(Thread.CurrentThread.CurrentUICulture.Name);
         }
 
         public Login(string language)
         {
             InitializeComponent();
             this.language = language;
-            Console.WriteLine("Idioma"+ language);
-
+            SetLanguage(language);
         }
 
-
-        private void ClicPlayMusicButtonClick(object sender, RoutedEventArgs e)
+        private void SetLanguage(string language)
         {
-            btnMusic.Opacity = 0.2;
-            if (!isPlaying)
+            if (language == "Español")
             {
-                isPlaying = true;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("es");
             }
             else
             {
-                isPlaying = false;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             }
         }
 
@@ -53,16 +44,17 @@ namespace Views.Pages
             btnLogin.Visibility = Visibility.Hidden;
             txtLoadingLabel.Visibility = Visibility.Visible;
             txtLoadingDots.Visibility = Visibility.Visible;
+
             try
             {
-                username = txtUser.Text;
-                password = psdPassword.Password;
+                string username = txtUser.Text;
+                string password = psdPassword.Password;
 
                 var playerLogin = await Task.Run(() => client.AuthenticateLogin(username, password));
 
                 if (playerLogin != null)
                 {
-                    newPlayeraActive = new Domain.DTOPlayer()
+                    activePlayer = new Domain.DTOPlayer()
                     {
                         IdPlayer = playerLogin.IdPlayer,
                         Username = playerLogin.Username,
@@ -75,26 +67,20 @@ namespace Views.Pages
 
                     txtLoadingLabel.Visibility = Visibility.Collapsed;
                     txtLoadingDots.Visibility = Visibility.Hidden;
+
                     // Mostrar el fondo gris semitransparente
                     brdGrayBackground.Visibility = Visibility.Visible;
 
                     // Crear una instancia de SuccessPage con el título y contenido deseado
-                    var successPage = new PageSuccess("¡Éxito!", "Inicio de sesión exitoso.");
+                    var successPage = new PageSuccess(Properties.Resources.lbLoginSucces, Properties.Resources.lbLoginMessage);
 
                     // Suscribirse al evento MessageClosed de SuccessPage
                     successPage.MessageClosed += (s, args) =>
                     {
                         txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
                         brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
-                        var home = new PageHome(newPlayeraActive, language);
-                        if (NavigationService != null)
-                        {
-                            NavigationService.Navigate(home);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ocurrió un error al intentar mostrar la ventana");
-                        }
+                        var home = new PageHome(activePlayer, language);
+                        NavigationService?.Navigate(home);
                     };
 
                     // Asignar SuccessPage al contenido del Frame
@@ -102,29 +88,31 @@ namespace Views.Pages
                 }
                 else
                 {
-                    MessageBox.Show("Credenciales incorrectas.", "Inicio de sesión fallido",
-                        MessageBoxButton.OK, MessageBoxImage.Error);
+                   // MessageBox.Show(Properties.Resources.InvalidCredentials, Properties.Resources.LoginFailedTitle, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error durante la autenticación: " + ex.Message);
+                //MessageBox.Show(Properties.Resources.AuthenticationError + ex.Message);
             }
             finally
             {
+                btnLogin.Visibility = Visibility.Visible;
+                txtLoadingLabel.Visibility = Visibility.Collapsed;
+                txtLoadingDots.Visibility = Visibility.Collapsed;
             }
         }
 
-        private void TxtClicRegister(object sender, MouseButtonEventArgs e)
+        private void TxtClicRegister(object sender, RoutedEventArgs e)
         {
             var registerPage = new PageCreateProfile();
-            NavigationService.Navigate(registerPage);
+            NavigationService?.Navigate(registerPage);
         }
 
         private void BtnClickLanguage(object sender, RoutedEventArgs e)
         {
-            var registerPage = new PageSelectLanguage(frMessage, frHome);
-            frMessage.Navigate(registerPage);
+            var selectLanguagePage = new PageSelectLanguage(frMessage, frHome);
+            frMessage.Navigate(selectLanguagePage);
         }
     }
 }

@@ -56,7 +56,7 @@
                MouseUp="TxtClicRegister"/>
         <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
-        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Click="ClicPlayMusicButtonClick" Margin="929,-3,-9,430">
+        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}"  Margin="929,-3,-9,430">
             <Image x:Name="btnMusic" Source="\Images\note.png" Width="49" Height="46"/>
         </Button>
         <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
