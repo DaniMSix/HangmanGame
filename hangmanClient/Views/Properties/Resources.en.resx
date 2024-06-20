@@ -136,7 +136,7 @@
     <value>Crear</value>
   </data>
   <data name="btnCreateGame" xml:space="preserve">
-    <value>Crear partida</value>
+    <value>Crear game</value>
   </data>
   <data name="btnExit" xml:space="preserve">
     <value>Salir</value>

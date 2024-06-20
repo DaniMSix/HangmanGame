@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="496" d:DesignWidth="1005"
       Title="PageHome">
@@ -15,13 +16,13 @@
 
 
 
-        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"
+        <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnAccessCode}" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"
                 Click="BtnJoinGame"/>
-        <Button Cursor="Hand" Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="Crear partida" HorizontalAlignment="Left" FontSize="22" Margin="433,414,0,0" VerticalAlignment="Top" Height="38" Width="175"
+        <Button Cursor="Hand" Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnCreateGame}" HorizontalAlignment="Left" FontSize="22" Margin="433,414,0,0" VerticalAlignment="Top" Height="38" Width="175"
                 Click="BtnClickCreateGame"/>
-        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Tengo un código" HorizontalAlignment="Left" Margin="626,414,0,0" 
+        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="{x:Static p:Resources.btnAccessGame}" HorizontalAlignment="Left" Margin="626,414,0,0" 
                 VerticalAlignment="Top" Width="187" Height="38" Click="BtnClickJoinGameWithCode"/>
-        <Label FontFamily="{StaticResource FuenteVT323}" Content="Partidas disponibles" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="449,97,0,0" VerticalAlignment="Top"/>
+        <Label FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.lbItemsGames}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="449,97,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbPlayerGreeting" FontFamily="{StaticResource FuenteVT323}" FontSize="20" HorizontalAlignment="Left" Margin="50,154,0,0" VerticalAlignment="Top"/>
 
         <DataGrid x:Name="dataGridItemsGames" AutoGenerateColumns="False" Margin="296,140,201,145" Background="Transparent" Foreground="Black" 

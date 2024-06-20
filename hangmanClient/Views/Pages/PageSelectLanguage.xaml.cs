@@ -8,10 +8,10 @@ namespace Views.Pages
 {
     public partial class PageSelectLanguage : Page
     {
+        private string language;
         public event EventHandler MessageClosed;
         System.Windows.Controls.Frame frMessage;
         System.Windows.Controls.Frame frHome;
-        string language;
 
         public PageSelectLanguage(System.Windows.Controls.Frame frMessage, System.Windows.Controls.Frame frHome)
         {
@@ -20,16 +20,25 @@ namespace Views.Pages
             this.frHome = frHome;
         }
 
-        private void NavigateToLogin()
+        public PageSelectLanguage()
         {
-            Login loginPage = new Login(language);
-            frHome.Navigate(loginPage);
+            InitializeComponent();
         }
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
             SetLanguage(language);
             NavigateToLogin();
+        }
+
+        private void BtnMexicoClick(object sender, RoutedEventArgs e)
+        {
+            language = "Español";
+        }
+
+        private void BtnEUClick(object sender, RoutedEventArgs e)
+        {
+            language = "Ingles";
         }
 
         private void SetLanguage(string language)
@@ -43,19 +52,16 @@ namespace Views.Pages
                 }
                 else
                 {
-                    app.SetCulture("es");
+                    app.SetCulture("");
                 }
             }
         }
 
-        private void BtnMexicoClick(object sender, RoutedEventArgs e)
+        private void NavigateToLogin()
         {
-            language = "Español";
-        }
-
-        private void BtnEUClick(object sender, RoutedEventArgs e)
-        {
-            language = "Ingles";
+            Login loginPage = new Login(language);
+            NavigationService?.Navigate(loginPage);
         }
     }
+
 }

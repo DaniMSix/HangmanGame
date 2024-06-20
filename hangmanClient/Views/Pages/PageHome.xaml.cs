@@ -1,5 +1,7 @@
 ﻿using Domain;
 using ServerManageGame;
+using System.Globalization;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Views.SRIManageGameService;
@@ -19,15 +21,31 @@ namespace Views.Pages
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
+            this.language = language;
+
+            SetLanguage(language);
+
             manageGame = new ManageGame(activePlayer, frHome, language);
-            ShowPlayerGreeting();
             LoadGames();
             datagridGames = dataGridItemsGames;
             this.language = language;
         }
 
-        public void ShowPlayerGreeting()
+        // lbItemsGames
+
+        private void SetLanguage(string language)
         {
+            // Establecer la cultura para la interfaz de usuario
+            if (language == "Español")
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            }
+
+            // Actualizar cualquier otro componente que dependa del idioma
             lbPlayerGreeting.Content = "Bienvenido " + activePlayer.Name;
         }
 

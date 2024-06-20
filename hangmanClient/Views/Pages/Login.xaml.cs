@@ -20,6 +20,8 @@ namespace Views.Pages
             SetLanguage(Thread.CurrentThread.CurrentUICulture.Name);
         }
 
+
+
         public Login(string language)
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace Views.Pages
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             }
+
         }
 
         private async void ClickLogin(object sender, RoutedEventArgs e)
@@ -88,12 +91,12 @@ namespace Views.Pages
                 }
                 else
                 {
-                   // MessageBox.Show(Properties.Resources.InvalidCredentials, Properties.Resources.LoginFailedTitle, MessageBoxButton.OK, MessageBoxImage.Error);
+                   MessageBox.Show("ERRor");
                 }
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(Properties.Resources.AuthenticationError + ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
