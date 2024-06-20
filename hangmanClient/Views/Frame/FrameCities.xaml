@@ -11,52 +11,52 @@
     <Grid>
         <Border Background="Gray" Opacity="0.5" CornerRadius="30"/>
 
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,26,594,211">
+        <Button x:Name="btnCityOne" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,26,594,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-London.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,26,449,211">
+        <Button x:Name="btnCityTwo" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,26,449,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Amsterdam.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,26,304,211">
+        <Button x:Name="btnCityThree" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,26,304,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Argentina.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,26,161,211">
+        <Button x:Name="btnCityFour" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,26,161,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Rome.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,26,18,211">
+        <Button x:Name="btnCityFive" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,26,18,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Canada.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,212,594,25">
+        <Button x:Name="btnCitySix" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,212,594,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Dublin.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,212,449,25">
+        <Button x:Name="btnCitySeven" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,212,449,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Shangai.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,212,304,25">
+        <Button x:Name="btnCityEight" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,212,304,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Egypt.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,212,161,25">
+        <Button x:Name="btnCityNine" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,212,161,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-Hamburg.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,212,18,25">
+        <Button x:Name="btnCityTen" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,212,18,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Cities/img-India.png"/>
             </Button.Background>

@@ -40,7 +40,7 @@ namespace Views.Pages
 
         private void ClickViewStatistics(object sender, RoutedEventArgs e)
         {
-            var statistics = new PageStatistics(playerActive, language);
+            var statistics = new PageStatistics(playerActive, language, homeFrame);
             homeFrame.Navigate(statistics);
         }
 

@@ -33,8 +33,6 @@ namespace Views.Pages
             lbTitle.Content = "Modificar";
             psdPassword.Visibility = Visibility.Collapsed;
             psdPasswordConfirm.Visibility = Visibility.Collapsed;
-            txtPassword.Visibility = Visibility.Collapsed;  
-            txtPasswordConfirm.Visibility = Visibility.Collapsed;
             txtEmail.IsEnabled = false;
             imgBlockLabel.Visibility = Visibility.Visible;
             imgPassword.Visibility = Visibility.Collapsed;
@@ -96,8 +94,6 @@ namespace Views.Pages
                 MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-
 
         private void BtnClickReturn(object sender, RoutedEventArgs e)
         {

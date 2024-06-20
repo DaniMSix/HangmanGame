@@ -1,28 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using ServerManageGame;
+using System;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Views.Frame
 {
-    /// <summary>
-    /// Lógica de interacción para FrameAnimals.xaml
-    /// </summary>
     public partial class FrameFruits : Page
     {
-        public FrameFruits()
+        private ManageGame manageGame;
+        private string language;
+        private int idCategory;
+        public event EventHandler<int> WordSelected;
+        public FrameFruits(int idCategory, string language)
         {
             InitializeComponent();
+            manageGame = new ManageGame(language);
+            this.idCategory = idCategory;
+            this.language = language;
+            AssignButtonNames();
+        }
+
+        private void AssignButtonNames()
+        {
+            var words = manageGame.RecoveringWordsForCategory(3);
+            var buttons = new Button[] { btnFruitOne, btnFruitTwo, btnFruitThree, btnFruitFour, btnFruitFive, btnFruitSix, btnFruitSeven, btnFruitEight, btnFruitNine, btnFruitTen };
+
+            for (int i = 0; i < words.Length && i < buttons.Length; i++)
+            {
+                if (language == "Ingles")
+                {
+                    buttons[i].Content = words[i].NameEn;
+                }
+                else
+                {
+                    buttons[i].Content = words[i].Name;
+                }
+                buttons[i].Tag = words[i].IdWord;
+            }
+        }
+
+        private void BtnClickGetId(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null && clickedButton.Tag != null)
+            {
+                int wordId = (int)clickedButton.Tag;
+                WordSelected?.Invoke(this, wordId);
+            }
         }
     }
 }

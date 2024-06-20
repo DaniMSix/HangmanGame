@@ -86,6 +86,12 @@
   <wsdl:message name="IManageGameService_GetWords_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetWordsResponse" />
   </wsdl:message>
+  <wsdl:message name="IManageGameService_GetScorePlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScorePlayer" />
+  </wsdl:message>
+  <wsdl:message name="IManageGameService_GetScorePlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScorePlayerResponse" />
+  </wsdl:message>
   <wsdl:message name="IManageGameService_StartGameRoom_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:StartGameRoom" />
   </wsdl:message>
@@ -167,6 +173,10 @@
     <wsdl:operation name="GetWords">
       <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetWords" message="tns:IManageGameService_GetWords_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetWordsResponse" message="tns:IManageGameService_GetWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScorePlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManageGameService/GetScorePlayer" message="tns:IManageGameService_GetScorePlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/GetScorePlayerResponse" message="tns:IManageGameService_GetScorePlayer_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="StartGameRoom">
       <wsdl:output wsaw:Action="http://tempuri.org/IManageGameService/StartGameRoom" message="tns:IManageGameService_StartGameRoom_OutputCallbackMessage" />
@@ -301,6 +311,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetWords">
       <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetWords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScorePlayer">
+      <soap12:operation soapAction="http://tempuri.org/IManageGameService/GetScorePlayer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

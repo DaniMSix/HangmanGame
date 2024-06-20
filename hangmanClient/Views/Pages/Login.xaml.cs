@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Globalization;
+using System.Resources;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,12 +18,22 @@ namespace Views.Pages
         private string username;
         private string password;
         Domain.DTOPlayer newPlayeraActive;
-        string language = "Español";
+        string language = "Ingles";
+        private ResourceManager resourceManager;
 
         public Login()
         {
             InitializeComponent();
         }
+
+        public Login(string language)
+        {
+            InitializeComponent();
+            this.language = language;
+            Console.WriteLine("Idioma"+ language);
+
+        }
+
 
         private void ClicPlayMusicButtonClick(object sender, RoutedEventArgs e)
         {
@@ -84,13 +97,13 @@ namespace Views.Pages
                         }
                     };
 
-
                     // Asignar SuccessPage al contenido del Frame
                     frMessage.Content = successPage;
                 }
                 else
                 {
-                    MessageBox.Show("Credenciales incorrectas.", "Inicio de sesión fallido", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Credenciales incorrectas.", "Inicio de sesión fallido",
+                        MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             catch (Exception ex)
@@ -104,12 +117,14 @@ namespace Views.Pages
 
         private void TxtClicRegister(object sender, MouseButtonEventArgs e)
         {
-            // Crear una instancia de la página de registro (suponiendo que se llama RegisterPage)
             var registerPage = new PageCreateProfile();
-
-            // Navegar a la página de registro
             NavigationService.Navigate(registerPage);
         }
 
+        private void BtnClickLanguage(object sender, RoutedEventArgs e)
+        {
+            var registerPage = new PageSelectLanguage(frMessage, frHome);
+            frMessage.Navigate(registerPage);
+        }
     }
 }

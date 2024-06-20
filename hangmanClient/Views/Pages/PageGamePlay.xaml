@@ -84,7 +84,7 @@
         <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
         <Label x:Name="lbHint" HorizontalAlignment="Left" Margin="546,35,0,0" VerticalAlignment="Top"/>
     
-        <Button x:Name="btnLogin" Content="Salir" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="864,447,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSalir"/>
+        <Button x:Name="btnExit" Content="Salir" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="864,447,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSalir"/>
 
 
     </Grid>

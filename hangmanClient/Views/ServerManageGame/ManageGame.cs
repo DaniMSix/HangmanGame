@@ -12,13 +12,14 @@ namespace ServerManageGame
     public class ManageGame : IManageGameServiceCallback
     {
         private ManageGameServiceClient manageGameServiceClient;
-        private Domain.DTOPlayer activePlayer;
+        public Domain.DTOPlayer activePlayer;
         public Gamematch gameMatch = new Gamematch();
         private PageWaitingRoom waitingRoomPage;
         Frame frCurrentFrame;
         public event Action<string> PlayerJoined;
         public event Action<string> PlayerDisconnected;
         public event Action<char[], int, bool> IfGuessed;
+        public int scorePlayer;
         string language;
         public event Action<Domain.DTOPlayer, Frame, string, int, bool, bool> GameFinished;
         public DTOGameMatch[] gamematches { get; set; }
@@ -121,6 +122,15 @@ namespace ServerManageGame
                 throw new InvalidOperationException("manageGameServiceClient no ha sido inicializado correctamente.");
             }
             return statistics = manageGameServiceClient.GetStatistics(idPlayer);
+        }
+
+        public int RecoveringScorePlayer(int idPlayer)
+        {
+            if (manageGameServiceClient == null)
+            {
+                throw new InvalidOperationException("manageGameServiceClient no ha sido inicializado correctamente.");
+            }
+            return scorePlayer = manageGameServiceClient.GetScorePlayer(idPlayer);
         }
 
         public void StartGame()

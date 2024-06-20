@@ -15,7 +15,7 @@ namespace Views.Notifications
             this.homeFrame = homeFrame;
             this.activePlayer = activePlayer;
             lbScore.Content = score;
-            lbWord.Content += " " + word;
+            //lbWord.Content += " " + word;
             this.language = language;
         }
 

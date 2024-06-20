@@ -4,11 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="495" d:DesignWidth="1005"
       Title="Login">
-
+    
     <Grid>
+        <Frame x:Name="frHome"></Frame>
         <Image Source="\Images\Background-Login.png" Margin="0,-7,-13,0"/>
 
         <Grid>
@@ -44,13 +46,13 @@
             </TextBlock.Triggers>
         </TextBlock>
 
-        <Button x:Name="btnLogin" Content="Iniciar sesión" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="431,425,0,0" VerticalAlignment="Top" Height="43" Width="153" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
+        <Button x:Name="btnLogin" Content="{x:Static p:Resources.btnAccept}" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="431,425,0,0" VerticalAlignment="Top" Height="43" Width="153" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
 
         <Image Source="\Images\title-home-Spanish.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
-        <Label x:Name="txtTitleLogin" HorizontalContentAlignment="Center" Content = "Iniciar sesión" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>
-        <Label x:Name="lbUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="371,192,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="¿No tienes perfil aún? ¡Regístrate aquí!" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
+        <Label x:Name="lbTitleLogin" Content="{x:Static p:Resources.lbTitleLogin}" HorizontalContentAlignment="Center" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>
+        <Label x:Name="lbUser" Content="{x:Static p:Resources.lbUser}" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="371,192,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPassword" Content="{x:Static p:Resources.lbPassword}" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="{x:Static p:Resources.lbRegister}" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
                MouseUp="TxtClicRegister"/>
         <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
@@ -58,7 +60,6 @@
             <Image x:Name="btnMusic" Source="\Images\note.png" Width="49" Height="46"/>
         </Button>
         <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
-        <Image Source="\Images\mexico-flag.png" HorizontalAlignment="Left" Height="56" Margin="888,12,0,0" VerticalAlignment="Top" Width="53"/>
 
         <!-- Fondo gris semitransparente -->
         <Border x:Name="brdGrayBackground" Background="#80000000" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1005" Height="496" Visibility="Collapsed"/>
@@ -70,5 +71,11 @@
         <!-- TextBlock para "Cargando" -->
         <TextBlock x:Name="txtLoadingLabel" FontFamily="{StaticResource FuenteVT323}" Text="Cargando" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,427,0,0" Visibility="Collapsed"/>
 
+        <Button x:Name="btnAnimalOne" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="894,10,57,441"
+        Click="BtnClickLanguage">
+            <Button.Background>
+                <ImageBrush  ImageSource="/Images/mexico-flag.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

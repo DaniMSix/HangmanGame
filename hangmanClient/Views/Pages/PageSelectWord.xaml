@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="496" d:DesignWidth="1005"
       Title="PageSelectWord">
@@ -13,17 +14,39 @@
             <ImageBrush ImageSource="\Images\Background-Categories.png"/>
         </Grid.Background>
 
-        
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Animales" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="44" Width="177"
+
+        <Button x:Name="btnAnimals" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnAnimals}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Height="44" Width="177"
                 Click="BtnClickAnimals"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Instrumentos musicales" FontSize="17" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Height="46" Width="177"
+        <Button x:Name="btnInstruments" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnInstruments}" FontSize="17" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Height="46" Width="177"
                 Click="BtnClickInstruments"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Frutas" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="44" Width="177"
+        <Button x:Name="btnFruits" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnFruits}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Height="44" Width="177"
                 Click="BtnClickFruits"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Capitales" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="44" Width="177"
+        <Button x:Name="btnCities" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnCities}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" Height="44" Width="177"
                 Click="BtnClickCities"/>
-        <Button Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="Profesiones" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="44" Width="177"
+        <Button x:Name="btnOccupations" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnOccupations}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="44" Width="177"
                 Click="BtnClickOccupations"/>
+
+        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Margin="47,421,864,5" Click="BtnClickCreateGame" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="179.296"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Image Source="\Images\arrow-left.png" Width="80" Height="61"/>
+        </Button>
+
+        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Margin="4,5,913,428" Click="BtnClickReturn">
+            <Image Source="\Images\arrow-left.png" Width="65" Height="54"/>
+        </Button>
+
+
         <Frame x:Name="frCategories" HorizontalAlignment="Left" Height="400" Margin="233,50,0,0" VerticalAlignment="Top" Width="742"/>
+
+
+
+
     </Grid>
 </Page>

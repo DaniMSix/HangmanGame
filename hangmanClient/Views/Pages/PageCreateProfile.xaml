@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="495" d:DesignWidth="1005"
       Title="PageCreateProfile">
@@ -23,12 +24,12 @@
 
             <Label x:Name="lbTitle" Content="Crear perfil" HorizontalContentAlignment="Center" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="291,58,419,383"/>
             <Image Source="\Images\Label-login.png"  Margin="180,130,726,316"/>
-            <Label Content="Nombre completo" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,184,0,0" VerticalAlignment="Top"/>
-            <Label Content="Usuario" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="193,101,0,0" VerticalAlignment="Top"/>
-            <Label Content="Teléfono celular" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,270,0,0" VerticalAlignment="Top"/>
-            <Label Content="Correo" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,348,0,0" VerticalAlignment="Top" Width="105"/>
-            <Label x:Name="txtPassword" Content="Contraseña" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,184,0,0" VerticalAlignment="Top"/>
-            <Label Content="Fecha de nacimiento" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,101,0,0" VerticalAlignment="Top"/>
+            <Label  x:Name="lbFullName" Content="{x:Static p:Resources.lbFullName}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,184,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="193,101,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbPhone" Content="{x:Static p:Resources.lbPhone}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,270,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbEmail" Content="{x:Static p:Resources.lbEmail}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,348,0,0" VerticalAlignment="Top" Width="105"/>
+            <Label x:Name="lbPassword" Content="{x:Static p:Resources.lbPassword}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,184,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbBirthday" Content="{x:Static p:Resources.lbBirthday}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,101,0,0" VerticalAlignment="Top"/>
             <Button x:Name="btnCreate" Cursor="Hand" Style="{StaticResource orange-button}" Content="Registrarse" HorizontalAlignment="Left" Margin="444,438,0,0" VerticalAlignment="Top" Height="43" Width="164" 
                     FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSend"/>
             <Image Source="/Images/Label-login.png"  Margin="178,213,728,233"/>
@@ -38,7 +39,7 @@
             <Image Source="/Images/Label-login.png"  Margin="178,378,728,68"/>
             <Image x:Name="imgPassword" Source="/Images/Label-login.png"  Margin="564,213,342,233"/>
             <Image x:Name="imgPasswordConfirm" Source="/Images/Label-login.png"  Margin="564,298,342,148"/>
-            <Label x:Name="txtPasswordConfirm" Content="Contraseña(confirmar)" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,270,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbPasswordConfirm" Content="{x:Static p:Resources.lbPasswordConfirm}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,270,0,0" VerticalAlignment="Top"/>
 
             <TextBox x:Name="txtUser" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
             Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="208,142,0,0"/>

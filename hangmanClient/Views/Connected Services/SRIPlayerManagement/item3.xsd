@@ -51,8 +51,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
       <xs:element minOccurs="0" name="Gamematch" nillable="true" type="tns:ArrayOfGamematch" />
-      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="description_EN" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="hintEN" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="idCategory" nillable="true" type="xs:int" />

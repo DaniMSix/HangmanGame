@@ -11,6 +11,7 @@ FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageWinningGuesser.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageGamePlay.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageSelectWord.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageSelectLanguage.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageWaitingRoom.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageChangeLanguage.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageCreateProfile.xaml;;
@@ -21,6 +22,7 @@ FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Frame\FrameMenu.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageAccessCode.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageStatistics.xaml;;
+FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageSuccess.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Notifications\PageWarning.xaml;;
 FC:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Pages\PageWinning.xaml;;
 

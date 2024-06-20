@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:Views.Properties"
       xmlns:local="clr-namespace:Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="517" d:DesignWidth="1005"
@@ -28,7 +29,7 @@
                 <DropShadowEffect Color="Black" Direction="315" ShadowDepth="2" Opacity="0.3"/>
             </Label.Effect>
         </Label>
-        <Button x:Name="btnStartGame" Content="Empezar" Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" HorizontalAlignment="Left" Margin="398,380,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"
+        <Button x:Name="btnStartGame" Content="{x:Static p:Resources.btnStart}" Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" HorizontalAlignment="Left" Margin="398,380,0,0" VerticalAlignment="Top" Height="41" Width="181"  Foreground="#6D3B00"
             Click="BtnStartManageGame"/>
 
     </Grid>

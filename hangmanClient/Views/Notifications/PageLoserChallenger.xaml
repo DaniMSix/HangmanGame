@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="251" d:DesignWidth="518"
       Title="PageLoserChallenger">
@@ -12,10 +13,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="\Images\Background-Error.png"/>
         </Grid.Background>
-        <Label FontFamily="{StaticResource PressStart2P}" FontSize="18" Content="¡Oh no! ¡Adivinaron la palabra!" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" Margin="0,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbTitleError" FontFamily="{StaticResource PressStart2P}" FontSize="14"  Content="{x:Static p:Resources.lbLose}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" Margin="0,93,0,0" VerticalAlignment="Top" Height="25" Width="518"/>
         <Image Source="\Images\sign.png" HorizontalAlignment="Left" Height="68" Margin="224,123,0,0" VerticalAlignment="Top" Width="82"/>
-        <Label FontFamily="{StaticResource FuenteVT323}" FontSize="15" Content="puntos" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPoints" FontFamily="{StaticResource FuenteVT323}" FontSize="15" Content="{x:Static p:Resources.lbPoints}" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbScore" FontFamily="{StaticResource FuenteVT323}" FontSize="23" Foreground="White" HorizontalAlignment="Left" Margin="233,153,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Left" Margin="210,212,0,0" VerticalAlignment="Top" Height="29" Width="90" Click="BtnAcceptClick"/>
+        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="{x:Static p:Resources.btnAccept}" HorizontalAlignment="Left" Margin="210,212,0,0" VerticalAlignment="Top" Height="29" Width="90" Click="BtnAcceptClick"/>
     </Grid>
 </Page>

@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="251" d:DesignWidth="518"
       Title="PageChangeLanguage">
@@ -17,7 +18,7 @@
             <ImageBrush ImageSource="\Images\Purple-Background.png"/>
         </Grid.Background>
         <Image Source="\Images\World.png" HorizontalAlignment="Center" Height="95" Margin="0,10,0,0" VerticalAlignment="Top" Width="80"/>
-        <Label Content="Cambiar idioma" FontFamily="{StaticResource PressStart2P}" FontSize="22" HorizontalAlignment="Center" Margin="0,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbChangeLanguage" Content="{x:Static p:Resources.lbChangeLanguage}" FontFamily="{StaticResource PressStart2P}" FontSize="22" HorizontalAlignment="Center" Margin="0,77,0,0" VerticalAlignment="Top"/>
         <Button Cursor="Hand" Style="{StaticResource TransparentImageButtonStyle}" Tag="\Views\Images\mexico-flag.png" HorizontalAlignment="Left" Margin="171,119,0,0" VerticalAlignment="Top" Height="64" Width="74" Grid.RowSpan="2"/>
         <Button Cursor="Hand" Style="{StaticResource TransparentImageButtonStyle}" Tag="\Views\Images\EU Flag Icon.png" HorizontalAlignment="Left" Margin="271,107,0,0" VerticalAlignment="Top" Height="72" Width="73" Grid.RowSpan="2"/>
         <Button Cursor="Hand" Style="{StaticResource green-button}" Content="Cancelar" FontFamily="{StaticResource  FuenteVT323}" FontSize="17" HorizontalAlignment="Left" Margin="282,53,0,0" VerticalAlignment="Top" Height="32" Width="91" Grid.Row="1"/>

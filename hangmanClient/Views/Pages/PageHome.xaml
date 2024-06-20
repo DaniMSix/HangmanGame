@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="\Images\Background-home.png"/>
         </Grid.Background>
 
-        
+
 
         <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="Unirse" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"
                 Click="BtnJoinGame"/>
@@ -49,7 +49,6 @@ BorderBrush="Transparent" GridLinesVisibility="None" HeadersVisibility="None" Se
                 <Style TargetType="DataGridRow">
                     <Setter Property="Background" Value="Transparent" />
                     <Setter Property="Margin" Value="0 5"/>
-                    <!-- Espacio vertical entre filas -->
                     <Style.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Background" Value="#DED4B1" />
@@ -71,11 +70,11 @@ BorderBrush="Transparent" GridLinesVisibility="None" HeadersVisibility="None" Se
         <Button Cursor="Hand" Style="{StaticResource TransparentButton}" HorizontalAlignment="Left" Margin="951,2,0,0" VerticalAlignment="Top" Height="25" Width="30" Click="BtnClicShowMenu"/>
         <Frame x:Name="frHome" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" />
 
-        
+
 
 
 
     </Grid>
-    
-    
+
+
 </Page>

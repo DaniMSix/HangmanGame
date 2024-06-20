@@ -20,7 +20,7 @@ namespace Views.Pages
             InitializeComponent();
 
             this.manageGame = manageGame;
-            this.manageGame.PlayerJoined += OnPlayerJoined;  // Subscribirse al evento
+            this.manageGame.PlayerJoined += OnPlayerJoined;
             this.manageGame.PlayerDisconnected += OnPlayerDisconnected;
             btnStartGame.Visibility = Visibility.Collapsed;
             this.language = language;

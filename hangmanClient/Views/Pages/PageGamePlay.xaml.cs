@@ -9,7 +9,7 @@ namespace Views.Pages
     public partial class PageGamePlay : Page
     {
         ManageGame manageGame;
-        System.Windows.Controls.Frame frame;
+        System.Windows.Controls.Frame frCurrent;
         string language;
 
         public PageGamePlay(ManageGame manageGame, System.Windows.Controls.Frame frCurrentFrame, string word, string hint, string letters)
@@ -17,7 +17,7 @@ namespace Views.Pages
             InitializeComponent();
 
             this.manageGame = manageGame;
-            this.frame = frCurrentFrame;
+            this.frCurrent = frCurrentFrame;
             lbWord.Content = word;
             lbHint.Content = hint;
             lbWordGuess.Content = letters;
@@ -30,7 +30,7 @@ namespace Views.Pages
         {   
             InitializeComponent();
             this.manageGame = manageGame;
-            this.frame = frCurrentFrame;
+            this.frCurrent = frCurrentFrame;
             lbHint.Content = hint;
             lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
@@ -124,6 +124,8 @@ namespace Views.Pages
         private void BtnClickSalir(object sender, RoutedEventArgs e)
         {
             manageGame.Discconect();
+            var pageHome = new PageHome(manageGame.activePlayer, language);
+            frCurrent.Navigate(pageHome);
         }
     }
 }

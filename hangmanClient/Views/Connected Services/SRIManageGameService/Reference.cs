@@ -689,12 +689,6 @@ namespace Views.SRIManageGameService {
         private Views.SRIManageGameService.Gamematch[] GamematchField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string descriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string description_ENField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string hintField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -744,32 +738,6 @@ namespace Views.SRIManageGameService {
                 if ((object.ReferenceEquals(this.GamematchField, value) != true)) {
                     this.GamematchField = value;
                     this.RaisePropertyChanged("Gamematch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
-                    this.descriptionField = value;
-                    this.RaisePropertyChanged("description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string description_EN {
-            get {
-                return this.description_ENField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.description_ENField, value) != true)) {
-                    this.description_ENField = value;
-                    this.RaisePropertyChanged("description_EN");
                 }
             }
         }
@@ -1248,6 +1216,9 @@ namespace Views.SRIManageGameService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool winField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string winSymbolField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -1319,6 +1290,19 @@ namespace Views.SRIManageGameService {
                 if ((this.winField.Equals(value) != true)) {
                     this.winField = value;
                     this.RaisePropertyChanged("win");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string winSymbol {
+            get {
+                return this.winSymbolField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.winSymbolField, value) != true)) {
+                    this.winSymbolField = value;
+                    this.RaisePropertyChanged("winSymbol");
                 }
             }
         }
@@ -1588,6 +1572,12 @@ namespace Views.SRIManageGameService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetWords", ReplyAction="http://tempuri.org/IManageGameService/GetWordsResponse")]
         System.Threading.Tasks.Task<Views.SRIManageGameService.DTOWord[]> GetWordsAsync(int idCategory);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetScorePlayer", ReplyAction="http://tempuri.org/IManageGameService/GetScorePlayerResponse")]
+        int GetScorePlayer(int idPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IManageGameService/GetScorePlayer", ReplyAction="http://tempuri.org/IManageGameService/GetScorePlayerResponse")]
+        System.Threading.Tasks.Task<int> GetScorePlayerAsync(int idPlayer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1725,6 +1715,14 @@ namespace Views.SRIManageGameService {
         
         public System.Threading.Tasks.Task<Views.SRIManageGameService.DTOWord[]> GetWordsAsync(int idCategory) {
             return base.Channel.GetWordsAsync(idCategory);
+        }
+        
+        public int GetScorePlayer(int idPlayer) {
+            return base.Channel.GetScorePlayer(idPlayer);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetScorePlayerAsync(int idPlayer) {
+            return base.Channel.GetScorePlayerAsync(idPlayer);
         }
     }
 }

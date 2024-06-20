@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="251" d:DesignWidth="518"
       Title="PageSuccess">
@@ -20,6 +21,6 @@
    Width="370">
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Width="360"></TextBlock>
         </Label>
-        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="Aceptar" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="BtnAcceptClick"/>
+        <Button x:Name="btnAccept" Cursor="Hand" Style="{StaticResource orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="14" Content="{x:Static p:Resources.btnAccept}" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="BtnAcceptClick"/>
     </Grid>
 </Page>

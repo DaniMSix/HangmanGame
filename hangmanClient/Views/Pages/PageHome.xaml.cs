@@ -63,7 +63,6 @@ namespace Views.Pages
             dataGridItemsGames.ItemsSource = games;
         }
 
-
         private void BtnJoinGame(object sender, RoutedEventArgs e)
         {
             if (dataGridItemsGames.SelectedItem != null)

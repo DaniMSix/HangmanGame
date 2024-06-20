@@ -11,52 +11,52 @@
     <Grid>
         <Border Background="Gray" Opacity="0.5" CornerRadius="30"/>
 
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,26,594,211">
+        <Button x:Name="btnInstrumentOne" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,26,594,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-guitar.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,26,449,211">
+        <Button x:Name="btnInstrumentTwo" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,26,449,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-drum.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,26,304,211">
+        <Button x:Name="btnInstrumentThree" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,26,304,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-citara.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,26,161,211">
+        <Button x:Name="btnInstrumentFour" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,26,161,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-triangle.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,26,18,211">
+        <Button x:Name="btnInstrumentFive" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,26,18,211">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-Xylophone.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,212,594,25">
+        <Button x:Name="btnInstrumentSix" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,212,594,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-Saxophone.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,212,449,25">
+        <Button x:Name="btnInstrumentSeven" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="159,212,449,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-piano.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,212,304,25">
+        <Button x:Name="btnInstrumentEight" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="304,212,304,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-flute.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,212,161,25">
+        <Button x:Name="btnInstrumentNine" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="447,212,161,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-Trumpet.png"/>
             </Button.Background>
         </Button>
-        <Button Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,212,18,25">
+        <Button x:Name="btnInstrumentTen" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="590,212,18,25">
             <Button.Background>
                 <ImageBrush  ImageSource="/Images/Instruments/img-Violin.png"/>
             </Button.Background>
