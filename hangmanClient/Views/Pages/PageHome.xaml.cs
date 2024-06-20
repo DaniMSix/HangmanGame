@@ -16,19 +16,19 @@ namespace Views.Pages
         DataGrid datagridGames;
         private Gamematch gamematch = new Gamematch();
         string language;
+        System.Windows.Controls.Frame frame;
 
         public PageHome(Domain.DTOPlayer activePlayer, string language)
         {
             InitializeComponent();
             this.activePlayer = activePlayer;
             this.language = language;
-
             SetLanguage(language);
-
             manageGame = new ManageGame(activePlayer, frHome, language);
             LoadGames();
             datagridGames = dataGridItemsGames;
             this.language = language;
+            //this.frame = frame;
         }
 
         // lbItemsGames
@@ -46,7 +46,6 @@ namespace Views.Pages
             }
 
             // Actualizar cualquier otro componente que dependa del idioma
-            lbPlayerGreeting.Content = "Bienvenido " + activePlayer.Name;
         }
 
         private void BtnClicShowMenu(object sender, RoutedEventArgs e)
@@ -91,7 +90,7 @@ namespace Views.Pages
                 gamematch.idGuesser = activePlayer.IdPlayer;
                 manageGame.StartJoinGame(gamematch, false);
             }
-            
+
         }
     }
 }

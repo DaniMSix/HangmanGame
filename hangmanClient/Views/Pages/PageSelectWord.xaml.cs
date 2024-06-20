@@ -92,9 +92,5 @@ namespace Views.Pages
                 pageHome.dataGridItemsGames.Visibility = Visibility.Visible;
             }
         }
-
-        
-
-
     }
 }

@@ -62,14 +62,6 @@ C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.csproj.Cor
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.exe
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\Views.pdb
 C:\Users\Dani\Desktop\HangmanGame\hangmanClient\Views\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.exe.config
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.exe
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.pdb
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\en\Views.resources.dll
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Domain.dll
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Logs.dll
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Domain.pdb
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Logs.pdb
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views.csproj.AssemblyReference.cache
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameCities.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameOccupations.g.cs
@@ -84,7 +76,6 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectWord.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectLanguage.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageWaitingRoom.g.cs
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageChangeLanguage.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCreateProfile.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Notifications\PageError.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageHome.g.cs
@@ -101,6 +92,14 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views_MarkupCompile.cache
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Views_MarkupCompile.lref
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.exe.config
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.exe
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Views.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\en\Views.resources.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Domain.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Logs.dll
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Domain.pdb
+C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\bin\Debug\Logs.pdb
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\App.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameCities.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Frame\FrameOccupations.baml
@@ -115,7 +114,6 @@ C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectWord.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageSelectLanguage.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageWaitingRoom.baml
-C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageChangeLanguage.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageCreateProfile.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Notifications\PageError.baml
 C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\obj\Debug\Pages\PageHome.baml

@@ -11,7 +11,7 @@
     
     <Grid>
         <Frame x:Name="frHome"></Frame>
-        <Image Source="\Images\Background-Login.png" Margin="0,-7,-13,0"/>
+        <Image Source="\Images\Background-Login.png"/>
 
         <Grid>
             <Image Source="\Images\Label-login.png" Margin="307,220,295,221"/>

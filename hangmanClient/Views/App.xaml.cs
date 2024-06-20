@@ -9,7 +9,8 @@ namespace Views
     {
         public App()
         {
-            SetCulture(""); // Establece el idioma predeterminado aquí
+            // Configuración inicial de la cultura si es necesario
+            SetCulture(""); // O el idioma predeterminado que desees
         }
 
         public void SetCulture(string cultureCode)
@@ -18,13 +19,12 @@ namespace Views
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;
 
-            // Asegúrate de usar el espacio de nombres correcto para los recursos
+            // Esto puede ser necesario si usas recursos
             Views.Properties.Resources.Culture = culture;
 
-            // Recargar la ventana principal
+            // Recarga la ventana principal
             if (MainWindow != null)
             {
-                // Recarga la ventana principal o navega a la página de inicio
                 MainWindow.Content = new Login(cultureCode);
             }
         }

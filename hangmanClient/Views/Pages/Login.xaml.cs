@@ -21,25 +21,24 @@ namespace Views.Pages
         }
 
 
-
         public Login(string language)
         {
             InitializeComponent();
             this.language = language;
             SetLanguage(language);
+            // No se carga aquí, se asume que los recursos se cargan en el archivo xaml
         }
 
         private void SetLanguage(string language)
         {
             if (language == "Español")
             {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("es");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-MX");
             }
             else
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             }
-
         }
 
         private async void ClickLogin(object sender, RoutedEventArgs e)
@@ -75,7 +74,7 @@ namespace Views.Pages
                     brdGrayBackground.Visibility = Visibility.Visible;
 
                     // Crear una instancia de SuccessPage con el título y contenido deseado
-                    var successPage = new PageSuccess(Properties.Resources.lbLoginSucces, Properties.Resources.lbLoginMessage);
+                    var successPage = new PageSuccess(Properties.Resources.lbTitleLogin, Properties.Resources.lbLoginMessage);
 
                     // Suscribirse al evento MessageClosed de SuccessPage
                     successPage.MessageClosed += (s, args) =>
@@ -91,7 +90,7 @@ namespace Views.Pages
                 }
                 else
                 {
-                   MessageBox.Show("ERRor");
+                    MessageBox.Show("Error");
                 }
             }
             catch (Exception ex)

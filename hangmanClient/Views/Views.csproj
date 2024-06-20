@@ -179,10 +179,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\PageChangeLanguage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\PageCreateProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,9 +227,6 @@
   <ItemGroup>
     <Compile Include="Pages\PageWaitingRoom.xaml.cs">
       <DependentUpon>PageWaitingRoom.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\PageChangeLanguage.xaml.cs">
-      <DependentUpon>PageChangeLanguage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageCreateProfile.xaml.cs">
       <DependentUpon>PageCreateProfile.xaml</DependentUpon>
