@@ -20,9 +20,22 @@ namespace Views.Pages
     /// </summary>
     public partial class PageError : Page
     {
-        public PageError()
+        public event EventHandler MessageClosed;
+        public PageError(string title, string message)
         {
             InitializeComponent();
+            lbTitleError.Content = title;
+            tbMessageError.Text = message;
+        }
+
+        private void CloseMessage()
+        {
+            MessageClosed?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void BtnAcceptClick(object sender, RoutedEventArgs e)
+        {
+            CloseMessage();
         }
     }
 }

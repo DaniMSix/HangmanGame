@@ -223,6 +223,9 @@ para descifrar palabras y salvar al ahorcado?</value>
   <data name="lbTitleAccesssCode" xml:space="preserve">
     <value>Código de acceso</value>
   </data>
+  <data name="lbTitleErrorCredentials" xml:space="preserve">
+    <value>Credenciales incorrectas</value>
+  </data>
   <data name="lbTitleIdiom" xml:space="preserve">
     <value>Seleccionar idioma</value>
   </data>
@@ -231,6 +234,9 @@ para descifrar palabras y salvar al ahorcado?</value>
   </data>
   <data name="lbTitleLosser" xml:space="preserve">
     <value>¡Oh no! ¡Haz sido ahorcado!</value>
+  </data>
+  <data name="lbTitleWarning" xml:space="preserve">
+    <value>Campos vacíos</value>
   </data>
   <data name="lbTitleWinChallenger" xml:space="preserve">
     <value>¡Felicidades!</value>
@@ -246,6 +252,12 @@ para descifrar palabras y salvar al ahorcado?</value>
   </data>
   <data name="lbWordGuess" xml:space="preserve">
     <value>La palabra  era:</value>
+  </data>
+  <data name="tbMessageErrorCredentials" xml:space="preserve">
+    <value>Las credenciales ingresadas no corresponden a ningún usuario registrado.</value>
+  </data>
+  <data name="tbMessageWarning" xml:space="preserve">
+    <value>Hay campos vacíos. Complételos o cámbielos para continuar</value>
   </data>
   <data name="txtRegister" xml:space="preserve">
     <value>Registrar</value>

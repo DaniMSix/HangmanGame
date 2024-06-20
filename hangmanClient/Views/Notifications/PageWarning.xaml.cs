@@ -15,14 +15,24 @@ using System.Windows.Shapes;
 
 namespace Views.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para warningPage.xaml
-    /// </summary>
     public partial class PageWarning : Page
     {
-        public PageWarning()
+        public event EventHandler MessageClosed;
+        public PageWarning(String title, string message)
         {
             InitializeComponent();
+            lbTitleWarning.Content = title;
+            tbMessageWarning.Text = message;
+        }
+
+        private void CloseMessage()
+        {
+            MessageClosed?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void BtnAcceptClick(object sender, RoutedEventArgs e)
+        {
+            CloseMessage();
         }
     }
 }

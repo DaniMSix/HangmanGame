@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\views\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\pages\\pageselectlanguage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\pageselectlanguage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\notifications\\pageerror.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\notifications\\pageerror.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\properties\\resources.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\properties\\resources.en.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\pages\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|c:\\users\\dms19\\onedrive\\escritorio\\github\\juego\\hangmangame\\hangmanclient\\views\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}|Views\\Views.csproj|solutionrelative:views\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,40 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
-              "RelativeDocumentMoniker": "Views\\Pages\\Login.xaml",
-              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
-              "RelativeToolTip": "Views\\Pages\\Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-20T20:57:58.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PageSelectLanguage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\PageSelectLanguage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\Pages\\PageSelectLanguage.xaml.cs",
-              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\PageSelectLanguage.xaml.cs",
-              "RelativeToolTip": "Views\\Pages\\PageSelectLanguage.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T19:30:17.617Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -69,22 +44,58 @@
               "RelativeDocumentMoniker": "Views\\Pages\\Login.xaml.cs",
               "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml.cs",
               "RelativeToolTip": "Views\\Pages\\Login.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAmwCIAAABEAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAcwIkAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T18:56:15.446Z",
+              "WhenOpened": "2024-06-20T21:06:43.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageError.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Notifications\\PageError.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Notifications\\PageError.xaml.cs",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Notifications\\PageError.xaml.cs",
+              "RelativeToolTip": "Views\\Notifications\\PageError.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAADgvyUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T22:16:27.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resources.en.resx",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Properties\\Resources.en.resx",
+              "RelativeDocumentMoniker": "Views\\Properties\\Resources.en.resx",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Properties\\Resources.en.resx",
+              "RelativeToolTip": "Views\\Properties\\Resources.en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-20T21:16:09.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\App.xaml.cs",
-              "RelativeToolTip": "Views\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T18:53:54.267Z",
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Views\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Properties\\Resources.resx",
+              "RelativeToolTip": "Views\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-20T21:17:58.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
+              "RelativeDocumentMoniker": "Views\\Pages\\Login.xaml",
+              "ToolTip": "C:\\Users\\DMS19\\OneDrive\\Escritorio\\Github\\Juego\\HangmanGame\\hangmanClient\\Views\\Pages\\Login.xaml",
+              "RelativeToolTip": "Views\\Pages\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-20T20:57:58.71Z",
               "EditorCaption": ""
             }
           ]

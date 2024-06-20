@@ -377,6 +377,15 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Credenciales incorrectas.
+        /// </summary>
+        public static string lbTitleErrorCredentials {
+            get {
+                return ResourceManager.GetString("lbTitleErrorCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Seleccionar idioma.
         /// </summary>
         public static string lbTitleIdiom {
@@ -400,6 +409,15 @@ namespace Views.Properties {
         public static string lbTitleLosser {
             get {
                 return ResourceManager.GetString("lbTitleLosser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Campos vacíos.
+        /// </summary>
+        public static string lbTitleWarning {
+            get {
+                return ResourceManager.GetString("lbTitleWarning", resourceCulture);
             }
         }
         
@@ -445,6 +463,24 @@ namespace Views.Properties {
         public static string lbWordGuess {
             get {
                 return ResourceManager.GetString("lbWordGuess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Las credenciales ingresadas no corresponden a ningún usuario registrado..
+        /// </summary>
+        public static string tbMessageErrorCredentials {
+            get {
+                return ResourceManager.GetString("tbMessageErrorCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hay campos vacíos. Complételos o cámbielos para continuar.
+        /// </summary>
+        public static string tbMessageWarning {
+            get {
+                return ResourceManager.GetString("tbMessageWarning", resourceCulture);
             }
         }
         

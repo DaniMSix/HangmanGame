@@ -220,6 +220,9 @@ to decipher words and save the hanged man?</value>
   <data name="lbTitleAccesssCode" xml:space="preserve">
     <value>Access code</value>
   </data>
+  <data name="lbTitleErrorCredentials" xml:space="preserve">
+    <value>Incorrect credentials</value>
+  </data>
   <data name="lbTitleIdiom" xml:space="preserve">
     <value>Select language</value>
   </data>
@@ -228,6 +231,9 @@ to decipher words and save the hanged man?</value>
   </data>
   <data name="lbTitleLosser" xml:space="preserve">
     <value>Oh no! You have been hanged!</value>
+  </data>
+  <data name="lbTitleWarning" xml:space="preserve">
+    <value>Empty fields</value>
   </data>
   <data name="lbTitleWinChallenger" xml:space="preserve">
     <value>Congratulations!</value>
@@ -243,6 +249,12 @@ to decipher words and save the hanged man?</value>
   </data>
   <data name="lbWordGuess" xml:space="preserve">
     <value>The word was:</value>
+  </data>
+  <data name="tbMessageErrorCredentials" xml:space="preserve">
+    <value>The credentials entered do not correspond to any registered user.</value>
+  </data>
+  <data name="tbMessageWarning" xml:space="preserve">
+    <value>There are empty fields. Fill them in or change them to continue.</value>
   </data>
   <data name="txtRegister" xml:space="preserve">
     <value>Register</value>

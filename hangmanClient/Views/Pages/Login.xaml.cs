@@ -26,8 +26,6 @@ namespace Views.Pages
             Console.WriteLine("language "+ language);
             SetLanguage(language);
             Language = language;
-
-            
         }
 
         private void SetLanguage(string language)
@@ -52,6 +50,42 @@ namespace Views.Pages
                 string username = txtUser.Text;
                 string password = psdPassword.Password;
 
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
+                    {
+                        imgLabelErrorUser.Visibility = Visibility.Visible;
+                        imgLabelErrorPassword.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(username))
+                        {
+                            imgLabelErrorUser.Visibility = Visibility.Visible;
+                            imgLabelErrorPassword.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            imgLabelErrorUser.Visibility = Visibility.Collapsed;
+                            imgLabelErrorPassword.Visibility = Visibility.Visible;
+                        }
+                    }
+
+                    txtLoadingLabel.Visibility = Visibility.Collapsed;
+                    txtLoadingDots.Visibility = Visibility.Hidden;
+                    brdGrayBackground.Visibility = Visibility.Visible;
+                    frMessage.Visibility = Visibility.Visible;
+                    var warningPage = new PageWarning(Properties.Resources.lbTitleWarning, Properties.Resources.tbMessageWarning);
+                    frMessage.Content = warningPage;
+                    warningPage.MessageClosed += (s, args) =>
+                    {
+                        txtLoadingDots.Visibility = Visibility.Collapsed; 
+                        brdGrayBackground.Visibility = Visibility.Collapsed; 
+                        frMessage.Visibility = Visibility.Collapsed;    
+                    };
+                    return;
+                }
+
                 var playerLogin = await Task.Run(() => client.AuthenticateLogin(username, password));
 
                 if (playerLogin != null)
@@ -70,29 +104,40 @@ namespace Views.Pages
                     txtLoadingLabel.Visibility = Visibility.Collapsed;
                     txtLoadingDots.Visibility = Visibility.Hidden;
 
-                    // Mostrar el fondo gris semitransparente
                     brdGrayBackground.Visibility = Visibility.Visible;
 
-                    // Crear una instancia de SuccessPage con el título y contenido deseado
                     var successPage = new PageSuccess(Properties.Resources.lbTitleLogin, Properties.Resources.lbLoginMessage);
 
-                    // Suscribirse al evento MessageClosed de SuccessPage
                     successPage.MessageClosed += (s, args) =>
                     {
-                        txtLoadingDots.Visibility = Visibility.Collapsed; // Ocultar la animación de carga
-                        brdGrayBackground.Visibility = Visibility.Collapsed; // Ocultar el fondo gris
+                        txtLoadingDots.Visibility = Visibility.Collapsed; 
+                        brdGrayBackground.Visibility = Visibility.Collapsed; 
                         Console.WriteLine("ANTES DE PAGEHOME");
                         Console.WriteLine("Language " + Language);
                         var home = new PageHome(activePlayer, Language);
                         NavigationService?.Navigate(home);
-                    };
 
-                    // Asignar SuccessPage al contenido del Frame
+                    };
                     frMessage.Content = successPage;
                 }
                 else
                 {
-                    MessageBox.Show("Error");
+                    txtLoadingLabel.Visibility = Visibility.Collapsed;
+                    txtLoadingDots.Visibility = Visibility.Hidden;
+                    brdGrayBackground.Visibility = Visibility.Visible;
+                    frMessage.Visibility = Visibility.Visible;
+                    var errorPage = new PageError(Properties.Resources.lbTitleErrorCredentials, Properties.Resources.tbMessageErrorCredentials);
+                    frMessage.Content = errorPage;
+                    errorPage.MessageClosed += (s, args) =>
+                    {
+                        txtLoadingDots.Visibility = Visibility.Collapsed;
+                        brdGrayBackground.Visibility = Visibility.Collapsed;
+                        frMessage.Visibility = Visibility.Collapsed;
+                        imgLabelErrorUser.Visibility = Visibility.Collapsed;
+                        imgLabelErrorPassword.Visibility = Visibility.Collapsed;
+                        frMessage.Visibility = Visibility.Collapsed;
+                    };
+                    return;
                 }
             }
             catch (Exception ex)
@@ -118,5 +163,25 @@ namespace Views.Pages
             var selectLanguagePage = new PageSelectLanguage(frMessage, frHome);
             frMessage.Navigate(selectLanguagePage);
         }
+
+        private void TxtUserTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtUser.Text.Length > 12)
+            {
+                txtUser.Text = txtUser.Text.Substring(0, 12);
+                txtUser.CaretIndex = txtUser.Text.Length; 
+            }
+        }
+
+        private void PsdPassworPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+
+            if (passwordBox != null && passwordBox.Password.Length > 15)
+            {
+                passwordBox.Password = passwordBox.Password.Substring(0, 15);
+            }
+        }
+
     }
 }

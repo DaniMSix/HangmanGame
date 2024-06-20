@@ -19,15 +19,10 @@ namespace Views.Pages
         {
             MessageClosed?.Invoke(this, EventArgs.Empty);
         }
-
-        private void SomeActionThatClosesTheMessage()
-        {
-            CloseMessage();
-        }
-
+       
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
-            SomeActionThatClosesTheMessage();
+            CloseMessage();
         }
     }
 }
