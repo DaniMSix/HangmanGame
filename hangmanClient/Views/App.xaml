@@ -187,7 +187,7 @@
                     <ControlTemplate TargetType="Button">
                         <Grid>
                             <Image Source="/Images/icon-buttonNumber.png" Stretch="Fill"/>
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>

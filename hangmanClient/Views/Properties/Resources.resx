@@ -190,6 +190,9 @@ para descifrar palabras y salvar al ahorcado?</value>
   <data name="lbLose" xml:space="preserve">
     <value>¡Oh no han adivinado la palabra!</value>
   </data>
+  <data name="lbMessageErrorServer" xml:space="preserve">
+    <value>Unable to connect to the server, try again later</value>
+  </data>
   <data name="lbMessageWinChallenger" xml:space="preserve">
     <value>¡No han adivinado la palabra correctamente!</value>
   </data>
@@ -225,6 +228,9 @@ para descifrar palabras y salvar al ahorcado?</value>
   </data>
   <data name="lbTitleErrorCredentials" xml:space="preserve">
     <value>Credenciales incorrectas</value>
+  </data>
+  <data name="lbTitleErrorServer" xml:space="preserve">
+    <value>Connection error</value>
   </data>
   <data name="lbTitleIdiom" xml:space="preserve">
     <value>Seleccionar idioma</value>

@@ -25,6 +25,9 @@
         <Label FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.lbItemsGames}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="449,97,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbPlayerGreeting" FontFamily="{StaticResource FuenteVT323}" FontSize="20" HorizontalAlignment="Left" Margin="50,154,0,0" VerticalAlignment="Top"/>
 
+        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Recargar" HorizontalAlignment="Left" Margin="831,236,0,0" 
+        VerticalAlignment="Top" Width="106" Height="38" Click="BtnLoadGames"/>
+
         <DataGrid x:Name="dataGridItemsGames" AutoGenerateColumns="False" Margin="296,140,201,145" Background="Transparent" Foreground="Black" 
         BorderBrush="Transparent" GridLinesVisibility="None" HeadersVisibility="None" SelectionMode="Single">
             <DataGrid.Resources>
@@ -43,6 +46,10 @@
                   Width="*" />
                 <DataGridTextColumn Header="Correo" Binding="{Binding ChallengerEmail}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
                   Width="*" />
+                <DataGridTextColumn Header="Categoría" Binding="{Binding Category}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
+  Width="*" />
+                <DataGridTextColumn Header="Idioma" Binding="{Binding language}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
+Width="*" />
                 <DataGridTextColumn Header="Fecha de Creación" Binding="{Binding creationDate, StringFormat=\{0:dd/MM/yyyy\}}" IsReadOnly="True" FontFamily="{StaticResource FuenteVT323}" FontSize="18" Foreground="#A77A45"
                   Width="*" />
             </DataGrid.Columns>
@@ -68,8 +75,10 @@
             </StackPanel>
         </Button>
 
+
+
         <Button Cursor="Hand" Style="{StaticResource TransparentButton}" HorizontalAlignment="Left" Margin="951,2,0,0" VerticalAlignment="Top" Height="25" Width="30" Click="BtnClicShowMenu"/>
-        <Frame x:Name="frHome" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" />
+        <Frame x:Name="frHome" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Navigated="frHome_Navigated" />
 
 
 

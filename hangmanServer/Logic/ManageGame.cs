@@ -43,7 +43,6 @@ namespace Logic
                 if (ex.InnerException != null)
                 {
                     Console.WriteLine("Inner Exception: " + ex.InnerException.Message);
-                    Console.WriteLine("Inner Inner Exception: " + ex.InnerException.InnerException.Message);
                 }
 
             }
@@ -155,6 +154,8 @@ namespace Logic
                 {
                     var gamematches = (from g in context.Gamematch
                                        join p in context.Player on g.idChallenger equals p.idPlayer
+                                       join w in context.Word on g.idWord equals w.idWord
+                                       join c in context.Category on w.idCategory equals c.idCategory
                                        where g.idMatchStatus == 2
                                        select new DTOGameMatch
                                        {
@@ -167,6 +168,8 @@ namespace Logic
                                            creationDate = g.creationDate.Value,
                                            ChallengerUsername = p.username,
                                            ChallengerName = p.name,
+                                           ChallengerEmail = p.email,
+                                           Category = c.name
                                        }).ToList();
                     return gamematches;
                 }
@@ -174,7 +177,7 @@ namespace Logic
             catch (Exception ex)
             {
                 Console.WriteLine("Error al obtener los juegos: " + ex.Message);
-                throw; 
+                throw;
             }
         }
 
@@ -192,35 +195,46 @@ namespace Logic
                                        {
                                            usernameGuesser = u.username,
                                            dateGame = g.creationDate.Value,
-                                           win = g.winChallenger,
-                                           score = c.score.Value,
-                                       }).AsEnumerable() // This will execute the query and bring the results into memory
+                                           win = g.winChallenger ?? false,
+                                           score = c.score ?? 0,
+                                       }).AsEnumerable()
                      .Select(x => new DTOStatistics
                      {
                          usernameGuesser = x.usernameGuesser,
                          dateGame = x.dateGame.ToString("yyyy-MM-dd"),
                          score = x.score,
+                         winSymbol = x.win ? "+10" : "-10"  
                      }).ToList();
 
                     var gamematches2 = (from g in context.Gamematch
-                                       join c in context.Player on g.idGuesser equals c.idPlayer
-                                       join u in context.Player on g.idChallenger equals u.idPlayer
-                                       where g.idGuesser == idChallenger && g.idMatchStatus == 5
+                                        join c in context.Player on g.idGuesser equals c.idPlayer
+                                        join u in context.Player on g.idChallenger equals u.idPlayer
+                                        where g.idGuesser == idChallenger && g.idMatchStatus == 5
                                         select new
-                                       {
-                                           usernameGuesser = u.username,
-                                           dateGame = g.creationDate.Value,
-                                           win = !g.winChallenger,
-                                           score = c.score.Value,
-                                       }).AsEnumerable() // This will execute the query and bring the results into memory
+                                        {
+                                            usernameGuesser = u.username,
+                                            dateGame = g.creationDate.Value,
+                                            win = !(g.winChallenger ?? true),
+                                            score = c.score ?? 0,
+                                        }).AsEnumerable()
                      .Select(x => new DTOStatistics
                      {
                          usernameGuesser = x.usernameGuesser,
                          dateGame = x.dateGame.ToString("yyyy-MM-dd"),
                          score = x.score,
+                         winSymbol = x.win ? "+10" : "-10"  // Asignación del símbolo basado en win
                      }).ToList();
 
-                    return gamematches.Concat(gamematches2).ToList();
+                    var statistics = gamematches.Concat(gamematches2).ToList();
+
+                    // Imprimir resultados
+                    Console.WriteLine("Resultados de estadísticas:");
+                    foreach (var stat in statistics)
+                    {
+                        Console.WriteLine($"Fecha del juego: {stat.dateGame}, Jugador adivinador: {stat.usernameGuesser}, Puntuación: {stat.score}, Símbolo de victoria: {stat.winSymbol}");
+                    }
+
+                    return statistics;
                 }
             }
             catch (Exception ex)
@@ -314,6 +328,19 @@ namespace Logic
             }
         }
 
+        public int GetScorePlayer(int idPlayer)
+        {
+            using (var context = new HangmanDbEntities())
+            {
+                var score = context.Player
+                  .Where(p => p.idPlayer == idPlayer)
+                  .Select(p => p.score)
+                  .FirstOrDefault();
+                return score.Value;
+            }
+
+        }
+
         public List<DTOWord> GetWordsForCategory(int categoryId)
         {
             using (var context = new HangmanDbEntities())
@@ -329,8 +356,6 @@ namespace Logic
                 HintEn = w.hintEN
             })
             .ToList();
-
-
                 return words;
             }
         }

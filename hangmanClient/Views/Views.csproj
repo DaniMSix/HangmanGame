@@ -550,8 +550,6 @@
     <WCFMetadataStorage Include="Connected Services\SRIManageGameService\" />
     <WCFMetadataStorage Include="Connected Services\SRIPlayerManagement\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Language\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

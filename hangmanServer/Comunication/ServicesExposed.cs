@@ -114,7 +114,6 @@ namespace Comunication
             callBackGameService = OperationContext.Current.GetCallbackChannel<IManageGameServiceCallback>();
             if (callBackGameService != null)
             {
-                Console.WriteLine("Code " + gamematch.code);
                 players.Add(gamematch.idChallenger.Value, callBackGameService);
                 callBackGameService.StartGameRoom(registeredGame);
             }
@@ -177,9 +176,12 @@ namespace Comunication
                     {
                         manageGame.DeleteGameId(gameId);
 
-                        players[room.GameMatch.idGuesser.Value].CanceledGame();
+                        if (room.GameMatch.idGuesser != null) {
+                            players[room.GameMatch.idGuesser.Value].CanceledGame();
+                            players.Remove(room.GameMatch.idGuesser.Value);
+                        }
+
                         players.Remove(userId);
-                        players.Remove(room.GameMatch.idGuesser.Value);
 
                         globalRooms.Remove(room);
                     }
@@ -228,7 +230,7 @@ namespace Comunication
                     string letters = ""; 
                     foreach(char letter in word)
                     {
-                        letters += "?";
+                        letters += "_";
                     }
 
                     players[room.GameMatch.idChallenger.Value].StartGameChallenger(word, hint, letters);
@@ -354,6 +356,10 @@ namespace Comunication
             return manageGame.GetWordsForCategory(idCategory);
         }
 
-        
+        public int GetScorePlayer(int idPlayer)
+        {
+            ManageGame manageGame = new ManageGame();
+            return manageGame.GetScorePlayer(idPlayer);
+        }
     }
 }

@@ -35,6 +35,9 @@ namespace Comunication
 
         [OperationContract]
         List<DTOWord> GetWords(int idCategory);
+
+        [OperationContract]
+        int GetScorePlayer(int idPlayer);
     }
 
     [ServiceContract]

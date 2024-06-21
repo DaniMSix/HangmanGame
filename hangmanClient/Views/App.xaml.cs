@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Threading;
 using System.Windows;
+using Views.Pages;
 
 namespace Views
 {
@@ -8,7 +9,9 @@ namespace Views
     {
         public App()
         {
-            SetCulture("");
+            var culture = new CultureInfo("");
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
         }
 
         public void SetCulture(string cultureCode)
@@ -17,9 +20,14 @@ namespace Views
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;
 
-            // Esto puede ser necesario si usas recursos
-            Views.Properties.Resources.Culture = culture;
+            if (MainWindow != null)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                var mainWindowAux = MainWindow;
+                MainWindow = mainWindow;
+                mainWindowAux.Close();
+            }
         }
-
     }
 }

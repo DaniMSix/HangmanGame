@@ -19,6 +19,7 @@ namespace Views.Pages
             this.manageGame = manageGame;
             this.frCurrent = frCurrentFrame;
             lbWord.Content = word;
+            SetSpacedText(word);
             lbHint.Content = hint;
             lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
@@ -37,6 +38,12 @@ namespace Views.Pages
             this.manageGame.GameFinished += OnGameFinished;
         }
 
+        private void SetSpacedText(string text)
+        {
+            string spacedText = string.Join(" ", text.ToCharArray());
+            lbWordGuess.Content = spacedText;
+        }
+
         public void OnIfGuessed(char[] letters, int failedAttempts, bool guesser)
         {
             string word = "";
@@ -44,7 +51,7 @@ namespace Views.Pages
             {
                 if (letter == '\0')
                 {
-                    word += "?";
+                    word += "_";
                 }
                 else
                 {

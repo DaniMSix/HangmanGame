@@ -5,31 +5,14 @@ namespace Views.Pages
 {
     public partial class PageSelectLanguage : Page
     {
-        System.Windows.Controls.Frame frCurrentFrame;
-        System.Windows.Controls.Frame frHome;
-        string language = "Ingles"; // Establecer un idioma predeterminado
+        string language = "Español"; // Establecer un idioma predeterminado
 
-        public PageSelectLanguage(System.Windows.Controls.Frame frCurrentFrame, System.Windows.Controls.Frame frHome)
+        public PageSelectLanguage()
         {
             InitializeComponent();
-            this.frCurrentFrame = frCurrentFrame;
-            this.frHome = frHome;
-        }
-
-        private void NavigateToLogin()
-        {
-            Login loginPage = new Login(language);
-            frHome.Navigate(loginPage);
         }
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
-        {
-            SetLanguage(language);
-            NavigateToLogin();
-            this.Visibility = Visibility.Collapsed; // Ocultar esta página después de la navegación
-        }
-
-        private void SetLanguage(string language)
         {
             var app = Application.Current as App;
             if (app != null)

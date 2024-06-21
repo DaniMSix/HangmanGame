@@ -33,13 +33,7 @@
                 <TextBlock Text="Cambiar contraseña" VerticalAlignment="Center" Width="150"/>
             </StackPanel>
         </Button>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="18,185,28,272" Click="ClickChangeLanguage">
-            <StackPanel  Orientation="Horizontal" Height="33" Width="150">
-                <Image Source="/Images/EU-Flag-Icon.png" Width="25" Height="25" />
-                <TextBlock Text="Cambiar idioma" VerticalAlignment="Center" Width="122"/>
-            </StackPanel>
-        </Button>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="23,221,31,248" Click="ClickSignOut">
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="23,189,31,280" Click="ClickSignOut">
             <StackPanel  Orientation="Horizontal" Height="33" Width="150">
                 <Image Source="/Images/arrow.png" Width="25" Height="25" />
                 <TextBlock Text="Cerrar sesión" VerticalAlignment="Center" Width="122"/>

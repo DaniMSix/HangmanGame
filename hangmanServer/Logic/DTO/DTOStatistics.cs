@@ -13,5 +13,6 @@ namespace Logic.DTO
         public string dateGame { get; set; }
         public bool win { get; set; }
         public float score { get; set; }
+        public string winSymbol { get; set; }
     }
 }

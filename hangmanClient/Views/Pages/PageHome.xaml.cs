@@ -23,27 +23,11 @@ namespace Views.Pages
             InitializeComponent();
             this.activePlayer = activePlayer;
             this.language = language;
-            SetLanguage(language);
             manageGame = new ManageGame(activePlayer, frHome, language);
             LoadGames();
             datagridGames = dataGridItemsGames;
             this.language = language;
             
-        }
-
-        private void SetLanguage(string language)
-        {
-            // Establecer la cultura para la interfaz de usuario
-            if (language == "Español")
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
-            }
-            else
-            {
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            }
-
-            // Actualizar cualquier otro componente que dependa del idioma
         }
 
         private void BtnClicShowMenu(object sender, RoutedEventArgs e)
@@ -88,6 +72,15 @@ namespace Views.Pages
                 gamematch.idGuesser = activePlayer.IdPlayer;
                 manageGame.StartJoinGame(gamematch, false);
             }
+        }
+
+        private void BtnLoadGames(object sender, RoutedEventArgs e)
+        {
+            LoadGames();
+        }
+
+        private void frHome_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
 
         }
     }

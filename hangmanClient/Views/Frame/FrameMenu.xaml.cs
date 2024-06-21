@@ -1,6 +1,7 @@
 ﻿using Domain;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace Views.Pages
 {
@@ -49,14 +50,10 @@ namespace Views.Pages
 
         }
 
-        private void ClickChangeLanguage(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ClickSignOut(object sender, RoutedEventArgs e)
         {
-
+            var login = new Login();
+            homeFrame.Navigate(login);
         }
     }
 }

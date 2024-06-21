@@ -278,6 +278,15 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Unable to connect to the server, try again later.
+        /// </summary>
+        public static string lbMessageErrorServer {
+            get {
+                return ResourceManager.GetString("lbMessageErrorServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¡No han adivinado la palabra correctamente!.
         /// </summary>
         public static string lbMessageWinChallenger {
@@ -382,6 +391,15 @@ namespace Views.Properties {
         public static string lbTitleErrorCredentials {
             get {
                 return ResourceManager.GetString("lbTitleErrorCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Connection error.
+        /// </summary>
+        public static string lbTitleErrorServer {
+            get {
+                return ResourceManager.GetString("lbTitleErrorServer", resourceCulture);
             }
         }
         

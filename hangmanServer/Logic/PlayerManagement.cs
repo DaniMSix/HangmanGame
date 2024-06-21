@@ -74,12 +74,6 @@ namespace Logic
                     return false;
                 }
 
-                Console.WriteLine("Datos antes de la actualización:");
-                Console.WriteLine($"Nombre actual: {player.name}");
-                Console.WriteLine($"Username actual: {player.username}");
-                Console.WriteLine($"Email actual: {player.email}");
-                Console.WriteLine($"Phonenumber actual: {player.phonenumber}");
-
                 player.username = dataPlayer.Username;
                 player.name = dataPlayer.Name;
                 player.birthdate = dataPlayer.Birthdate;
@@ -87,17 +81,9 @@ namespace Logic
 
                 context.Entry(player).State = EntityState.Modified;
 
-                Console.WriteLine("Datos a actualizar:");
-                Console.WriteLine($"Nuevo Nombre: {player.name}");
-                Console.WriteLine($"Nuevo Username: {player.username}");
-                Console.WriteLine($"Nuevo Email: {player.email}");
-                Console.WriteLine($"Nuevo Phonenumber: {player.phonenumber}");
-
                 try
                 {
-                    Console.WriteLine("ANTES de guardar los cambios");
                     context.SaveChanges();
-                    Console.WriteLine("DESPUÉS de guardar los cambios");
                     return true;
                 }
                 catch (Exception ex)
@@ -125,6 +111,7 @@ namespace Logic
                     password = newPlayer.Password,
                     email = newPlayer.Email,
                     phonenumber = newPlayer.Phonenumber,
+                    score = 0
                 };
 
                 context.Player.Add(recordPlayer);

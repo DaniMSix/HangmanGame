@@ -16,8 +16,6 @@ namespace Domain
         public int idChallenger { get; set; }
         public int idMatchStatus { get; set; }
         public DateTime creationDate { get; set; }
-
-        // Campos del jugador Challenger
         public string ChallengerUsername { get; set; }
         public string ChallengerName { get; set; }
         public DateTime ChallengerBirthdate { get; set; }
@@ -25,6 +23,7 @@ namespace Domain
         public string ChallengerEmail { get; set; }
         public string ChallengerPassword { get; set; }
         public int ChallengerScore { get; set; }
-        
+        public string Category { get; set; }
+
     }
 }

@@ -12,7 +12,6 @@ namespace Views.Pages
     {
         private SRIPlayerManagement.IPlayerManagement client = new SRIPlayerManagement.PlayerManagementClient();
         private Domain.DTOPlayer activePlayer;
-        private string Language;
 
         public Login()
         {
@@ -22,21 +21,7 @@ namespace Views.Pages
         public Login(string language)
         {
             InitializeComponent();
-            Console.WriteLine("-------LOGIN----------");
-            Console.WriteLine("language "+ language);
-            SetLanguage(language);
             Language = language;
-        }
-
-        private void SetLanguage(string language)
-        {
-            var culture = new CultureInfo(language == "Ingles" ? "en" : "");
-            Thread.CurrentThread.CurrentUICulture = culture;
-
-            // Actualizar etiquetas y textos en la interfaz de usuario
-            lbUser.Content = Properties.Resources.lbUser;
-            lbPassword.Content = Properties.Resources.lbPassword;
-            btnLogin.Content = Properties.Resources.btnLogin;
         }
 
         private async void ClickLogin(object sender, RoutedEventArgs e)
@@ -44,6 +29,7 @@ namespace Views.Pages
             btnLogin.Visibility = Visibility.Hidden;
             txtLoadingLabel.Visibility = Visibility.Visible;
             txtLoadingDots.Visibility = Visibility.Visible;
+            frMessage.Visibility = Visibility.Visible;
 
             try
             {
@@ -88,6 +74,11 @@ namespace Views.Pages
 
                 var playerLogin = await Task.Run(() => client.AuthenticateLogin(username, password));
 
+                if (playerLogin == null)
+                {
+
+                }
+
                 if (playerLogin != null)
                 {
                     activePlayer = new Domain.DTOPlayer()
@@ -111,9 +102,7 @@ namespace Views.Pages
                     successPage.MessageClosed += (s, args) =>
                     {
                         txtLoadingDots.Visibility = Visibility.Collapsed; 
-                        brdGrayBackground.Visibility = Visibility.Collapsed; 
-                        Console.WriteLine("ANTES DE PAGEHOME");
-                        Console.WriteLine("Language " + Language);
+                        brdGrayBackground.Visibility = Visibility.Collapsed;
                         var home = new PageHome(activePlayer, Language);
                         NavigationService?.Navigate(home);
 
@@ -142,7 +131,21 @@ namespace Views.Pages
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                txtLoadingLabel.Visibility = Visibility.Collapsed;
+                txtLoadingDots.Visibility = Visibility.Hidden;
+                brdGrayBackground.Visibility = Visibility.Visible;
+                frMessage.Visibility = Visibility.Visible;
+                var errorPage = new PageError(Properties.Resources.lbTitleErrorServer, Properties.Resources.lbMessageErrorServer);
+                frMessage.Content = errorPage;
+                errorPage.MessageClosed += (s, args) =>
+                {
+                    txtLoadingDots.Visibility = Visibility.Collapsed;
+                    brdGrayBackground.Visibility = Visibility.Collapsed;
+                    frMessage.Visibility = Visibility.Collapsed;
+                    imgLabelErrorUser.Visibility = Visibility.Collapsed;
+                    imgLabelErrorPassword.Visibility = Visibility.Collapsed;
+                    frMessage.Visibility = Visibility.Collapsed;
+                };
             }
             finally
             {
@@ -160,7 +163,7 @@ namespace Views.Pages
 
         private void BtnClickLanguage(object sender, RoutedEventArgs e)
         {
-            var selectLanguagePage = new PageSelectLanguage(frMessage, frHome);
+            var selectLanguagePage = new PageSelectLanguage();
             frMessage.Navigate(selectLanguagePage);
         }
 

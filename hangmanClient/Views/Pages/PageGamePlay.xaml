@@ -67,12 +67,12 @@
             FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="516,362,0,0" VerticalAlignment="Top" Width="58"/>
             <Button Content="Z" x:Name="btnZ" FontSize="27" Foreground="#986A34" Style="{StaticResource ButtonWithImageBackground}" Click="BtnGetLetter"
             FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Height="56" Margin="458,362,0,0" VerticalAlignment="Top" Width="58"/>
-           
+
 
         </Grid>
-        <Label x:Name="lbWordGuess" HorizontalAlignment="Left" Margin="511,152,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="#66300C"  x:Name="lbWordGuess" FontFamily="{StaticResource FuenteVT323}" HorizontalContentAlignment="Center" FontSize="45" HorizontalAlignment="Left" Margin="426,189,0,0" VerticalAlignment="Top" Height="61" Width="343"/>
 
-        <Label x:Name="lbWord" HorizontalAlignment="Left" Margin="511,121,0,0" VerticalAlignment="Top"/>
+        <Label HorizontalContentAlignment="Center" FontFamily="{StaticResource FuenteVT323}" FontSize="45" x:Name="lbWord" HorizontalAlignment="Left" Margin="568,92,0,0" VerticalAlignment="Top" Width="271"/>
 
         <Image x:Name="imgStepOne" Visibility="Collapsed" Source="\Images\img-stepOne.png" HorizontalAlignment="Left" Height="113" Margin="198,150,0,0" VerticalAlignment="Top" Width="113"/>
         <Image x:Name="imgStepTwo" Visibility="Collapsed" Source="\Images\img-stepTwo.png" HorizontalAlignment="Left" Height="252" Margin="198,148,0,0" VerticalAlignment="Top" Width="112"/>
@@ -83,7 +83,7 @@
 
         <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
         <Label x:Name="lbHint" HorizontalAlignment="Left" Margin="546,35,0,0" VerticalAlignment="Top"/>
-    
+
         <Button x:Name="btnExit" Content="Salir" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="864,447,0,0" VerticalAlignment="Top" Height="43" Width="126" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSalir"/>
 
 

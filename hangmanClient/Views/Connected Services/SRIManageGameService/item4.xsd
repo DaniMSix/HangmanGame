@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfDTOGameMatch" nillable="true" type="tns:ArrayOfDTOGameMatch" />
   <xs:complexType name="DTOGameMatch">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ChallengerBirthdate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ChallengerEmail" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ChallengerName" nillable="true" type="xs:string" />
