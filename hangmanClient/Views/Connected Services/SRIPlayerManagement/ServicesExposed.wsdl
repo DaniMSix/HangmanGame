@@ -50,6 +50,12 @@
   <wsdl:message name="IPlayerManagement_UpdateFullProfile_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateFullProfileResponse" />
   </wsdl:message>
+  <wsdl:message name="IPlayerManagement_ValidateEmailAndUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEmailAndUser" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerManagement_ValidateEmailAndUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEmailAndUserResponse" />
+  </wsdl:message>
   <wsdl:message name="IManageGameService_NewGame_InputMessage">
     <wsdl:part name="parameters" element="tns:NewGame" />
   </wsdl:message>
@@ -141,6 +147,10 @@
     <wsdl:operation name="UpdateFullProfile">
       <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile" message="tns:IPlayerManagement_UpdateFullProfile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse" message="tns:IPlayerManagement_UpdateFullProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEmailAndUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlayerManagement/ValidateEmailAndUser" message="tns:IPlayerManagement_ValidateEmailAndUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlayerManagement/ValidateEmailAndUserResponse" message="tns:IPlayerManagement_ValidateEmailAndUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="IManageGameService">
@@ -244,6 +254,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateFullProfile">
       <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/UpdateFullProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEmailAndUser">
+      <soap12:operation soapAction="http://tempuri.org/IPlayerManagement/ValidateEmailAndUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

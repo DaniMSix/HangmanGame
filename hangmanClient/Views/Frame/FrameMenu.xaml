@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Views.Pages"
+      xmlns:p="clr-namespace:Views.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="211"
       Title="FrameMenu">
@@ -16,27 +17,20 @@
         <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="24,87,60,379" Click="ClickEditProfile">
             <StackPanel  Orientation="Horizontal" Height="20" Width="132">
                 <Image Source="\Images\pen.png" Width="23" Height="23" />
-                <TextBlock Text="Editar perfil" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock Text="{x:Static p:Resources.lbEditProfile}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
             </StackPanel>
         </Button>
 
         <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="12,120,19,342" Click="ClickViewStatistics">
             <StackPanel  Orientation="Horizontal" Height="33" Width="155">
                 <Image Source="\Images\dashboard-icon.png" Width="25" Height="25" />
-                <TextBlock Text="Ver estadísticas" VerticalAlignment="Center" Width="130"/>
+                <TextBlock Text="{x:Static p:Resources.btnViewStatistics}" VerticalAlignment="Center" Width="130"/>
             </StackPanel>
         </Button>
-
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20"  Margin="20,156,13,315" Click="ClickChangePassword">
-            <StackPanel  Orientation="Horizontal" Height="34" Width="177">
-                <Image Source="\Images\trash-can-icon.png" Width="25" Height="25" />
-                <TextBlock Text="Cambiar contraseña" VerticalAlignment="Center" Width="150"/>
-            </StackPanel>
-        </Button>
-        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="23,189,31,280" Click="ClickSignOut">
+        <Button Cursor="Hand" Style="{StaticResource TransparentButton}" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="21,155,33,314" Click="ClickSignOut">
             <StackPanel  Orientation="Horizontal" Height="33" Width="150">
                 <Image Source="/Images/arrow.png" Width="25" Height="25" />
-                <TextBlock Text="Cerrar sesión" VerticalAlignment="Center" Width="122"/>
+                <TextBlock Text="{x:Static p:Resources.lbSignOut}" VerticalAlignment="Center" Width="122"/>
             </StackPanel>
         </Button>
         <Label Content="Usuario" HorizontalAlignment="Left" Margin="67,34,0,0" VerticalAlignment="Top"/>

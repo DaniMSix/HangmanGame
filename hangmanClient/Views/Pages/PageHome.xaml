@@ -14,8 +14,6 @@
             <ImageBrush ImageSource="\Images\Background-home.png"/>
         </Grid.Background>
 
-
-
         <Button Cursor="Hand" Style="{StaticResource green-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnAccessCode}" FontSize="22" HorizontalAlignment="Left" Margin="275,412,0,0" VerticalAlignment="Top" Height="38" Width="130"
                 Click="BtnJoinGame"/>
         <Button Cursor="Hand" Style="{StaticResource pink-button}" FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.btnCreateGame}" HorizontalAlignment="Left" FontSize="22" Margin="433,414,0,0" VerticalAlignment="Top" Height="38" Width="175"
@@ -25,8 +23,11 @@
         <Label FontFamily="{StaticResource FuenteVT323}" Content="{x:Static p:Resources.lbItemsGames}" FontSize="22" Foreground="#6D3B00" HorizontalAlignment="Left" Margin="449,97,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbPlayerGreeting" FontFamily="{StaticResource FuenteVT323}" FontSize="20" HorizontalAlignment="Left" Margin="50,154,0,0" VerticalAlignment="Top"/>
 
-        <Button Cursor="Hand" Style="{StaticResource long-orange-button}" FontFamily="{StaticResource FuenteVT323}" FontSize="22" Content="Recargar" HorizontalAlignment="Left" Margin="831,236,0,0" 
-        VerticalAlignment="Top" Width="106" Height="38" Click="BtnLoadGames"/>
+        <Button Cursor="Hand" Background="Transparent" BorderThickness="0" FontFamily="{StaticResource FuenteVT323}" FontSize="22" HorizontalAlignment="Left" Margin="825,0,0,0" VerticalAlignment="Center" Width="61" Height="68" Click="BtnLoadGames">
+            <StackPanel Orientation="Horizontal" Height="70" Width="70">
+                <Image Source="/Images/img-reload.png" Width="60" Height="60" />
+            </StackPanel>
+        </Button>
 
         <DataGrid x:Name="dataGridItemsGames" AutoGenerateColumns="False" Margin="296,140,201,145" Background="Transparent" Foreground="Black" 
         BorderBrush="Transparent" GridLinesVisibility="None" HeadersVisibility="None" SelectionMode="Single">
@@ -66,7 +67,6 @@ Width="*" />
             </DataGrid.RowStyle>
         </DataGrid>
 
-
         <Frame x:Name="frMenu" HorizontalAlignment="Left" Height="500" Margin="784,0,0,0" VerticalAlignment="Top" Width="211" Visibility="Collapsed"/>
 
         <Button x:Name="btnExit" Cursor="Hand" Style="{StaticResource TransparentButton}" Visibility="Hidden" FontFamily="{StaticResource FuenteVT323}" FontSize="20" Margin="951,7,10,455" Click="BtnClicHideMenu">
@@ -74,16 +74,9 @@ Width="*" />
                 <Image Source="/Images/exit.png" Width="29" Height="30" />
             </StackPanel>
         </Button>
-
-
-
         <Button Cursor="Hand" Style="{StaticResource TransparentButton}" HorizontalAlignment="Left" Margin="951,2,0,0" VerticalAlignment="Top" Height="25" Width="30" Click="BtnClicShowMenu"/>
-        <Frame x:Name="frHome" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Navigated="frHome_Navigated" />
-
-
-
-
-
+        <Frame x:Name="frHome" Margin="2,0,-2,0"/>
+        <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
     </Grid>
 
 

@@ -11,9 +11,11 @@ namespace Views.Pages
         private System.Windows.Controls.Frame homeFrame;
         private DTOPlayer playerActive;
         string language;
+        private SoundHelper soundHelper;
         public FrameMenu(System.Windows.Controls.Frame frHome, DTOPlayer playerActive, string language)
         {
             InitializeComponent();
+            soundHelper = new SoundHelper();
             homeFrame = frHome;
             this.playerActive = playerActive;
             this.language = language;
@@ -21,6 +23,7 @@ namespace Views.Pages
 
         private void BtnClicHideMenu(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             var parentFrame = this.Parent as System.Windows.Controls.Frame;
             if (parentFrame != null)
             {
@@ -30,6 +33,7 @@ namespace Views.Pages
 
         private void ClickEditProfile(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             var registerPage = new PageCreateProfile(playerActive, homeFrame, language);
             if (homeFrame.Content is PageHome pageHome)
             {
@@ -41,6 +45,7 @@ namespace Views.Pages
 
         private void ClickViewStatistics(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             var statistics = new PageStatistics(playerActive, language, homeFrame);
             homeFrame.Navigate(statistics);
         }
@@ -52,6 +57,7 @@ namespace Views.Pages
 
         private void ClickSignOut(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             var login = new Login();
             homeFrame.Navigate(login);
         }

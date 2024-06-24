@@ -29,8 +29,6 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Padding" Value="0"/>
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-            
-            
         </Style>
 
         <Style x:Key="green-button" TargetType="Button">
@@ -208,8 +206,6 @@
             </Setter>
         </Style>
 
-
-
         <Style x:Key="ImageButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -223,12 +219,9 @@
                         CornerRadius="5"
                         ClipToBounds="True">
                             <Grid>
-                                <!-- Background Image -->
                                 <Image Source="{Binding Path=Background.ImageSource, RelativeSource={RelativeSource TemplatedParent}}"
-                               Stretch="UniformToFill"
-                               Opacity="{TemplateBinding Opacity}" />
-
-                                <!-- Content Presenter for Button Text -->
+                            Stretch="UniformToFill"
+                            Opacity="{TemplateBinding Opacity}" />
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                             </Grid>
                         </Border>
@@ -247,11 +240,5 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-
-
-
-
-
     </Application.Resources>
 </Application>

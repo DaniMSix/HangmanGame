@@ -1,18 +1,7 @@
 ﻿using ServerManageGame;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Views.Frame
 {
@@ -21,6 +10,9 @@ namespace Views.Frame
         ManageGame manageGame;
         string language;
         int idCategory;
+        public event EventHandler<int> WordSelected;
+        private SoundHelper soundHelper;
+
         public FrameInstruments(int idCategory, string language)
         {
             InitializeComponent();
@@ -28,7 +20,9 @@ namespace Views.Frame
             this.idCategory = idCategory;
             this.language = language;
             AssignButtonNames();
+            soundHelper = new SoundHelper();
         }
+
         private void AssignButtonNames()
         {
             var words = manageGame.RecoveringWordsForCategory(2);
@@ -46,6 +40,36 @@ namespace Views.Frame
                 }
 
             }
+        }
+
+        private void BtnClickGetId(object sender, EventArgs e)
+        {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
+            Button clickedButton = sender as Button;
+            if (clickedButton != null && clickedButton.Tag != null)
+            {
+                int wordId = (int)clickedButton.Tag;
+                WordSelected?.Invoke(this, wordId);
+
+                foreach (Button button in GetAllButtons())
+                {
+                    button.Opacity = 1.0;
+                }
+                clickedButton.Opacity = 0.5;
+            }
+        }
+
+        private IEnumerable<Button> GetAllButtons()
+        {
+            var buttons = new List<Button>();
+            foreach (var child in gridButtons.Children)
+            {
+                if (child is Button button)
+                {
+                    buttons.Add(button);
+                }
+            }
+            return buttons;
         }
     }
 }

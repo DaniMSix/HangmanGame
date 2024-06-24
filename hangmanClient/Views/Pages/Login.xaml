@@ -23,7 +23,7 @@
             <PasswordBox x:Name="psdPassword" HorizontalAlignment="Left" Margin="387,332,0,0" VerticalAlignment="Top"
             Width="240" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0" PasswordChanged="PsdPassworPasswordChanged"/>
         </Grid>
-        <TextBlock x:Name="txtLoadingDots" FontFamily="{StaticResource FuenteVT323}" Visibility="Collapsed" Text="..." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,427,0,0" >
+        <TextBlock x:Name="txtLoadingDots" FontFamily="{StaticResource FuenteVT323}" Visibility="Collapsed" Text="..." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,427,0,0">
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="TextBlock.Loaded">
                     <BeginStoryboard>
@@ -49,33 +49,30 @@
         <Button x:Name="btnLogin" Content="{x:Static p:Resources.btnAccept}" Cursor="Hand" Style="{StaticResource orange-button}" HorizontalAlignment="Left" Margin="431,425,0,0" VerticalAlignment="Top" Height="43" Width="153" FontFamily="{StaticResource FuenteVT323}" 
                 FontSize="24" Foreground="#6D3B00" Click="ClickLogin"/>
 
-        <Image Source="\Images\title-home-Spanish.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
+        <Image x:Name="imgTtleSapanish" Source="\Images\title-home-Spanish.png" Visibility="Collapsed" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
+        <Image x:Name="imgTitleEnglish" Source="\Images\title-home-English.png" HorizontalAlignment="Center" Height="70" Margin="0,67,0,0" VerticalAlignment="Top" Width="452"/>
         <Label x:Name="lbTitleLogin" Content="{x:Static p:Resources.lbTitleLogin}" HorizontalContentAlignment="Center" FontFamily="{StaticResource PressStart2P}" FontSize="22" Foreground="#FFFBD4" Margin="345,157,328,300"/>
         <Label x:Name="lbUser" Content="{x:Static p:Resources.lbUser}" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="371,192,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbPassword" Content="{x:Static p:Resources.lbPassword}" FontFamily="{StaticResource FuenteVT323}" Foreground="White" FontSize="22" HorizontalAlignment="Left" Margin="372,286,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txtRegister" HorizontalContentAlignment="Center" Content="{x:Static p:Resources.lbRegister}" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
+        <Label x:Name="txtRegister" Cursor="Hand" HorizontalContentAlignment="Center" Content="{x:Static p:Resources.lbRegister}" FontFamily="{StaticResource FuenteVT323}"  Foreground="White" FontSize="21" HorizontalAlignment="Left" Margin="301,369,0,0" VerticalAlignment="Top" Width="420"
                MouseUp="TxtClicRegister"/>
-        <MediaElement x:Name="mediaPlayerBackgroundMusic" Source="/Music/retro-videogame.mp3" HorizontalAlignment="Left" Height="44" Margin="154,10,0,0" VerticalAlignment="Top" Width="44"/>
 
-        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}"  Margin="929,-3,-9,430">
-            <Image x:Name="btnMusic" Source="\Images\note.png" Width="49" Height="46"/>
-        </Button>
-        <MediaElement x:Name="mediaPlayerMusicButton" HorizontalAlignment="Left" Height="43" Margin="213,10,0,0" VerticalAlignment="Top" Width="42"/>
-
-        <!-- Fondo gris semitransparente -->
         <Border x:Name="brdGrayBackground" Background="#80000000" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1005" Height="496" Visibility="Collapsed"/>
 
-        <!-- Frame para el mensaje -->
         <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
 
-
-        <!-- TextBlock para "Cargando" -->
         <TextBlock x:Name="txtLoadingLabel" FontFamily="{StaticResource FuenteVT323}" Text="Cargando" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,427,0,0" Visibility="Collapsed"/>
 
-        <Button x:Name="btnAnimalOne" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="894,10,57,441"
+        <Button x:Name="btnLanguage" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="894,10,57,441"
         Click="BtnClickLanguage">
             <Button.Background>
-                <ImageBrush  ImageSource="/Images/mexico-flag.png"/>
+                <ImageBrush ImageSource="/Images/mexico-flag.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnMusic" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="946,10,10,441"
+            Click="PauseMusicClick">
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/note.png"/>
             </Button.Background>
         </Button>
     </Grid>

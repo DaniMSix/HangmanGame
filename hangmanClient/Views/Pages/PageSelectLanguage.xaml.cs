@@ -1,41 +1,51 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Views.Pages
 {
     public partial class PageSelectLanguage : Page
     {
-        string language = "Español"; // Establecer un idioma predeterminado
+        string language;
+        public event EventHandler<string> LanguageSelected;
+        private SoundHelper soundHelper;
 
         public PageSelectLanguage()
         {
             InitializeComponent();
+            soundHelper = new SoundHelper();
         }
 
         private void BtnAcceptClick(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
+            string language = this.language;
             var app = Application.Current as App;
             if (app != null)
             {
                 if (language == "Ingles")
                 {
-                    app.SetCulture("en"); // Establecer la cultura en inglés
+                    app.SetCulture("en");
+                    
                 }
                 else
                 {
-                    app.SetCulture(""); // Establecer la cultura predeterminada
+                    app.SetCulture(""); 
                 }
             }
+            LanguageSelected?.Invoke(this, language);
         }
 
         private void BtnMexicoClick(object sender, RoutedEventArgs e)
         {
-            language = "Español"; // Cambiar el idioma a Español al hacer clic en el botón correspondiente
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
+            language = "Español"; 
         }
 
         private void BtnEUClick(object sender, RoutedEventArgs e)
         {
-            language = "Ingles"; // Cambiar el idioma a Inglés al hacer clic en el botón correspondiente
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
+            language = "Ingles"; 
         }
     }
 }

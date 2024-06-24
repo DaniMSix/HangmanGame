@@ -12,6 +12,7 @@ namespace Views.Pages
         ManageGame manageGame;
         string language;
         System.Windows.Controls.Frame frCurrent;
+        private SoundHelper soundHelper;
 
         public PageStatistics(DTOPlayer activePlayer, string language, System.Windows.Controls.Frame frCurrent)
         {
@@ -22,6 +23,7 @@ namespace Views.Pages
             LoadStatistics();
             lbGamesWon.Content = manageGame.RecoveringScorePlayer(activePlayer.IdPlayer).ToString() + " puntos ganados";
             this.frCurrent = frCurrent;
+            soundHelper = new SoundHelper();
         }
 
         public void LoadStatistics()
@@ -32,6 +34,7 @@ namespace Views.Pages
 
         private void BtnClickReturn(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             var home = new PageHome(activePlayer, language);
             frCurrent.Navigate(home);
 

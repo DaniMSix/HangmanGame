@@ -97,6 +97,15 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cancelar.
+        /// </summary>
+        public static string btnCancel {
+            get {
+                return ResourceManager.GetString("btnCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string btnCities {
@@ -169,11 +178,38 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Guardar cambios.
+        /// </summary>
+        public static string btnModify {
+            get {
+                return ResourceManager.GetString("btnModify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ocupaciones.
         /// </summary>
         public static string btnOccupations {
             get {
                 return ResourceManager.GetString("btnOccupations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        public static string btnOut {
+            get {
+                return ResourceManager.GetString("btnOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registrarse.
+        /// </summary>
+        public static string btnRegister {
+            get {
+                return ResourceManager.GetString("btnRegister", resourceCulture);
             }
         }
         
@@ -187,11 +223,11 @@ namespace Views.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a Ver estadísticas.
         /// </summary>
-        public static string lb {
+        public static string btnViewStatistics {
             get {
-                return ResourceManager.GetString("lb", resourceCulture);
+                return ResourceManager.GetString("btnViewStatistics", resourceCulture);
             }
         }
         
@@ -201,6 +237,33 @@ namespace Views.Properties {
         public static string lbAccessCode {
             get {
                 return ResourceManager.GetString("lbAccessCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código de la partida.
+        /// </summary>
+        public static string lbAccessCodeLobby {
+            get {
+                return ResourceManager.GetString("lbAccessCodeLobby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Verifique el código de acceso, no existe alguna partida con ese código..
+        /// </summary>
+        public static string lbAccessCodeMessage {
+            get {
+                return ResourceManager.GetString("lbAccessCodeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No se encontró el código de acceso.
+        /// </summary>
+        public static string lbAccessCodeNotFound {
+            get {
+                return ResourceManager.GetString("lbAccessCodeNotFound", resourceCulture);
             }
         }
         
@@ -223,11 +286,74 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Crear perfil.
+        /// </summary>
+        public static string lbCreateProfile {
+            get {
+                return ResourceManager.GetString("lbCreateProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Formato de fecha incorrecto. Por favor, ingresa una fecha en formato dd-MM-yyyy..
+        /// </summary>
+        public static string lbDateError {
+            get {
+                return ResourceManager.GetString("lbDateError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ocurrió un error: el usuario y/o correo ya existen.
+        /// </summary>
+        public static string lbDateExists {
+            get {
+                return ResourceManager.GetString("lbDateExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a se ha desconectado de la partida.
+        /// </summary>
+        public static string lbDisconnectedPlayer {
+            get {
+                return ResourceManager.GetString("lbDisconnectedPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Editar perfil.
+        /// </summary>
+        public static string lbEditProfile {
+            get {
+                return ResourceManager.GetString("lbEditProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string lbEmail {
             get {
                 return ResourceManager.GetString("lbEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Campo vacío.
+        /// </summary>
+        public static string lbEmptyField {
+            get {
+                return ResourceManager.GetString("lbEmptyField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dato incorrecto.
+        /// </summary>
+        public static string lbError {
+            get {
+                return ResourceManager.GetString("lbError", resourceCulture);
             }
         }
         
@@ -246,6 +372,42 @@ namespace Views.Properties {
         public static string lbItemsGames {
             get {
                 return ResourceManager.GetString("lbItemsGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a se ha unido a la partida.
+        /// </summary>
+        public static string lbJoinPlayer {
+            get {
+                return ResourceManager.GetString("lbJoinPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Alguien se ha unido a la partida.
+        /// </summary>
+        public static string lbLobby {
+            get {
+                return ResourceManager.GetString("lbLobby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La sala ya esta completa, busque otra partida.
+        /// </summary>
+        public static string lbLobbyComplete {
+            get {
+                return ResourceManager.GetString("lbLobbyComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La sala ya esta completa.
+        /// </summary>
+        public static string lbLobbyIsComplete {
+            get {
+                return ResourceManager.GetString("lbLobbyIsComplete", resourceCulture);
             }
         }
         
@@ -278,11 +440,20 @@ namespace Views.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Unable to connect to the server, try again later.
+        ///   Busca una cadena traducida similar a No se ha podido conectar con el servidor, inténtelo más tarde..
         /// </summary>
         public static string lbMessageErrorServer {
             get {
                 return ResourceManager.GetString("lbMessageErrorServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El usuario se ha desconectado, la partida ha sido cancelada..
+        /// </summary>
+        public static string lbMessageGameCanceled {
+            get {
+                return ResourceManager.GetString("lbMessageGameCanceled", resourceCulture);
             }
         }
         
@@ -305,6 +476,15 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Se ha modificado correctamente el perfil.
+        /// </summary>
+        public static string lbModifySuccess {
+            get {
+                return ResourceManager.GetString("lbModifySuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Contraseña.
         /// </summary>
         public static string lbPassword {
@@ -319,6 +499,24 @@ namespace Views.Properties {
         public static string lbPasswordConfirm {
             get {
                 return ResourceManager.GetString("lbPasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Las contraseñas no coinciden..
+        /// </summary>
+        public static string lbPasswordDontMatch {
+            get {
+                return ResourceManager.GetString("lbPasswordDontMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo de contraseña no debe estar vacío..
+        /// </summary>
+        public static string lbPasswordEmpty {
+            get {
+                return ResourceManager.GetString("lbPasswordEmpty", resourceCulture);
             }
         }
         
@@ -359,11 +557,38 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Se ha creado correctamente el perfil.
+        /// </summary>
+        public static string lbRegisterSuccess {
+            get {
+                return ResourceManager.GetString("lbRegisterSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cerrar sesión.
+        /// </summary>
+        public static string lbSignOut {
+            get {
+                return ResourceManager.GetString("lbSignOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Estadísticas.
         /// </summary>
         public static string lbStadistics {
             get {
                 return ResourceManager.GetString("lbStadistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        public static string lbStadisticsMenu {
+            get {
+                return ResourceManager.GetString("lbStadisticsMenu", resourceCulture);
             }
         }
         
@@ -386,6 +611,15 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Error.
+        /// </summary>
+        public static string lbTitleError {
+            get {
+                return ResourceManager.GetString("lbTitleError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Credenciales incorrectas.
         /// </summary>
         public static string lbTitleErrorCredentials {
@@ -395,11 +629,20 @@ namespace Views.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Connection error.
+        ///   Busca una cadena traducida similar a Error de conexión.
         /// </summary>
         public static string lbTitleErrorServer {
             get {
                 return ResourceManager.GetString("lbTitleErrorServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Datos ya existentes.
+        /// </summary>
+        public static string lbTitleExistsDate {
+            get {
+                return ResourceManager.GetString("lbTitleExistsDate", resourceCulture);
             }
         }
         
@@ -427,6 +670,33 @@ namespace Views.Properties {
         public static string lbTitleLosser {
             get {
                 return ResourceManager.GetString("lbTitleLosser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        public static string lbTitleModify {
+            get {
+                return ResourceManager.GetString("lbTitleModify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificación exitosa.
+        /// </summary>
+        public static string lbTitleModifySuccess {
+            get {
+                return ResourceManager.GetString("lbTitleModifySuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registroso exitoso.
+        /// </summary>
+        public static string lbTitleRegisterSucces {
+            get {
+                return ResourceManager.GetString("lbTitleRegisterSucces", resourceCulture);
             }
         }
         
@@ -467,6 +737,24 @@ namespace Views.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El rival se ha desconectado.
+        /// </summary>
+        public static string lbUserDisconnected {
+            get {
+                return ResourceManager.GetString("lbUserDisconnected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El usuario y/o correo electrónico ya existen.
+        /// </summary>
+        public static string lbUserEmailExits {
+            get {
+                return ResourceManager.GetString("lbUserEmailExits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Bienvenido.
         /// </summary>
         public static string lbWelcome {
@@ -476,7 +764,7 @@ namespace Views.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a La palabra  era:.
+        ///   Busca una cadena traducida similar a La palabra era:.
         /// </summary>
         public static string lbWordGuess {
             get {

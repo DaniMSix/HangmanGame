@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ServiceModel;
 using System.Windows;
 using System.Windows.Controls;
-using Views.Notifications;
 using Views.Pages;
 using Views.SRIManageGameService;
 
@@ -18,6 +16,8 @@ namespace ServerManageGame
         Frame frCurrentFrame;
         public event Action<string> PlayerJoined;
         public event Action<string> PlayerDisconnected;
+        public event Action<string, string> AccessCode;
+        public event Action<string, string> RoomCompleted;
         public event Action<char[], int, bool> IfGuessed;
         public int scorePlayer;
         string language;
@@ -58,7 +58,10 @@ namespace ServerManageGame
 
         public void AccessCodeNotFound()
         {
-            MessageBox.Show("No se encontro el código de acceso");
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                AccessCode?.Invoke(Views.Properties.Resources.lbAccessCodeNotFound, Views.Properties.Resources.lbAccessCodeMessage);
+            });
         }
 
         public void CanceledGame()
@@ -69,7 +72,10 @@ namespace ServerManageGame
 
         public void CompleteRoom()
         {
-            MessageBox.Show("La sala ya esta completa");
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                AccessCode?.Invoke(Views.Properties.Resources.lbLobbyIsComplete, Views.Properties.Resources.lbLobbyComplete);
+            });
         }
 
         public void StartGameRoom(Gamematch game)
@@ -84,7 +90,7 @@ namespace ServerManageGame
             this.gameMatch = gamematch;
             Application.Current.Dispatcher.Invoke(() =>
             {
-                PlayerJoined?.Invoke(namePlayerGuesser);  // Invocar el evento cuando un jugador se una
+                PlayerJoined?.Invoke(namePlayerGuesser);
             });
         }
 
@@ -174,7 +180,10 @@ namespace ServerManageGame
 
         public void UserDisconected()
         {
-            MessageBox.Show("", "El rival se desconecto");
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                AccessCode?.Invoke(Views.Properties.Resources.lbUserDisconnected, Views.Properties.Resources.lbMessageGameCanceled);
+            });
             var canceledGame = new PageHome(activePlayer, language);
             frCurrentFrame.Navigate(canceledGame);
         }

@@ -8,7 +8,7 @@
       d:DesignHeight="400" d:DesignWidth="742"
       Title="FrameAnimals">
 
-    <Grid>
+    <Grid x:Name="gridButtons">
         <Border Background="Gray" Opacity="0.5" CornerRadius="30"/>
 
         <Button x:Name="btnAnimalOne" Foreground="#724E2E" FontSize="23" FontFamily="{StaticResource FuenteVT323}" Style="{StaticResource ImageButtonStyle}" Margin="14,26,594,211"

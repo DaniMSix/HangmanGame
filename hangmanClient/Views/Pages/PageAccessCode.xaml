@@ -13,18 +13,25 @@
         <Grid.Background>
             <ImageBrush ImageSource="\Images\Background-Access-Code.png"/>
         </Grid.Background>
+
+        <Frame x:Name="frAccessCode" ></Frame>
+        <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Margin="4,5,913,428" Click="BtnClickReturn">
+            <Image Source="\Images\arrow-left.png" Width="65" Height="54"/>
+        </Button>
+
         
-        
+
         <Image Source="\Images\txtAccess-code.png" HorizontalAlignment="Center" Height="90" Margin="0,258,0,0" VerticalAlignment="Top" Width="459"/>
         <Image Source="\Images\fungus-icon.png" HorizontalAlignment="Center" Height="103" Margin="0,53,0,0" VerticalAlignment="Top" Width="145"/>
         <Label x:Name="lbAccessCode" Content="{x:Static p:Resources.lbTitleAccesssCode}" FontFamily="{StaticResource PressStart2P}" FontSize="34" HorizontalAlignment="Center" Margin="0,185,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnJoinGame" Cursor="Hand" Style="{StaticResource green-button}" Content="{x:Static p:Resources.btnAccessCode}" FontFamily="{StaticResource FuenteVT323}" FontSize="25" HorizontalAlignment="Center" Margin="0,397,0,0" VerticalAlignment="Top" Height="53" Width="203"
                 Click="BtnClickJoinGame"/>
-        <TextBox x:Name="txtCodeOneNumber" Style="{StaticResource TransparentTextBox}" FontSize="70" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Margin="273,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="59" Height="88" TextChanged="txtCodeOneNumber_TextChanged" />
-        <TextBox x:Name="txtCodeSecondNumber" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="356,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="59" Height="88"/>
-        <TextBox x:Name="txtCodeThirdNumber" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="436,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="58" Height="88"/>
-        <TextBox x:Name="txtCodeFourthNumber" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="516,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="58" Height="88"/>
-        <TextBox x:Name="txtCodeFifthNumber" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="594,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Height="88"/>
+        <TextBox x:Name="txtCodeOneNumber" MaxLength="1" Style="{StaticResource TransparentTextBox}" FontSize="70" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" Margin="273,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="59" Height="88" />
+        <TextBox x:Name="txtCodeSecondNumber" MaxLength="1" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="356,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="59" Height="88"/>
+        <TextBox x:Name="txtCodeThirdNumber" MaxLength="1" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="436,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="58" Height="88"/>
+        <TextBox x:Name="txtCodeFourthNumber" MaxLength="1" Style="{StaticResource ResourceKey=TransparentTextBox}" FontSize="70" FontFamily="{StaticResource ResourceKey=FuenteVT323}" HorizontalAlignment="Left" Margin="516,258,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="58" Height="88"/>
+        
+        <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
 
     </Grid>
 </Page>

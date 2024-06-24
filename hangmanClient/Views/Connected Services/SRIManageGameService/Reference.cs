@@ -1469,6 +1469,12 @@ namespace Views.SRIManageGameService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/UpdateFullProfile", ReplyAction="http://tempuri.org/IPlayerManagement/UpdateFullProfileResponse")]
         System.Threading.Tasks.Task<bool> UpdateFullProfileAsync(Views.SRIManageGameService.DTOPlayer dataPlayer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/ValidateEmailAndUser", ReplyAction="http://tempuri.org/IPlayerManagement/ValidateEmailAndUserResponse")]
+        bool ValidateEmailAndUser(string username, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPlayerManagement/ValidateEmailAndUser", ReplyAction="http://tempuri.org/IPlayerManagement/ValidateEmailAndUserResponse")]
+        System.Threading.Tasks.Task<bool> ValidateEmailAndUserAsync(string username, string email);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1528,6 +1534,14 @@ namespace Views.SRIManageGameService {
         
         public System.Threading.Tasks.Task<bool> UpdateFullProfileAsync(Views.SRIManageGameService.DTOPlayer dataPlayer) {
             return base.Channel.UpdateFullProfileAsync(dataPlayer);
+        }
+        
+        public bool ValidateEmailAndUser(string username, string email) {
+            return base.Channel.ValidateEmailAndUser(username, email);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ValidateEmailAndUserAsync(string username, string email) {
+            return base.Channel.ValidateEmailAndUserAsync(username, email);
         }
     }
     

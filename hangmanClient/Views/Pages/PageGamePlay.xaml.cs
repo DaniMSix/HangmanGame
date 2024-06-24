@@ -11,6 +11,7 @@ namespace Views.Pages
         ManageGame manageGame;
         System.Windows.Controls.Frame frCurrent;
         string language;
+        private SoundHelper soundHelper;
 
         public PageGamePlay(ManageGame manageGame, System.Windows.Controls.Frame frCurrentFrame, string word, string hint, string letters)
         {
@@ -19,30 +20,27 @@ namespace Views.Pages
             this.manageGame = manageGame;
             this.frCurrent = frCurrentFrame;
             lbWord.Content = word;
-            SetSpacedText(word);
-            lbHint.Content = hint;
+            lbHint.Text = hint;
             lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
             this.manageGame.GameFinished += OnGameFinished;
             ButtonGrid.Visibility = Visibility.Collapsed;
+            soundHelper = new SoundHelper();
+            this.manageGame.AccessCode += ShowMessageGameCanceled;
         }
-
+        
         public PageGamePlay(ManageGame manageGame, System.Windows.Controls.Frame frCurrentFrame, string hint, string letters)
         {   
             InitializeComponent();
             this.manageGame = manageGame;
             this.frCurrent = frCurrentFrame;
-            lbHint.Content = hint;
+            lbHint.Text = hint;
             lbWordGuess.Content = letters;
             this.manageGame.IfGuessed += OnIfGuessed;
             this.manageGame.GameFinished += OnGameFinished;
+            soundHelper = new SoundHelper();
         }
 
-        private void SetSpacedText(string text)
-        {
-            string spacedText = string.Join(" ", text.ToCharArray());
-            lbWordGuess.Content = spacedText;
-        }
 
         public void OnIfGuessed(char[] letters, int failedAttempts, bool guesser)
         {
@@ -51,11 +49,11 @@ namespace Views.Pages
             {
                 if (letter == '\0')
                 {
-                    word += "_";
+                    word += "__ ";
                 }
                 else
                 {
-                    word += letter.ToString();
+                    word += letter.ToString() + " ";
                 }
             }
             lbWordGuess.Content = word;
@@ -116,6 +114,7 @@ namespace Views.Pages
 
         private void BtnGetLetter(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             Button clickedButton = sender as Button;
 
             if (clickedButton != null)
@@ -130,9 +129,20 @@ namespace Views.Pages
 
         private void BtnClickSalir(object sender, RoutedEventArgs e)
         {
+            soundHelper.PlayBackgroundMusic(@"C:\Users\DMS19\OneDrive\Escritorio\Github\Juego\HangmanGame\hangmanClient\Views\Music\button-sound.mp3");
             manageGame.Discconect();
             var pageHome = new PageHome(manageGame.activePlayer, language);
             frCurrent.Navigate(pageHome);
+        }
+
+        public void ShowMessageGameCanceled(string title, string message)
+        {
+            var warningPage = new PageError(title, message);
+            frMessage.Content = warningPage;
+            warningPage.MessageClosed += (s, args) =>
+            {
+                frMessage.Visibility = Visibility.Collapsed;
+            };
         }
     }
 }

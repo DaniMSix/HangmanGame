@@ -7,18 +7,12 @@ namespace Views.Utils
 {
     public class SoundManager
     {
-        private static MediaPlayer mediaPlayer;
+        private static MediaPlayer player = new MediaPlayer();
 
-        static SoundManager()
+        public static void PlaySound(string soundFile)
         {
-            mediaPlayer = new MediaPlayer();
-        }
-
-        // Método para reproducir el sonido del clic del botón
-        public static void PlayButtonClickSound()
-        {
-            mediaPlayer.Open(new Uri("C:\\Users\\Dani\\Desktop\\HangmanGame\\hangmanClient\\Views\\Music\\button-sound.mp3"));
-            mediaPlayer.Play();
+            player.Open(new Uri(soundFile, UriKind.Relative));
+            player.Play();
         }
     }
 }

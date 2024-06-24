@@ -129,6 +129,9 @@
   <data name="btnAnimals" xml:space="preserve">
     <value>Animals</value>
   </data>
+  <data name="btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="btnCities" xml:space="preserve">
     <value>Cities</value>
   </data>
@@ -136,7 +139,7 @@
     <value>Create</value>
   </data>
   <data name="btnCreateGame" xml:space="preserve">
-    <value>Crear game</value>
+    <value>Create game</value>
   </data>
   <data name="btnExit" xml:space="preserve">
     <value>Out</value>
@@ -153,14 +156,35 @@
   <data name="btnLogin" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="btnModify" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
   <data name="btnOccupations" xml:space="preserve">
     <value>Occupations</value>
+  </data>
+  <data name="btnOut" xml:space="preserve">
+    <value>Out</value>
+  </data>
+  <data name="btnRegister" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="btnStart" xml:space="preserve">
     <value>Start</value>
   </data>
+  <data name="btnViewStatistics" xml:space="preserve">
+    <value>View statistics</value>
+  </data>
   <data name="lbAccessCode" xml:space="preserve">
     <value>Access code</value>
+  </data>
+  <data name="lbAccessCodeLobby" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="lbAccessCodeMessage" xml:space="preserve">
+    <value>Check the access code, there is no line item with this code.</value>
+  </data>
+  <data name="lbAccessCodeNotFound" xml:space="preserve">
+    <value>Access code not found</value>
   </data>
   <data name="lbBirthday" xml:space="preserve">
     <value>Date of birth</value>
@@ -168,14 +192,47 @@
   <data name="lbChangeLanguage" xml:space="preserve">
     <value>Change language</value>
   </data>
+  <data name="lbCreateProfile" xml:space="preserve">
+    <value>Create profile</value>
+  </data>
+  <data name="lbDateError" xml:space="preserve">
+    <value>Incorrect date format. Please enter a date in dd-MM-yyyy format.</value>
+  </data>
+  <data name="lbDateExists" xml:space="preserve">
+    <value>An error occurred: the user and/or email already exist.</value>
+  </data>
+  <data name="lbDisconnectedPlayer" xml:space="preserve">
+    <value>has been disconnected from the game</value>
+  </data>
+  <data name="lbEditProfile" xml:space="preserve">
+    <value>Edit profile</value>
+  </data>
   <data name="lbEmail" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="lbEmptyField" xml:space="preserve">
+    <value>Empty field</value>
+  </data>
+  <data name="lbError" xml:space="preserve">
+    <value>Incorrect data</value>
   </data>
   <data name="lbFullName" xml:space="preserve">
     <value>FullName</value>
   </data>
   <data name="lbItemsGames" xml:space="preserve">
     <value>Available items</value>
+  </data>
+  <data name="lbJoinPlayer" xml:space="preserve">
+    <value>has joined the game</value>
+  </data>
+  <data name="lbLobby" xml:space="preserve">
+    <value>Someone has joined the game</value>
+  </data>
+  <data name="lbLobbyComplete" xml:space="preserve">
+    <value>The room is already full, look for another game</value>
+  </data>
+  <data name="lbLobbyIsComplete" xml:space="preserve">
+    <value>The room is already full</value>
   </data>
   <data name="lbLoginMessage" xml:space="preserve">
     <value>Are you ready 
@@ -190,17 +247,29 @@ to decipher words and save the hanged man?</value>
   <data name="lbMessageErrorServer" xml:space="preserve">
     <value>No se pudo conectar con el servidor, inténtelo más tarde.</value>
   </data>
+  <data name="lbMessageGameCanceled" xml:space="preserve">
+    <value>The user has disconnected, the game has been cancelled.</value>
+  </data>
   <data name="lbMessageWinChallenger" xml:space="preserve">
     <value>They didn't guess the word correctly!</value>
   </data>
   <data name="lbMessageWinningGuesser" xml:space="preserve">
     <value>You guessed the right word!</value>
   </data>
+  <data name="lbModifySuccess" xml:space="preserve">
+    <value>Profile has been successfully modified</value>
+  </data>
   <data name="lbPassword" xml:space="preserve">
     <value>Password</value>
   </data>
   <data name="lbPasswordConfirm" xml:space="preserve">
     <value>Password confirm</value>
+  </data>
+  <data name="lbPasswordDontMatch" xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="lbPasswordEmpty" xml:space="preserve">
+    <value>The password field must not be empty.</value>
   </data>
   <data name="lbPhone" xml:space="preserve">
     <value>Phone</value>
@@ -214,6 +283,12 @@ to decipher words and save the hanged man?</value>
   <data name="lbRegister" xml:space="preserve">
     <value>Don't have a profile yet, register here!</value>
   </data>
+  <data name="lbRegisterSuccess" xml:space="preserve">
+    <value>Profile has been successfully created</value>
+  </data>
+  <data name="lbSignOut" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
   <data name="lbStadistics" xml:space="preserve">
     <value>Statistics</value>
   </data>
@@ -223,11 +298,17 @@ to decipher words and save the hanged man?</value>
   <data name="lbTitleAccesssCode" xml:space="preserve">
     <value>Access code</value>
   </data>
+  <data name="lbTitleError" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="lbTitleErrorCredentials" xml:space="preserve">
     <value>Incorrect credentials</value>
   </data>
   <data name="lbTitleErrorServer" xml:space="preserve">
     <value>Error de conexión</value>
+  </data>
+  <data name="lbTitleExistsDate" xml:space="preserve">
+    <value>Data already existing</value>
   </data>
   <data name="lbTitleIdiom" xml:space="preserve">
     <value>Select language</value>
@@ -237,6 +318,15 @@ to decipher words and save the hanged man?</value>
   </data>
   <data name="lbTitleLosser" xml:space="preserve">
     <value>Oh no! You have been hanged!</value>
+  </data>
+  <data name="lbTitleModify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="lbTitleModifySuccess" xml:space="preserve">
+    <value>Successful modification</value>
+  </data>
+  <data name="lbTitleRegisterSucces" xml:space="preserve">
+    <value>Successful registration</value>
   </data>
   <data name="lbTitleWarning" xml:space="preserve">
     <value>Empty fields</value>
@@ -249,6 +339,12 @@ to decipher words and save the hanged man?</value>
   </data>
   <data name="lbUser" xml:space="preserve">
     <value>User</value>
+  </data>
+  <data name="lbUserDisconnected" xml:space="preserve">
+    <value>The user is disconnected</value>
+  </data>
+  <data name="lbUserEmailExits" xml:space="preserve">
+    <value>The user and/or e-mail already exist</value>
   </data>
   <data name="lbWelcome" xml:space="preserve">
     <value>Welcome</value>

@@ -20,17 +20,41 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <TextBlock x:Name="txtLoadingLabel" FontFamily="{StaticResource FuenteVT323}" Text="Cargando" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="477,446,0,0" Visibility="Collapsed"/>
 
 
-            <Label x:Name="lbTitle" Content="Crear perfil" HorizontalContentAlignment="Center" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="291,58,419,383"/>
+            <TextBlock x:Name="txtLoadingDots" FontFamily="{StaticResource FuenteVT323}" Visibility="Collapsed" Text="..." FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="547,445,0,0" >
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Text">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="."/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value=".."/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="..."/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="."/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value=".."/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="..."/>
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}"/>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Collapsed}"/>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <Label x:Name="lbTitle" Content="{x:Static p:Resources.lbCreateProfile}" HorizontalContentAlignment="Center" FontFamily="{StaticResource PressStart2P}" FontSize="26" Foreground="#FFFBD4" Margin="291,58,419,383"/>
             <Image Source="\Images\Label-login.png"  Margin="180,130,726,316"/>
             <Label  x:Name="lbFullName" Content="{x:Static p:Resources.lbFullName}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,184,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbUser" Content="Usuario" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="193,101,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbUser" Content="{x:Static p:Resources.lbUser}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="193,101,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbPhone" Content="{x:Static p:Resources.lbPhone}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,270,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbEmail" Content="{x:Static p:Resources.lbEmail}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="189,348,0,0" VerticalAlignment="Top" Width="105"/>
             <Label x:Name="lbPassword" Content="{x:Static p:Resources.lbPassword}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,184,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbBirthday" Content="{x:Static p:Resources.lbBirthday}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,101,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="btnCreate" Cursor="Hand" Style="{StaticResource orange-button}" Content="Registrarse" HorizontalAlignment="Left" Margin="444,438,0,0" VerticalAlignment="Top" Height="43" Width="164" 
+            <Button x:Name="btnCreate" Cursor="Hand" Style="{StaticResource orange-button}" Content="{x:Static p:Resources.btnRegister}" HorizontalAlignment="Left" Margin="449,432,0,0" VerticalAlignment="Top" Height="42" Width="164" 
                     FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="#6D3B00" Click="BtnClickSend"/>
             <Image Source="/Images/Label-login.png"  Margin="178,213,728,233"/>
             <Image Source="/Images/Label-login.png"  Margin="178,299,728,147"/>
@@ -41,26 +65,30 @@
             <Image x:Name="imgPasswordConfirm" Source="/Images/Label-login.png"  Margin="564,298,342,148"/>
             <Label x:Name="lbPasswordConfirm" Content="{x:Static p:Resources.lbPasswordConfirm}" FontFamily="{StaticResource FuenteVT323}" FontSize="24" Foreground="White"  HorizontalAlignment="Left" Margin="575,270,0,0" VerticalAlignment="Top"/>
 
-            <TextBox x:Name="txtUser" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBox x:Name="txtUser" MaxLength="12" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TxtUserTextChanged"
             Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="208,142,0,0"/>
 
-            <TextBox x:Name="txtName" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBox x:Name="txtName" MaxLength="40" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TxtNameTextChanged"
             Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="208,224,0,0"/>
 
-            <TextBox x:Name="txtPhone" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBox x:Name="txtPhone"  FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TxtPhoneTextChanged"
             Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="208,310,0,0"/>
 
-            <TextBox x:Name="txtEmail" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBox x:Name="txtEmail" MaxLength="45" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TxtEmailTextChanged"
             Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="208,388,0,0"/>
-            <TextBox x:Name="txtDateOfBirthday" FontFamily="{StaticResource FuenteVT323}" HorizontalAlignment="Left" VerticalAlignment="Top"
+            <TextBox x:Name="txtDateOfBirthday" FontFamily="{StaticResource FuenteVT323}" Text="dd-MM-yyyy" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"
                 Width="229" Height="27" FontSize="20" Background="Transparent" BorderThickness="0" Margin="595,141,0,0"/>
 
-            <PasswordBox x:Name="psdPassword" HorizontalAlignment="Left" Margin="595,224,0,0" VerticalAlignment="Top"
+            <PasswordBox x:Name="psdPassword" MaxLength="20"  HorizontalAlignment="Left" Margin="595,224,0,0" VerticalAlignment="Top" PasswordChanged="PsdPasswordPasswordChanged"
             Width="227" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0"/>
 
-            <PasswordBox x:Name="psdPasswordConfirm" HorizontalAlignment="Left" Margin="595,310,0,0" VerticalAlignment="Top"
+            <PasswordBox x:Name="psdPasswordConfirm" MaxLength="20" HorizontalAlignment="Left" Margin="595,310,0,0" VerticalAlignment="Top" PasswordChanged="PsdPasswordConfirmPasswordChanged"
             Width="227" Height="27" FontSize="20" PasswordChar="*" Background="Transparent" BorderThickness="0"/>
             <Image x:Name="imgQuestion" Source="\Images\question.png" HorizontalAlignment="Left" Height="50" Margin="517,216,0,0" VerticalAlignment="Top" Width="42"/>
+            <Border x:Name="brdGrayBackground" Background="#80000000" HorizontalAlignment="Left" VerticalAlignment="Center" Width="1005" Height="496" Visibility="Collapsed"/>
+
+            <Frame x:Name="frMessage" HorizontalAlignment="Left" Height="243" Margin="253,0,0,0" VerticalAlignment="Center" Width="516"/>
+            
 
             <Button Cursor="Hand" Style="{StaticResource TransparentButtonStyle}" Margin="4,5,1113,428" Click="BtnClickReturn">
                 <Image x:Name="btnMusic" Source="\Images\arrow-left.png" Width="65" Height="54"/>
